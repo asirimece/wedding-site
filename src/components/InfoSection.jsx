@@ -1,4 +1,3 @@
-// src/components/InfoSection.jsx
 import { useState } from "react";
 
 function CTAButton({ cta }) {

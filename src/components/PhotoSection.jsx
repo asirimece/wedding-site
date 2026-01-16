@@ -1,4 +1,3 @@
-// src/components/PhotoSection.jsx
 export function PhotoSection({ image, alt, height = "break" }) {
   return (
     <div className={`photo photo--${height}`}>

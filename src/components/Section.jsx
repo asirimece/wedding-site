@@ -1,4 +1,3 @@
-// src/components/Section.jsx
 export function Section({ id, variant = "info", children }) {
   return (
     <section id={id} className={`section section--${variant}`}>

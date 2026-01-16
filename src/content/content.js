@@ -1,4 +1,3 @@
-// src/content/content.js
 export const content = {
   en: {
     navItems: [
@@ -14,11 +13,11 @@ export const content = {
     hero: {
       photo: "/photos/hero.png",
       photoAlt: "Couple photo",
-      title: "Emma & Lucas",
-      subtitle: "We’re getting married!",
+      title: "Nora & Romain",
+      subtitle: "We're getting Married",
       body: [
-        "Saturday, 12 July 2026",
-        "Zürich, Switzerland",
+        "Saturday, 6 June 2026",
+        "Provence, France",
         "We can’t wait to celebrate with you.",
       ],
       ctas: [
@@ -35,7 +34,7 @@ export const content = {
     schedule: {
       title: "Schedule",
       subtitle: "A quick overview of the day",
-      body: ["Times are approximate — we’ll update if anything changes."],
+      body: [""],
       items: [
         { title: "Ceremony", meta: "15:00", detail: "Arrive 20 minutes early" },
         { title: "Reception", meta: "16:30", detail: "Drinks & photos" },
@@ -60,11 +59,11 @@ export const content = {
     travel: {
       title: "Travel & Stay",
       subtitle: "Recommendations",
-      body: ["If you’re coming from out of town, here are a few options."],
+      body: ["Here are a few options."],
       items: [
         { title: "Getting there", meta: "", detail: "Nearest train: Zürich HB (15 min by tram)" },
-        { title: "Hotels", meta: "", detail: "We recommend booking early (summer season)" },
-        { title: "Tips", meta: "", detail: "Comfortable shoes — we’ll be outdoors briefly" },
+        { title: "Hotels", meta: "", detail: " " },
+        { title: "Tips", meta: "", detail: " " },
       ],
     },
 
@@ -72,18 +71,18 @@ export const content = {
       title: "FAQ",
       subtitle: "Good to know",
       items: [
-        { q: "Dress code?", a: "Summer formal / cocktail. Pastels welcome (not required)." },
+        { q: "Dress code", a: " " },
         { q: "Can I bring a plus-one?", a: "Please follow your invitation. If unsure, contact us." },
-        { q: "Children?", a: "We love your kids — this will be an adults-only celebration." },
-        { q: "Gifts?", a: "Your presence is the best gift. If you’d like, we’ll share a registry link soon." },
+        { q: "Children", a: "We love your kids — this will be an adults-only celebration." },
+        { q: "Gifts", a: "Your presence is the best gift. If you’d like, we’ll share a registry link soon." },
       ],
     },
 
     speech: {
       title: "Speeches & Toasts",
-      subtitle: "Want to say a few words?",
+      subtitle: "Would you like to say a few words?",
       body: [
-        "If you’d like to give a speech or toast, please sign up using the form below so we can plan the timing.",
+        "Please sign up using the form below so we can plan the timing!",
       ],
       ctas: [
         { label: "Sign up for a speech", href: "https://example.com/speech-form", external: true, variant: "primary" },
@@ -92,8 +91,8 @@ export const content = {
 
     final: {
       title: "RSVP",
-      subtitle: "We hope you can make it",
-      body: ["Please RSVP by 15 June 2026."],
+      subtitle: "We hope to see you on our happiest day!",
+      body: ["Please RSVP by TBD."],
       ctas: [
         { label: "RSVP Now", href: "https://example.com/rsvp", external: true, variant: "primary" },
         { label: "Contact", href: "mailto:hello@example.com", external: true, variant: "secondary" },

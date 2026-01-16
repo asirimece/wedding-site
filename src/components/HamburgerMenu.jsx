@@ -1,4 +1,3 @@
-// src/components/HamburgerMenu.jsx
 import { useEffect, useState } from "react";
 
 export function HamburgerMenu({ items, lang, setLang, languages }) {
