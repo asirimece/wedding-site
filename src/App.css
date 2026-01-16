@@ -1,0 +1,375 @@
+:root{
+  --bg: #fbf7f4;
+  --ink: #2b2a28;
+  --muted: #6d6862;
+
+  --card: rgba(255,255,255,0.72);
+  --cardSolid: #fffaf6;
+
+  --border: rgba(43,42,40,0.12);
+  --shadow: 0 12px 40px rgba(0,0,0,0.08);
+
+  --primary: #d88fa5;     /* pastel rose */
+  --primaryInk: #ffffff;
+  --secondary: rgba(43,42,40,0.06);
+}
+
+*{ box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.page{
+  min-height: 100vh;
+}
+
+.main{
+  padding-top: 64px; /* header height */
+}
+
+.section{
+  padding: 18px 16px;
+}
+
+.sectionInner{
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.section--hero{
+  padding-top: 14px;
+}
+
+.stack{
+  display: grid;
+  gap: 14px;
+}
+
+/* Photos */
+.photo{
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: #eee;
+}
+
+.photo--hero{ height: min(60vh, 520px); }
+.photo--break{ height: min(38vh, 360px); }
+
+.photoImg{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Info frames */
+.infoFrame{
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.infoFrame--frame{
+  background: var(--card);
+  backdrop-filter: blur(8px);
+}
+
+.infoFrame--invitation{
+  background: var(--cardSolid);
+}
+
+.infoContent{
+  padding: 18px 18px;
+}
+
+.h2{
+  margin: 0 0 6px 0;
+  font-size: 26px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.subtitle{
+  margin: 0 0 14px 0;
+  color: var(--muted);
+}
+
+.p{
+  margin: 0 0 8px 0;
+  color: var(--ink);
+}
+
+.note{
+  margin: 10px 0 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.ctaRow{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+/* Buttons */
+.btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 14px;
+  border-radius: 999px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.btn--primary{
+  background: var(--primary);
+  color: var(--primaryInk);
+}
+
+.btn--secondary{
+  background: var(--secondary);
+  color: var(--ink);
+  border-color: var(--border);
+}
+
+/* Timeline list */
+.list{
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0 0;
+  display: grid;
+  gap: 10px;
+}
+
+.listItem{
+  background: rgba(255,255,255,0.55);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 12px 12px;
+}
+
+.listRow{
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: baseline;
+}
+
+.listTitle{ font-weight: 700; }
+.listMeta{ color: var(--muted); font-weight: 600; }
+.listDetail{ margin-top: 6px; color: var(--muted); }
+
+/* FAQ accordion */
+.faq{
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.faqItem{
+  width: 100%;
+  text-align: left;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.55);
+  border-radius: 16px;
+  padding: 12px 12px;
+  cursor: pointer;
+}
+
+.faqQ{
+  display:flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-weight: 700;
+}
+
+.faqA{
+  margin-top: 8px;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.mapBox{
+  margin-top: 14px;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.55);
+}
+
+.mapImg{
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display:block;
+}
+
+.mapActions{
+  padding: 10px;
+}
+
+/* Header + menu */
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14px;
+  background: rgba(251,247,244,0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  z-index: 50;
+}
+
+.brand{
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.burger{
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.6);
+  border-radius: 999px;
+  padding: 10px 12px;
+  cursor: pointer;
+}
+
+/* Overlay */
+.menuOverlay{
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+}
+
+.menuBackdrop{
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.20);
+  border: none;
+}
+
+.menuPanel{
+  position: relative;
+  width: min(92vw, 420px);
+  border-radius: 24px;
+  background: rgba(255,255,255,0.86);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  padding: 14px;
+  z-index: 101;
+}
+
+.menuTop{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.menuTitle{
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.menuClose{
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.7);
+  border-radius: 999px;
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+.menuNav{
+  display: grid;
+  gap: 8px;
+  margin: 10px 0 14px 0;
+}
+
+.menuItem{
+  padding: 12px 12px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.6);
+  text-decoration: none;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.menuLang{
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+}
+
+.menuLangLabel{
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.menuLangRow{
+  display:flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.pill{
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.6);
+  border-radius: 999px;
+  padding: 10px 12px;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.pill.isActive{
+  background: var(--primary);
+  color: var(--primaryInk);
+  border-color: transparent;
+}
+
+.menuHint{
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* Footer */
+.footer{
+  padding: 30px 16px 50px;
+}
+
+.footerText{
+  max-width: 720px;
+  margin: 0 auto;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* Desktop enhancement later: we’ll do split layout here */
+@media (min-width: 900px){
+  .sectionInner{ max-width: 980px; }
+  .stack{
+    grid-template-columns: 1.15fr 0.85fr; /* PHOTO | INFO */
+    align-items: stretch;
+  }
+  .photo--hero{ height: 520px; }
+}
