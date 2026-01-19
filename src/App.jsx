@@ -1,134 +1,129 @@
 import { useMemo, useState } from "react";
 import "./App.css";
 import { content } from "./content/content";
-import { HamburgerMenu } from "./components/HamburgerMenu";
-import { PhotoSection } from "./components/PhotoSection";
-import { InfoSection } from "./components/InfoSection";
+import { SectionNav } from "./components/SectionNav";
 import { Section } from "./components/Section";
 
 export default function App() {
-  // i18n-ready: keep it as state; for now only "en" is filled.
+
   const [lang, setLang] = useState("en");
 
   const t = useMemo(() => {
-    const pack = content[lang] ?? content.en;
-    return pack;
+    return content[lang] ?? content.en;
   }, [lang]);
 
   return (
     <div className="page">
-      <HamburgerMenu
-        lang={lang}
-        setLang={setLang}
-        items={t.navItems}
-        languages={content}
-      />
+
+      {/* Floating navigation dots / menu */}
+      <SectionNav items={t.navItems.filter(i => i.href !== "#top")} />
 
       <main className="main">
-        {/* HERO: PHOTO then INFO (mobile). Desktop will become split via CSS later. */}
-        <Section id="top" variant="hero">
-          <div className="stack">
-            <PhotoSection
-              image={t.hero.photo}
-              alt={t.hero.photoAlt}
-              height="hero"
+
+        {/* ================= HERO ================= */}
+
+        <Section
+          id="top"
+          variant="hero"
+          className="heroSection"
+          style={{
+            backgroundImage: `url(${t.hero.background})`,
+          }}
+        >
+          <div className="heroBgOverlay" />
+          
+          <div className="heroWrapper">
+
+          <div className="heroText">
+            <p className="heroSubtitle">{t.hero.subtitle}</p>
+            <h1 className="heroTitle">{t.hero.title}</h1>
+          </div>
+
+            <img
+              src={t.hero.couple}
+              alt="Couple"
+              className="heroCouple"
             />
-            <InfoSection
-              title={t.hero.title}
-              subtitle={t.hero.subtitle}
-              body={t.hero.body}
-              ctas={t.hero.ctas}
-              frameVariant="invitation"
-            />
+
           </div>
         </Section>
 
-        {/* PHOTO break */}
-        <Section id="photo-1" variant="photoBreak">
-          <PhotoSection
-            image={t.breaks.one.photo}
-            alt={t.breaks.one.photoAlt}
-            height="break"
-          />
+
+        {/* ================= VENUE ================= */}
+
+        <Section
+          id="venue"
+          style={{
+            backgroundImage: `url(${t.venue.background})`,
+          }}
+        >
+          <div className="contentBox">
+
+            <h2>{t.venue.title}</h2>
+            <p>{t.venue.text}</p>
+
+            <a
+              className="primaryButton"
+              href={t.venue.mapLink}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Open in Google Maps
+            </a>
+
+          </div>
         </Section>
 
-        {/* INFO: Schedule */}
-        <Section id="schedule" variant="info">
-          <InfoSection
-            title={t.schedule.title}
-            subtitle={t.schedule.subtitle}
-            body={t.schedule.body}
-            list={t.schedule.items}
-            frameVariant="frame"
-          />
+
+        {/* ================= SCHEDULE ================= */}
+
+        <Section
+          id="schedule"
+          style={{
+            backgroundImage: `url(${t.schedule.background})`,
+          }}
+        >
+          <div className="contentBox">
+
+            <h2>{t.schedule.title}</h2>
+
+            {t.schedule.items.map((item, i) => (
+              <div key={i} className="scheduleRow">
+                <span>{item.time}</span>
+                <span>{item.label}</span>
+              </div>
+            ))}
+
+          </div>
         </Section>
 
-        {/* PHOTO break */}
-        <Section id="photo-2" variant="photoBreak">
-          <PhotoSection
-            image={t.breaks.two.photo}
-            alt={t.breaks.two.photoAlt}
-            height="break"
-          />
+
+        {/* ================= RSVP ================= */}
+
+        <Section
+          id="rsvp"
+          style={{
+            backgroundImage: `url(${t.rsvp.background})`,
+          }}
+        >
+          <div className="contentBox">
+
+            <h2>{t.rsvp.title}</h2>
+            <p>{t.rsvp.text}</p>
+
+            <a
+              className="primaryButton"
+              href={t.rsvp.formLink}
+              target="_blank"
+              rel="noreferrer"
+            >
+              RSVP Now
+            </a>
+
+          </div>
         </Section>
 
-        {/* INFO: Venue + map */}
-        <Section id="venue" variant="info">
-          <InfoSection
-            title={t.venue.title}
-            subtitle={t.venue.subtitle}
-            body={t.venue.body}
-            map={t.venue.map}
-            frameVariant="frame"
-          />
-        </Section>
 
-        {/* INFO: Travel */}
-        <Section id="travel" variant="info">
-          <InfoSection
-            title={t.travel.title}
-            subtitle={t.travel.subtitle}
-            body={t.travel.body}
-            list={t.travel.items}
-            frameVariant="frame"
-          />
-        </Section>
-
-        {/* INFO: FAQ */}
-        <Section id="faq" variant="info">
-          <InfoSection
-            title={t.faq.title}
-            subtitle={t.faq.subtitle}
-            faq={t.faq.items}
-            frameVariant="frame"
-          />
-        </Section>
-
-        {/* INFO: Speech signup */}
-        <Section id="speech" variant="info">
-          <InfoSection
-            title={t.speech.title}
-            subtitle={t.speech.subtitle}
-            body={t.speech.body}
-            ctas={t.speech.ctas}
-            frameVariant="frame"
-          />
-        </Section>
-
-        {/* Final RSVP / contact */}
-        <Section id="rsvp" variant="info">
-          <InfoSection
-            title={t.final.title}
-            subtitle={t.final.subtitle}
-            body={t.final.body}
-            ctas={t.final.ctas}
-            frameVariant="invitation"
-          />
-        </Section>
-
-        <footer className="footer">
-          <p className="footerText">{t.footer}</p>
-        </footer>
       </main>
     </div>
   );
