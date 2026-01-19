@@ -19,8 +19,8 @@ export const content = {
       background: "/backgrounds/seit-bg.png",
       couple: "/photos/seit.png",
       title: "WIE ALLES BEGANN",
-      subtitle: "Seit 2012",
-      text: "Wir haben uns im August 2012 auf einer Tanzfläche in Barcelona kennengelernt – ein zufälliger Moment, der alles verändert hat.\n Seitdem haben wir zusammen getanzt, gelacht und Wege gefunden, die uns immer näher zueinander gebracht haben. Jetzt freuen wir uns darauf, mit euch unseren nächsten Schritt zu feiern.",
+      subtitle: "SEIT 2012",
+      text: "Wir haben uns im August 2012 auf einer Tanzfläche in Barcelona kennengelernt – ein zufälliger Moment, der alles verändert hat.\n Seitdem haben wir zusammen getanzt, gelacht und Wege gefunden, die uns immer näher zueinander gebracht haben.\n Jetzt freuen wir uns darauf, mit euch unseren nächsten Schritt zu feiern.",
     },
 
     schedule: {

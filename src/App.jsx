@@ -57,19 +57,23 @@ export default function App() {
             backgroundImage: `url(${t.seit.background})`,
           }}
         >
-          <div className="contentBox">
+          <div className="contentBox seitBox">
+            <div className="seitLeft">
+              <h2 className="seitTitle">{t.seit.title}</h2>
+              <p className="seitSubtitle">{t.seit.subtitle}</p>
+              
+              {t.seit.text.split("\n").map((paragraph, i) => (
+                <p key={i} className="seitText">
+                  {paragraph.trim()}
+                </p>
+              ))}
+            </div>
 
-            <h2>{t.seit.title}</h2>
-            <h2>{t.seit.subtitle}</h2>
-            <p>{t.seit.text}</p>
-            
-            <img
-              src={t.seit.couple}
-              alt="Couple"
-              className="seitCouple"
-            />
-
+            <div className="seitRight">
+              <img src={t.seit.couple} alt="Couple" />
+            </div>
           </div>
+
         </Section>
 
 
