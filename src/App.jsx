@@ -1,8 +1,11 @@
 import { useMemo, useState } from "react";
-import "./App.css";
+import "./sections.css";
+import "./layouts.css";
 import { content } from "./content/content";
 import { SectionNav } from "./components/SectionNav";
 import { Section } from "./components/Section";
+import { SplitLayout } from "./components/layouts/SplitLayout";
+import { TextLayout } from "./components/layouts/TextLayout";
 
 export default function App() {
 
@@ -53,27 +56,14 @@ export default function App() {
 
         <Section
           id="seit"
-          style={{
-            backgroundImage: `url(${t.seit.background})`,
-          }}
+          style={{ backgroundImage: `url(${t.seit.background})` }}
         >
-          <div className="contentBox seitBox">
-            <div className="seitLeft">
-              <h2 className="seitTitle">{t.seit.title}</h2>
-              <p className="seitSubtitle">{t.seit.subtitle}</p>
-              
-              {t.seit.text.split("\n").map((paragraph, i) => (
-                <p key={i} className="seitText">
-                  {paragraph.trim()}
-                </p>
-              ))}
-            </div>
-
-            <div className="seitRight">
-              <img src={t.seit.couple} alt="Couple" />
-            </div>
-          </div>
-
+          <SplitLayout
+            title={t.seit.title}
+            subtitle={t.seit.subtitle}
+            text={t.seit.text}
+            image={t.seit.couple}
+          />
         </Section>
 
 

@@ -98,36 +98,6 @@
   }
 }
 
-.contentBox {
-  background: rgba(255,255,255,0.85);
-  padding: 3rem;
-  border-radius: 18px;
-  max-width: 600px;
-  margin: auto;
-  text-align: center;
-}
-@media (max-width: 768px) {
-  .contentBox {
-    max-width: 92vw;
-    padding: 2rem 1.5rem;
-  }
-
-  .seitLeft {
-    max-width: 420px;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .seitRight img {
-    max-width: 260px;
-    margin: 0 auto;
-  }
-
-  .sectionInner {
-    padding: 8vh 4vw;
-  }
-}
-
 .seitBox {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
@@ -176,22 +146,6 @@
   line-height: 1.7;
   margin-bottom: 1rem;
   white-space: pre-line;
-}
-
-.seitCouple {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-
-  /* Big, dominant hero sizing */
-  height: clamp(260px, 82vh, 460px);
-  width: auto;
-  max-width: 96vw;
-
-  object-fit: contain;
-  z-index: 4;
-  pointer-events: none;
 }
 
 .scheduleTitle {
