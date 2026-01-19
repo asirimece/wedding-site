@@ -49,6 +49,161 @@ export default function App() {
         </Section>
 
 
+        {/* ================= SEIT ================= */}
+
+        <Section
+          id="seit"
+          style={{
+            backgroundImage: `url(${t.seit.background})`,
+          }}
+        >
+          <div className="contentBox">
+
+            <h2>{t.seit.title}</h2>
+            <h2>{t.seit.subtitle}</h2>
+            <p>{t.seit.text}</p>
+            
+            <img
+              src={t.seit.couple}
+              alt="Couple"
+              className="seitCouple"
+            />
+
+          </div>
+        </Section>
+
+
+        {/* ================= SCHEDULE ================= */}
+
+        <Section
+          id="schedule"
+          style={{
+            backgroundImage: `url(${t.schedule.background})`,
+          }}
+        >
+          <div className="contentBox">
+
+            <h2>{t.schedule.title}</h2>
+
+            {t.schedule.items.map((item, i) => (
+              <div key={i} className="scheduleRow">
+                <span>{item.time}</span>
+                <span>{item.label}</span>
+              </div>
+            ))}
+
+            <img
+              src={t.schedule.img}
+              alt="Img"
+              className="scheduleImg"
+            />
+
+          </div>
+        </Section>
+
+    
+        {/* ================= INFO ================= */}
+
+        <Section
+          id="info"
+          style={{
+            backgroundImage: `url(${t.info.background})`,
+          }}
+        >
+          <div className="contentBox">
+
+          <div className="infoText">
+            <p className="infoSubtitle">{t.info.subtitle}</p>
+            <h1 className="infoTitle">{t.info.title}</h1>
+          </div>
+
+          </div>
+        </Section>
+
+
+        {/* ================= Q&A ================= */}
+
+        <Section
+          id="qa"
+          style={{
+            backgroundImage: `url(${t.qa.background})`,
+          }}
+        >
+          <div className="contentBox">
+
+          <div className="qaText">
+            <p className="qaSubtitle">{t.qa.subtitle}</p>
+            <h1 className="qaTitle">{t.qa.title}</h1>
+          </div>
+
+          </div>
+        </Section>
+
+
+        {/* ================= TENT ================= */}
+
+        <Section
+          id="tent"
+          style={{
+            backgroundImage: `url(${t.tent.background})`,
+          }}
+        >
+          <div className="contentBox">
+
+          <div className="tentText">
+            <p className="tentSubtitle">{t.tent.subtitle}</p>
+            <h1 className="tentTitle">{t.tent.title}</h1>
+          </div>
+
+          </div>
+        </Section>
+
+
+        {/* ================= HOTEL ================= */}
+
+        <Section
+          id="hotel"
+          style={{
+            backgroundImage: `url(${t.hotel.background})`,
+          }}
+        >
+          <div className="contentBox">
+
+          <div className="hotelText">
+            <p className="hotelSubtitle">{t.hotel.subtitle}</p>
+            <h1 className="hotelTitle">{t.hotel.title}</h1>
+          </div>
+
+          </div>
+        </Section>
+        
+
+        {/* ================= RSVP ================= */}
+  
+          <Section
+            id="rsvp"
+            style={{
+              backgroundImage: `url(${t.rsvp.background})`,
+            }}
+          >
+            <div className="contentBox">
+  
+              <h2>{t.rsvp.title}</h2>
+              <p>{t.rsvp.text}</p>
+  
+              <a
+                className="primaryButton"
+                href={t.rsvp.formLink}
+                target="_blank"
+                rel="noreferrer"
+              >
+                RSVP
+              </a>
+  
+            </div>
+          </Section>
+        
+
         {/* ================= VENUE ================= */}
 
         <Section
@@ -75,53 +230,6 @@ export default function App() {
         </Section>
 
 
-        {/* ================= SCHEDULE ================= */}
-
-        <Section
-          id="schedule"
-          style={{
-            backgroundImage: `url(${t.schedule.background})`,
-          }}
-        >
-          <div className="contentBox">
-
-            <h2>{t.schedule.title}</h2>
-
-            {t.schedule.items.map((item, i) => (
-              <div key={i} className="scheduleRow">
-                <span>{item.time}</span>
-                <span>{item.label}</span>
-              </div>
-            ))}
-
-          </div>
-        </Section>
-
-
-        {/* ================= RSVP ================= */}
-
-        <Section
-          id="rsvp"
-          style={{
-            backgroundImage: `url(${t.rsvp.background})`,
-          }}
-        >
-          <div className="contentBox">
-
-            <h2>{t.rsvp.title}</h2>
-            <p>{t.rsvp.text}</p>
-
-            <a
-              className="primaryButton"
-              href={t.rsvp.formLink}
-              target="_blank"
-              rel="noreferrer"
-            >
-              RSVP Now
-            </a>
-
-          </div>
-        </Section>
 
 
       </main>

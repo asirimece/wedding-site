@@ -73,11 +73,8 @@
   left: 50%;
   transform: translateX(-50%);
 
-  /* Big, dominant hero sizing */
   height: clamp(520px, 82vh, 920px);
   width: auto;
-
-  /* prevent overflow on very narrow screens */
   max-width: 96vw;
 
   object-fit: contain;
@@ -111,9 +108,85 @@
   text-align: center;
 }
 
+.seitText {
+  position: absolute;
+  top: 6%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.seitTitle {
+  font-family: "Noto Serif Display", serif;
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  letter-spacing: 0.12em;
+  color: #3C3421;
+}
+
+.seitSubtitle {
+  font-family: "Tenor Sans", sans-serif;
+  letter-spacing: 0.18em;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  color: #3C3421;
+}
+
+.seitCouple {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  /* Big, dominant hero sizing */
+  height: clamp(260px, 82vh, 460px);
+  width: auto;
+  max-width: 96vw;
+
+  object-fit: contain;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.scheduleTitle {
+  font-family: "Noto Serif Display", serif;
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  letter-spacing: 0.12em;
+  color: #3C3421;
+}
+
+.scheduleImg {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-100%);
+
+  /* Big, dominant hero sizing */
+  height: clamp(50px, 8vh, 46px);
+  width: auto;
+  max-width: 10vw;
+
+  object-fit: contain;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.infoTitle {
+  font-family: "Noto Serif Display", serif;
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  letter-spacing: 0.12em;
+  color: #3C3421;
+}
+
+.qaTitle {
+  font-family: "Noto Serif Display", serif;
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  letter-spacing: 0.12em;
+  color: #3C3421;
+}
 
 /* Buttons */
-
 .primaryButton {
   display: inline-block;
   margin-top: 20px;
@@ -126,7 +199,6 @@
 
 
 /* Schedule rows */
-
 .scheduleRow {
   display: flex;
   justify-content: space-between;
