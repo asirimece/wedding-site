@@ -1,3 +1,5 @@
+/* ================= HERO ================= */
+
 .section--hero {
   background-size: cover;
   background-position: center top;
@@ -98,20 +100,19 @@
   }
 }
 
+
+/* ================= SEIT ================= */
 .seitBox {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 3rem;
   max-width: 1100px;
 }
+
 @media (max-width: 768px) {
   .seitBox {
     gap: 1.25rem;
     grid-template-columns: 1fr;
-  }
-
-  .seitRight {
-    margin-top: 0;
   }
 }
 
@@ -124,60 +125,10 @@
   height: auto;
 }
 
-.seitTitle {
-  font-family: "Noto Serif Display", serif;
-  font-size: clamp(2.8rem, 6vw, 5rem);
-  letter-spacing: 0.12em;
-  color: #3C3421;
-}
-
-.seitSubtitle {
-  margin-top: 1rem;
-  font-family: "Tenor Sans", sans-serif;
-  letter-spacing: 0.18em;
-  margin-bottom: 10px;
-  font-size: 0.9rem;
-  color: #3C3421;
-}
-
-.seitText {
-  margin-top: 1.5rem;
-  font-family: "Tenor Sans", sans-serif;
-  line-height: 1.7;
-  margin-bottom: 1rem;
-  white-space: pre-line;
-}
-
-.scheduleTitle {
-  font-family: "Noto Serif Display", serif;
-  font-size: clamp(2.8rem, 6vw, 5rem);
-  letter-spacing: 0.12em;
-  color: #3C3421;
-}
-
-.scheduleImg {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-100%);
-
-  /* Big, dominant hero sizing */
-  height: clamp(50px, 8vh, 46px);
-  width: auto;
-  max-width: 10vw;
-
-  object-fit: contain;
-  z-index: 4;
-  pointer-events: none;
-}
-
-.infoTitle {
-  font-family: "Noto Serif Display", serif;
-  font-size: clamp(2.8rem, 6vw, 5rem);
-  letter-spacing: 0.12em;
-  color: #3C3421;
-}
-
+/* ================= TITLES ================= */
+.seitTitle,
+.scheduleTitle,
+.infoTitle,
 .qaTitle {
   font-family: "Noto Serif Display", serif;
   font-size: clamp(2.8rem, 6vw, 5rem);
@@ -185,7 +136,7 @@
   color: #3C3421;
 }
 
-/* Buttons */
+/* ================= BUTTON ================= */
 .primaryButton {
   display: inline-block;
   margin-top: 20px;
@@ -196,10 +147,201 @@
   text-decoration: none;
 }
 
+/* ================= SCHEDULE ================= */
+.contentBox--schedule {
+  align-items: left;
+}
 
-/* Schedule rows */
-.scheduleRow {
+/* LEFT COLUMN */
+.scheduleLeft {
+  text-align: left;
+}
+
+.scheduleImg {
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  margin-top: 3rem;
+  border-radius: 12px;
+  display: block;
+
+  margin-left: 0;
+  margin-right: 0;
+}
+
+
+/* RIGHT COLUMN */
+.scheduleRight {
   display: flex;
-  justify-content: space-between;
-  padding: 8px 0;
+  align-items: center;
+}
+
+.scheduleLines {
+  width: 100%;
+  max-width: 520px;
+  margin-top: 1.25rem;
+}
+
+.scheduleRow2 {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 1.75rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid rgba(60, 52, 33, 0.20);
+}
+
+.scheduleTime2 {
+  font-family: "Tenor Sans", sans-serif;
+  letter-spacing: 0.12em;
+  color: #3C3421;
+  font-size: 1.05rem; 
+}
+
+.scheduleLabel2 {
+  font-family: "Noto Serif Display", serif;
+  color: #3C3421;
+  font-size: 1.25rem; 
+  line-height: 1.25;
+}
+
+/* ================= INFO SECTION ================= */
+.infoBox {
+  max-width: 1100px !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+
+  max-width: 900px;
+  margin: 2.5rem auto 0 auto;
+}
+
+/* Individual card */
+.infoCard {
+  text-align: center;
+}
+
+/* Icon styling */
+.infoIcon {
+  height: 150px;
+  margin-bottom: 1.2rem;
+  opacity: 100;
+}
+
+/* Card title */
+.infoCardTitle {
+  font-family: "Noto Serif Display", serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.06em;
+  color: #3C3421;
+  margin-bottom: 0.75rem;
+}
+
+/* Card text */
+.infoCardText {
+  font-family: "Tenor Sans", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-top: 0.75rem;
+  color: #3C3421;
+}
+
+
+/* ================= Q&A ================= */
+.qaBox {
+  max-width: 1100px !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.qaGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+
+  max-width: 900px;
+  margin: 2.5rem auto 0 auto;
+}
+
+/* Individual card */
+.qaCard {
+  text-align: center;
+}
+
+.qaIcon {
+  height: 150px;
+  margin-bottom: 1.2rem;
+  opacity: 100;
+}
+
+/* Card title */
+.qaCardTitle {
+  font-family: "Noto Serif Display", serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.06em;
+  color: #3C3421;
+  margin-bottom: 0.75rem;
+}
+
+/* Card text */
+.qaCardText {
+  font-family: "Tenor Sans", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-top: 0.75rem;
+  color: #3C3421;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  .contentBox--schedule {
+    grid-template-columns: 1fr;
+  }
+
+  .scheduleLeft {
+    text-align: center;
+  }
+
+  .scheduleImg {
+    max-width: 85%;
+    margin: 1.5rem auto;
+  }
+
+  .scheduleRight {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .scheduleLines {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .scheduleRow2 {
+    grid-template-columns: 90px 1fr;
+    gap: 1.25rem;
+  }
+
+  .scheduleLabel2 {
+    font-size: 1.1rem;
+    text-align: left;
+  }
+
+  .infoGrid {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    gap: 1.75rem;
+  }
+
+  .infoBox {
+    padding: 2rem 1.5rem;
+  }
+
 }

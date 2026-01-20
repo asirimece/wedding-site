@@ -27,6 +27,7 @@ export const content = {
       background: "/backgrounds/schedule-bg.png",
       img: "/photos/schedule-img.png",
       title: "UNSER HOCHZEITSTAG",
+      subtitle: "06. Juni 2026",
       items: [
         { time: "2:45 PM", label: "Ankunft & Welcome Drinks" },
         { time: "3:30 PM", label: "Zeremonie" },
@@ -36,10 +37,25 @@ export const content = {
     },
 
     info: {
-      background: "/backgrounds/info-bg.png",
       title: "EIN PAAR INFOS...",
-      subtitle: " ",
-      text: " ",
+      background: "/backgrounds/info-bg.jpg",
+      items: [
+        {
+          icon: "/icons/location.png",
+          title: "Die Hochzeitslocation",
+          text: "Hier möchten wir mit euch anstoßen, lachen und unvergessliche Momente erleben. Damit ihr leicht dorthin findet, hier die Adresse:\n Domaine des Jardins de Campagne, 30100 Nîmes (siehe googlemaps) auf dem Gelände der steht euch ein großer Parkplatz kostenlos zur Verfügung."
+        },
+        {
+          icon: "/icons/drink.png",
+          title: "Dress Code",
+          text: "Das Wichtigste: Ihr fühlt euch wohl und genießt den Tag mit uns.\nHelle Farben und leichte Stoffe passen perfekt zur Location. Für den Abend kann eine leichte Weste angenehm sein. Unser Farb‑Schema (ihr müsst euch nicht daran halten):"
+        },
+        {
+          icon: "/icons/gift.png",
+          title: "Geschenke",
+          text: "Eure Anwesenheit ist unser größtes Geschenk. Falls ihr uns dennoch etwas schenken möchtet, freuen wir uns über einen Beitrag zu unseren Flitterwochen."
+        },
+      ],
     },
 
     qa: {
@@ -48,6 +64,23 @@ export const content = {
       title: "HÄUFIG GESTELLTEN FRAGEN",
       subtitle: " ",
       text: " ",
+      items: [
+        {
+          icon: "/icons/kid.png",
+          title: "Können wir Kinder mitnehmen?",
+          text: "Wir möchten die gemeinsame Zeit mit unseren Freunden und unserer Familie in einer entspannten Atmosphäre voll auskosten. Unsere Feier ist daher ohne Kinder geplant. Solltet ihr eine besondere Situation haben, meldet euch gern direkt bei uns – wir finden gemeinsam eine Lösung."
+        },
+        {
+          icon: "/icons/surprise.png",
+          title: "Überraschung geplant?",
+          text: "Wie schön! Damit alles gut in den Ablauf passt, meldet euch bitte kurz bei unserer Ansprechperson – so bleibt die Überraschung (z.B. Rede, Spiel, etc.) für uns erhalten und lässt sich ideal einplanen.\n Johanna (DE): +49 xxx x xx x \n Aurélien (FR): +41 76 445 32 86"
+        },
+        {
+          icon: "/icons/hotel.png",
+          title: "Unterkunft",
+          text: "Ihr könnt selbstverständlich die Unterkunft wählen, die am besten zu euch passt.\n Damit ihr euch leichter orientieren könnt, haben wir zwei Empfehlungen vorbereitet – ein Hotel und eine Übernachtungsmöglichkeit direkt vor Ort.\n Für alle, die die Region weiter erkunden möchten, gibt es außerdem einen kleinen Guide mit zusätzlichen Tipps."
+        },
+      ],
     },
 
     tent: {

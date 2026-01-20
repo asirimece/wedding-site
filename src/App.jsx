@@ -39,7 +39,7 @@ export default function App() {
 
           <div className="heroText">
             <p className="heroSubtitle">{t.hero.subtitle}</p>
-            <h1 className="heroTitle">{t.hero.title}</h1>
+            <h1 className="heroTitle nowrap-desktop">{t.hero.title}</h1>
           </div>
 
             <img
@@ -53,7 +53,6 @@ export default function App() {
 
 
         {/* ================= SEIT ================= */}
-
         <Section
           id="seit"
           style={{ backgroundImage: `url(${t.seit.background})` }}
@@ -68,86 +67,128 @@ export default function App() {
 
 
         {/* ================= SCHEDULE ================= */}
-
         <Section
           id="schedule"
-          style={{
-            backgroundImage: `url(${t.schedule.background})`,
-          }}
+          style={{ backgroundImage: `url(${t.schedule.background})` }}
         >
-          <div className="contentBox">
+          <div className="contentBox contentBox--split contentBox--schedule">
 
-            <h2>{t.schedule.title}</h2>
+            {/* LEFT column: title + subtitle + image */}
+            <div className="splitLeft scheduleLeft">
+              <h2 className="sectionTitle scheduleTitle nowrap-desktop">{t.schedule.title}</h2>
+              {t.schedule.subtitle && (
+                <p className="sectionSubtitle scheduleSubtitle">{t.schedule.subtitle}</p>
+              )}
 
-            {t.schedule.items.map((item, i) => (
-              <div key={i} className="scheduleRow">
-                <span>{item.time}</span>
-                <span>{item.label}</span>
+              <img src={t.schedule.img} alt="" className="scheduleImg" />
+            </div>
+
+            {/* RIGHT column: schedule list */}
+            <div className="splitRight scheduleRight">
+              <div className="scheduleLines">
+                {t.schedule.items.map((item, i) => (
+                  <div key={i} className="scheduleRow2">
+                    <div className="scheduleTime2">{item.time}</div>
+                    <div className="scheduleLabel2">{item.label}</div>
+                  </div>
+                ))}
               </div>
-            ))}
-
-            <img
-              src={t.schedule.img}
-              alt="Img"
-              className="scheduleImg"
-            />
+            </div>
 
           </div>
         </Section>
 
     
         {/* ================= INFO ================= */}
-
         <Section
           id="info"
           style={{
-            backgroundImage: `url(${t.info.background})`,
+            backgroundImage: `url(${t.qa.background})`, /* BG NOT WORKING?? */
           }}
         >
-          <div className="contentBox">
+          <div className="contentBox infoBox">
 
-          <div className="infoText">
-            <p className="infoSubtitle">{t.info.subtitle}</p>
-            <h1 className="infoTitle">{t.info.title}</h1>
-          </div>
+            <h2 className="sectionTitle">{t.info.title}</h2>
+
+            <div className="infoGrid">
+
+              {t.info.items.map((item, i) => (
+                <div key={i} className="infoCard">
+
+                  <img
+                    src={item.icon}
+                    alt=""
+                    className="infoIcon"
+                  />
+
+                  <h3 className="infoCardTitle">{item.title}</h3>
+                  <p className="infoCardText">{item.text}</p>
+
+                </div>
+              ))}
+
+            </div>
 
           </div>
         </Section>
 
 
         {/* ================= Q&A ================= */}
-
         <Section
           id="qa"
           style={{
             backgroundImage: `url(${t.qa.background})`,
           }}
         >
-          <div className="contentBox">
+          <div className="contentBox qaBox">
 
-          <div className="qaText">
-            <p className="qaSubtitle">{t.qa.subtitle}</p>
-            <h1 className="qaTitle">{t.qa.title}</h1>
-          </div>
+            <h2 className="sectionTitle">{t.qa.title}</h2>
+
+            <div className="qaGrid">
+
+              {t.qa.items.map((item, i) => (
+                <div key={i} className="qaCard">
+
+                  <img
+                    src={item.icon}
+                    alt=""
+                    className="qaIcon"
+                  />
+
+                  <h3 className="qaCardTitle">{item.title}</h3>
+                  <p className="qaCardText">{item.text}</p>
+
+                </div>
+              ))}
+
+            </div>
 
           </div>
         </Section>
 
 
         {/* ================= TENT ================= */}
-
         <Section
           id="tent"
-          style={{
-            backgroundImage: `url(${t.tent.background})`,
-          }}
+          style={{ backgroundImage: `url(${t.tent.background})` }}
         >
-          <div className="contentBox">
+          <div className="contentBox contentBox--split contentBox--schedule">
 
-          <div className="tentText">
-            <p className="tentSubtitle">{t.tent.subtitle}</p>
-            <h1 className="tentTitle">{t.tent.title}</h1>
-          </div>
+            {/* LEFT column: title + subtitle + image */}
+            <div className="splitLeft scheduleLeft">
+              <h2 className="sectionTitle scheduleTitle nowrap-desktop">{t.tent.title}</h2>
+              <p className="sectionSubtitle scheduleSubtitle">{t.tent.subtitle}</p>
+
+              <img src={t.tent.img} alt="" className="tentImg" />
+            </div>
+
+            {/* RIGHT column: schedule list */}
+            <div className="splitRight scheduleRight">
+              <div className="tentText">
+                <p className="tentSubtitle">{t.tent.subtitle}</p>
+                <h1 className="tentTitle nowrap-desktop">{t.tent.title}</h1>
+              </div>
+            </div>
 
           </div>
         </Section>
@@ -165,7 +206,7 @@ export default function App() {
 
           <div className="hotelText">
             <p className="hotelSubtitle">{t.hotel.subtitle}</p>
-            <h1 className="hotelTitle">{t.hotel.title}</h1>
+            <h1 className="hotelTitle nowrap-desktop">{t.hotel.title}</h1>
           </div>
 
           </div>
