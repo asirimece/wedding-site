@@ -6,12 +6,6 @@
   background-repeat: no-repeat;
 }
 
-/* Desktop: reduce zoom slightly (show more image) */
-@media (min-width: 769px) {
-  .section--hero {
-    background-size: 110%;
-  }
-}
 
 /* Mobile: full cover */
 @media (max-width: 768px) {
@@ -40,7 +34,7 @@
 .heroWrapper {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   z-index: 3;
 }
 
@@ -74,38 +68,27 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-
-  height: clamp(520px, 82vh, 920px);
-  width: auto;
+  width: 80%;
   max-width: 96vw;
+  height: auto;
 
   object-fit: contain;
   z-index: 4;
   pointer-events: none;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 640px) {
   .heroCouple {
-    height: clamp(640px, 88vh, 1100px);
-    max-width: 92vw;
-    bottom: -1%;
-  }
-}
-
-@media (max-width: 768px) {
-  .heroCouple {
-    height: clamp(420px, 72vh, 680px);
-    max-width: 100vw;
-    bottom: -1%;
+    height: 75%;
+    width: auto;
   }
 }
 
 
 /* ================= SEIT ================= */
 .seitBox {
-  display: grid;
+  display: flex;
   grid-template-columns: 1.1fr 0.9fr;
-  gap: 3rem;
   max-width: 1100px;
 }
 
@@ -118,6 +101,7 @@
 
 .seitLeft {
   text-align: center;
+  flex-direction: column;
 }
 
 .seitRight img {
@@ -129,7 +113,8 @@
 .seitTitle,
 .scheduleTitle,
 .infoTitle,
-.qaTitle {
+.qaTitle,
+.tentTitle {
   font-family: "Noto Serif Display", serif;
   font-size: clamp(2.8rem, 6vw, 5rem);
   letter-spacing: 0.12em;
@@ -148,29 +133,24 @@
 }
 
 /* ================= SCHEDULE ================= */
-.contentBox--schedule {
-  align-items: left;
+.contentBox--schedule{
+  display: flex;
 }
 
-/* LEFT COLUMN */
 .scheduleLeft {
+  display: flex;
   text-align: left;
+  flex-direction: column;
 }
 
-.scheduleImg {
+.scheduleImg,
+.tentImg {
   width: 100%;
   max-width: 340px;
   height: auto;
   margin-top: 3rem;
-  border-radius: 12px;
-  display: block;
-
-  margin-left: 0;
-  margin-right: 0;
 }
 
-
-/* RIGHT COLUMN */
 .scheduleRight {
   display: flex;
   align-items: center;
@@ -194,7 +174,7 @@
   font-family: "Tenor Sans", sans-serif;
   letter-spacing: 0.12em;
   color: #3C3421;
-  font-size: 1.05rem; 
+  font-size: 1.25rem; 
 }
 
 .scheduleLabel2 {
@@ -202,62 +182,18 @@
   color: #3C3421;
   font-size: 1.25rem; 
   line-height: 1.25;
+  text-align: left;
 }
 
-/* ================= INFO SECTION ================= */
-.infoBox {
-  max-width: 1100px !important;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.infoGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem;
-
-  max-width: 900px;
-  margin: 2.5rem auto 0 auto;
-}
-
-/* Individual card */
-.infoCard {
-  text-align: center;
-}
-
-/* Icon styling */
-.infoIcon {
-  height: 150px;
-  margin-bottom: 1.2rem;
-  opacity: 100;
-}
-
-/* Card title */
-.infoCardTitle {
-  font-family: "Noto Serif Display", serif;
-  font-size: 1.2rem;
-  letter-spacing: 0.06em;
-  color: #3C3421;
-  margin-bottom: 0.75rem;
-}
-
-/* Card text */
-.infoCardText {
-  font-family: "Tenor Sans", sans-serif;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin-top: 0.75rem;
-  color: #3C3421;
-}
-
-
-/* ================= Q&A ================= */
+/* ================= INFO, Q&A ================= */
+.infoBox,
 .qaBox {
   max-width: 1100px !important;
   margin-left: auto;
   margin-right: auto;
 }
 
+.infoGrid,
 .qaGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -268,10 +204,16 @@
 }
 
 /* Individual card */
+.infoCard,
 .qaCard {
-  text-align: center;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* Icon styling */
+.infoIcon,
 .qaIcon {
   height: 150px;
   margin-bottom: 1.2rem;
@@ -279,29 +221,102 @@
 }
 
 /* Card title */
+.infoCardTitle,
 .qaCardTitle {
   font-family: "Noto Serif Display", serif;
   font-size: 1.2rem;
   letter-spacing: 0.06em;
   color: #3C3421;
   margin-bottom: 0.75rem;
+  text-align: center;
 }
 
-/* Card text */
+.infoCardText,
 .qaCardText {
   font-family: "Tenor Sans", sans-serif;
   font-size: 0.95rem;
   line-height: 1.6;
   margin-top: 0.75rem;
   color: #3C3421;
+  white-space: pre-line;
 }
+
+.infoLink,
+.qaLink {
+  text-decoration: underline;
+}
+
+/* ================= TENT ================= */
+.contentBox--tent,
+.contentBox--hotel {
+  display: flex;
+  flex-direction: column;
+}
+
+.tentHeader,
+.hotelHeader {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.tentBody,
+.hotelBody {
+  display: flex;
+  flex-direction: row;
+}
+
+.tentLeft,
+.hotelLeft {
+  flex: 0 0 42%;
+  text-align: left;
+}
+
+.tentImg,
+.hotelImg {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  margin-top: 1.5rem;
+}
+
+.tentRight,
+.hotelRight {
+  flex: 0 0 58%;
+  text-align: left;
+  white-space: pre-line;
+}
+
+.tentBlockTitle,
+.hotelBlockTitle {
+  font-family: "Noto Serif Display", serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.06em;
+  color: #3C3421;
+  margin-bottom: 0.75rem;
+  text-align: left;
+}
+
+.tentBlockText,
+.hotelBlockText {
+  font-family: "Tenor Sans", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-top: 0.75rem;
+  color: #3C3421;
+  white-space: pre-line;
+  margin-bottom: 0.75rem;
+}
+
+.tentImageText,
+.hotelImageText {
+  font-style: italic;
+  opacity: 0.75;
+  margin-top: 0.75rem;
+}
+
 
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
-
-  .contentBox--schedule {
-    grid-template-columns: 1fr;
-  }
 
   .scheduleLeft {
     text-align: center;
@@ -309,7 +324,6 @@
 
   .scheduleImg {
     max-width: 85%;
-    margin: 1.5rem auto;
   }
 
   .scheduleRight {
@@ -317,6 +331,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    margin-left: 0;
   }
 
   .scheduleLines {
@@ -330,18 +345,65 @@
   }
 
   .scheduleLabel2 {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     text-align: left;
   }
 
-  .infoGrid {
+  .infoGrid,
+  .qaGrid {
     grid-template-columns: 1fr;
     max-width: 100%;
     gap: 1.75rem;
   }
 
-  .infoBox {
+  .infoBox,
+  .qaBox {
     padding: 2rem 1.5rem;
   }
 
+  .contentBox--tent {
+    flex-direction: column;
+  }
+
+  .tentLeft,
+  .tentRight {
+    flex: 1 1 auto;
+    width: 100%;
+    text-align: center;
+  }
+
+  .tentImg {
+    margin-top: 0;
+  }
+
+  .tentImageText {
+    text-align: left;
+    margin-bottom: 1.5rem;
+  }
+
+  .tentHeader {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .tentBody {
+    flex-direction: column;
+
+  }
+
+  .tentBlock {
+    margin-bottom: 0.75rem;
+    text-align: justify;
+  }
+
+  .scheduleTime2 {
+    font-size: 1rem; 
+  }
+
+  .scheduleLabel2 {
+    font-size: 1rem; 
+  }
+
+  
 }
+

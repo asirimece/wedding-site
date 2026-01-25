@@ -18,9 +18,6 @@ export default function App() {
   return (
     <div className="page">
 
-      {/* Floating navigation dots / menu */}
-      <SectionNav items={t.navItems.filter(i => i.href !== "#top")} />
-
       <main className="main">
 
         {/* ================= HERO ================= */}
@@ -103,7 +100,7 @@ export default function App() {
         <Section
           id="info"
           style={{
-            backgroundImage: `url(${t.qa.background})`, /* BG NOT WORKING?? */
+            backgroundImage: `url(${t.info.background})`, /* BG NOT WORKING?? */
           }}
         >
           <div className="contentBox infoBox">
@@ -122,8 +119,28 @@ export default function App() {
                   />
 
                   <h3 className="infoCardTitle">{item.title}</h3>
-                  <p className="infoCardText">{item.text}</p>
-
+                  <p className="infoCardText">
+                    {item.text.split("{{MAP}}").map((part, idx) => (
+                      <span key={idx}>
+                        {part}
+                        {idx === 0 && item.mapUrl && (
+                          <>
+                            {" "}
+                            (
+                            <a
+                              href={item.mapUrl}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="infoLink"
+                            >
+                              siehe Google Maps
+                            </a>
+                            ){" "}
+                          </>
+                        )}
+                      </span>
+                    ))}
+                  </p>
                 </div>
               ))}
 
@@ -157,7 +174,6 @@ export default function App() {
 
                   <h3 className="qaCardTitle">{item.title}</h3>
                   <p className="qaCardText">{item.text}</p>
-
                 </div>
               ))}
 
@@ -172,22 +188,63 @@ export default function App() {
           id="tent"
           style={{ backgroundImage: `url(${t.tent.background})` }}
         >
-          <div className="contentBox contentBox--split contentBox--schedule">
+          <div className="contentBox contentBox--tent">
 
-            {/* LEFT column: title + subtitle + image */}
-            <div className="splitLeft scheduleLeft">
-              <h2 className="sectionTitle scheduleTitle nowrap-desktop">{t.tent.title}</h2>
-              <p className="sectionSubtitle scheduleSubtitle">{t.tent.subtitle}</p>
-
-              <img src={t.tent.img} alt="" className="tentImg" />
+            {/* FULL WIDTH HEADER */}
+            <div className="tentHeader">
+              <h2 className="sectionTitle">{t.tent.title}</h2>
+              <p className="sectionSubtitle tentSubtitle">
+                {t.tent.subtitle}
+              </p>
             </div>
 
-            {/* RIGHT column: schedule list */}
-            <div className="splitRight scheduleRight">
-              <div className="tentText">
-                <p className="tentSubtitle">{t.tent.subtitle}</p>
-                <h1 className="tentTitle nowrap-desktop">{t.tent.title}</h1>
+            {/* SPLIT CONTENT */}
+            <div className="tentBody">
+
+              <div className="splitLeft tentLeft">
+                <img src={t.tent.img} alt="" className="tentImg" />
+                  {t.tent.imageText && (
+                    <p className="tentImageText">
+                      {t.tent.imageText.split("{{BROCHURE}}").map((part, idx) => (
+                        <span key={idx}>
+                          {part}
+                          {idx === 0 && t.tent.brochureUrl && (
+                            <a
+                              href={t.tent.brochureUrl}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="tentBrochureLink"
+                            >
+                            Broschüre
+                            </a>
+                          )}
+                        </span>
+                      ))}
+                    </p>
+                  )}
               </div>
+              
+              <div className="splitRight tentRight">
+                <div className="tentContent">
+
+                {t.tent.blocks.map((block, i) => (
+                  <div key={i} className="tentBlock">
+
+                    <h3 className="tentBlockTitle">
+                      {block.subtitle}
+                    </h3>
+
+                    <p className="tentBlockText">
+                      {block.text}
+                    </p>
+
+                  </div>
+                ))}
+
+              </div>
+
+              </div>
+
             </div>
 
           </div>
@@ -195,23 +252,72 @@ export default function App() {
 
 
         {/* ================= HOTEL ================= */}
-
         <Section
           id="hotel"
-          style={{
-            backgroundImage: `url(${t.hotel.background})`,
-          }}
+          style={{ backgroundImage: `url(${t.hotel.background})` }}
         >
-          <div className="contentBox">
+          <div className="contentBox contentBox--hotel">
 
-          <div className="hotelText">
-            <p className="hotelSubtitle">{t.hotel.subtitle}</p>
-            <h1 className="hotelTitle nowrap-desktop">{t.hotel.title}</h1>
-          </div>
+            {/* FULL WIDTH HEADER */}
+            <div className="hotelHeader">
+              <h2 className="sectionTitle">{t.hotel.title}</h2>
+              <p className="sectionSubtitle hotelSubtitle">
+                {t.hotel.subtitle}
+              </p>
+            </div>
+
+            {/* SPLIT CONTENT */}
+            <div className="hotelBody">
+
+              <div className="splitLeft hotelLeft">
+                <img src={t.hotel.img} alt="" className="hotelImg" />
+                  {t.hotel.imageText && (
+                    <p className="hotelImageText">
+                      {t.hotel.imageText.split("{{URL}}").map((part, idx) => (
+                        <span key={idx}>
+                          {part}
+                          {idx === 0 && t.hotel.hotelUrl && (
+                            <a
+                              href={t.hotel.hotelUrl}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="hotelLink"
+                            >
+                            www.hotel-marquis-de-la-baume.com
+                            </a>
+                          )}
+                        </span>
+                      ))}
+                    </p>
+                  )}
+              </div>
+              
+              <div className="splitRight hotelRight">
+                <div className="hotelContent">
+
+                {t.hotel.blocks.map((block, i) => (
+                  <div key={i} className="hotelBlock">
+
+                    <h3 className="hotelBlockTitle">
+                      {block.subtitle}
+                    </h3>
+
+                    <p className="hotelBlockText">
+                      {block.text}
+                    </p>
+
+                  </div>
+                ))}
+
+              </div>
+
+              </div>
+
+            </div>
 
           </div>
         </Section>
-        
+
 
         {/* ================= RSVP ================= */}
   
@@ -237,33 +343,7 @@ export default function App() {
   
             </div>
           </Section>
-        
-
-        {/* ================= VENUE ================= */}
-
-        <Section
-          id="venue"
-          style={{
-            backgroundImage: `url(${t.venue.background})`,
-          }}
-        >
-          <div className="contentBox">
-
-            <h2>{t.venue.title}</h2>
-            <p>{t.venue.text}</p>
-
-            <a
-              className="primaryButton"
-              href={t.venue.mapLink}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Open in Google Maps
-            </a>
-
-          </div>
-        </Section>
-
+      
 
 
 
