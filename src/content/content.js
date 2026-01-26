@@ -1,5 +1,5 @@
 export const content = {
-  en: {
+  de: {
 
     navItems: [
       { label: "Top", href: "#top" },
@@ -12,7 +12,7 @@ export const content = {
       background: "/backgrounds/hero-bg.png",
       couple: "/photos/hero.png",
       title: "NORA & ROMAIN",
-      subtitle: "6 JUNI 2026, Nîmes, Frankreich",
+      subtitle: "6 JUNI 2026 IN NÎMES, FRANKREICH",
     },
 
     seit: {
@@ -86,7 +86,13 @@ export const content = {
 
     tent: {
       background: "/backgrounds/tent-bg.png",
-      img: "/photos/tent-img.png",
+      images: [
+        "/photos/tent-img-1.png",
+        "/photos/tent-img-2.png",
+        "/photos/tent-img-3.png",
+        "/photos/tent-img-4.png",
+        "/photos/tent-img-5.png",
+      ],
       title: "LES TENTES DU BONHEUR",
       subtitle: "Unser Vorschlag für alle Gäste, die “sous les étoiles” übernachten möchten",
       imageText: "Mehr Infos & Fotos findet ihr in dieser {{BROCHURE}}.",
@@ -139,5 +145,186 @@ export const content = {
       text: "Château de Villary, 30900 Nîmes, France",
       mapLink: "https://www.google.com/maps?q=Château+de+Villary",
     }, 
-  }
+  },
+
+  fr: {
+
+  navItems: [
+    { label: "Accueil", href: "#top" },
+    { label: "Programme", href: "#schedule" },
+    { label: "Lieu", href: "#venue" },
+    { label: "RSVP", href: "#rsvp" },
+  ],
+
+  hero: {
+    background: "/backgrounds/hero-bg.png",
+    couple: "/photos/hero.png",
+    title: "NORA & ROMAIN",
+    subtitle: "6 JUIN 2026, Nîmes, France",
+  },
+
+  seit: {
+    background: "/backgrounds/seit-bg.png",
+    couple: "/photos/seit.png",
+    title: "COMMENT TOUT A COMMENCÉ",
+    subtitle: "DEPUIS 2012",
+    text:
+      "Nous nous sommes rencontrés en août 2012 sur une piste de danse à Barcelone – un moment inattendu qui a tout changé.\n" +
+      "Depuis, nous avons dansé, ri et trouvé ensemble notre chemin, toujours un peu plus proches.\n" +
+      "Aujourd’hui, nous sommes impatients de célébrer avec vous cette nouvelle étape de notre vie.",
+  },
+
+  schedule: {
+    background: "/backgrounds/schedule-bg.png",
+    img: "/photos/schedule-img.png",
+    title: "NOTRE JOUR DE MARIAGE",
+    subtitle: "06 Juin 2026",
+    items: [
+      { time: "2:45 PM", label: "Arrivée & cocktail d’accueil" },
+      { time: "3:30 PM", label: "Cérémonie" },
+      { time: "4:30 PM", label: "Apéritif & photos" },
+      { time: "7:00 PM", label: "Dîner & soirée" },
+    ],
+  },
+
+  info: {
+    title: "QUELQUES INFOS...",
+    background: "/backgrounds/info-bg.png",
+    items: [
+      {
+        icon: "/icons/location.gif",
+        title: "Le lieu du mariage",
+        text:
+          "C’est ici que nous trinquerons, rirons et partagerons ensemble des moments inoubliables.\n" +
+          "Pour vous y rendre facilement, voici l’adresse :\n" +
+          "Domaine des Jardins de Campagne, 30100 Nîmes\n" +
+          "{{MAP}}Un grand parking gratuit est disponible sur place.",
+        mapUrl: "https://maps.google.com/?q=Domaine+des+Jardins+de+Campagne+30100+Nîmes"
+      },
+      {
+        icon: "/icons/drink.gif",
+        title: "Dress code",
+        text:
+          "L’essentiel : que vous vous sentiez à l’aise et profitiez pleinement de la journée avec nous.\n" +
+          "Les couleurs claires et les tissus légers s’accordent parfaitement avec le lieu.\n" +
+          "Pour la soirée, une petite veste peut être utile. Notre palette de couleurs (sans obligation) :"
+      },
+      {
+        icon: "/icons/gift.gif",
+        title: "Cadeaux",
+        text:
+          "Votre présence est le plus beau des cadeaux.\n" +
+          "Si vous souhaitez tout de même nous offrir quelque chose, une contribution à notre voyage de noces nous ferait très plaisir."
+      },
+    ],
+  },
+
+  qa: {
+    background: "/backgrounds/qa-bg.png",
+    img: "/photos/qa-img.png",
+    title: "QUESTIONS FRÉQUENTES",
+    subtitle: " ",
+    text: " ",
+    items: [
+      {
+        icon: "/icons/kid.gif",
+        title: "Les enfants sont-ils invités ?",
+        text:
+          "Nous souhaitons profiter pleinement de ce moment avec nos amis et notre famille dans une atmosphère détendue.\n" +
+          "La célébration se fera donc sans enfants.\n" +
+          "Si vous avez une situation particulière, n’hésitez pas à nous contacter — nous trouverons ensemble une solution."
+      },
+      {
+        icon: "/icons/surprise.gif",
+        title: "Vous préparez une surprise ?",
+        text:
+          "Quelle belle attention !\n" +
+          "Afin que tout s’intègre parfaitement au déroulement de la journée, merci de contacter notre personne de référence.\n" +
+          "Johanna (DE) : +49 xxx x xx x\n" +
+          "Aurélien (FR) : +41 76 445 32 86"
+      },
+      {
+        icon: "/icons/hotel.gif",
+        title: "Hébergement",
+        text:
+          "Vous êtes libres de choisir l’hébergement qui vous convient le mieux.\n" +
+          "Pour vous faciliter la tâche, nous avons préparé deux recommandations : un hôtel et une possibilité de logement directement sur place.\n" +
+          "Pour celles et ceux qui souhaitent explorer davantage la région, un petit guide avec des conseils supplémentaires sera également disponible."
+      },
+    ],
+  },
+
+  tent: {
+    background: "/backgrounds/tent-bg.png",
+    img: "/photos/tent-img.png",
+    title: "LES TENTES DU BONHEUR",
+    subtitle: "Notre suggestion pour les invités souhaitant dormir « sous les étoiles »",
+    imageText: "Plus d’informations et de photos dans cette {{BROCHURE}}.",
+    brochureUrl: "/pdfs/tent-brochure.pdf",
+
+    blocks: [
+      {
+        subtitle: "De quoi s’agit-il ?",
+        text:
+          "Pour les invités souhaitant séjourner sur place du vendredi 5 juin au dimanche 7 juin, nous proposons de magnifiques tipis installés dans le jardin.\n" +
+          "Les « tentes premium » se trouvent directement sur le domaine et donnent accès à des douches et toilettes partagées.\n" +
+          "La piscine et le jardin peuvent être utilisés librement pendant le séjour."
+      },
+      {
+        subtitle: "Prix",
+        text:
+          "Le prix est de 350 € pour 2 nuits pour 2 personnes (petit-déjeuner inclus)."
+      },
+      {
+        subtitle: "Réservation",
+        text:
+          "La réservation se fait directement auprès du prestataire.\n" +
+          "Merci de contacter : lestentesdubonheuratxxxxx.com\n" +
+          "Important : n’oubliez pas d’indiquer la référence « Nora&Romain 2026 »."
+      }
+    ]
+  },
+
+  hotel: {
+    background: "/backgrounds/hotel-bg.png",
+    img: "/photos/hotel-img.png",
+    title: "BEST WESTERN — MARQUIS DE LA BAUME",
+    subtitle: "Pour les invités préférant séjourner à l’hôtel",
+    imageText: "Plus d’informations sur : {{URL}}",
+    hotelUrl: "www.hotel-marquis-de-la-baume.com",
+
+    blocks: [
+      {
+        subtitle: "Réservation",
+        text:
+          "La réservation se fait directement auprès de l’hôtel.\n" +
+          "Pour les disponibilités et tarifs, merci de contacter le Marquis de la Baume.\n" +
+          "Avec le code « Romain&Nora 2026 », vous bénéficiez d’un tarif préférentiel selon les dates et catégories de chambre."
+      },
+      {
+        subtitle: "Informations sur l’hôtel",
+        text:
+          "Nous recommandons le Best Western Marquis de la Baume pour les invités souhaitant un hébergement confortable.\n" +
+          "Cet hôtel 4 étoiles plein de charme est situé dans un bâtiment historique du XVIIe siècle au cœur du centre-ville de Nîmes.\n" +
+          "Il se trouve à environ 15 km du lieu de réception et constitue un excellent point de départ pour découvrir la ville."
+      }
+    ]
+  },
+
+  rsvp: {
+    background: "/backgrounds/rsvp-bg.png",
+    title: "RSVP",
+    text: "MERCI DE RÉPONDRE AVANT LE 28 FÉVRIER 2026 — VIA LE LIEN CI-DESSOUS",
+    formLink: "https://example.com/rsvp",
+  },
+
+  venue: {
+    background: "/backgrounds/venue-bg.png",
+    title: "Lieu",
+    text: "Château de Villary, 30900 Nîmes, France",
+    mapLink: "https://www.google.com/maps?q=Château+de+Villary",
+  },
+
+}
+
 };

@@ -1,17 +1,17 @@
 import { useState, useEffect } from "react";
 
-const PASSWORD = "wedding2026"; // CHANGE THIS
+const PASSWORD = "N&R26";
 
 const TEXT = {
   de: {
-    title: "Die Hochzeit von Nora & Romain",
+    title: "Die Hochzeit von Nora\u00A0&\u00A0Romain",
     subtitle: "Bitte Passwort eingeben",
     placeholder: "Passwort",
     button: "Eintreten",
     error: "Falsches Passwort"
   },
   fr: {
-    title: "Le Mariage de Nora & Romain",
+    title: "Le Mariage de Nora\u00A0&\u00A0Romain",
     subtitle: "Veuillez entrer le mot de passe",
     placeholder: "Mot de passe",
     button: "Entrer",

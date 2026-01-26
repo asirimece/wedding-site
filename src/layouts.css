@@ -1,8 +1,125 @@
+/* ===== TENT SLIDER LAYOUT ===== */
+
+.tentSlider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tentArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+  border: none;
+
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(6px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  z-index: 5;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+
+  transition: all 0.2s ease;
+}
+
+.tentArrow:hover {
+  background: rgba(255,255,255,0.85);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.tentArrow svg {
+  width: 16px;
+  height: 16px;
+  stroke: #3C3421;
+  stroke-width: 2.2;
+}
+
+
+.tentArrow.left {
+  left: -12px;
+}
+
+.tentArrow.right {
+  right: -12px;
+}
+
+/* Brochure link (shared text element) */
+
+.tentBrochureLink {
+  margin-left: 6px;
+  font-weight: 600;
+  text-decoration: underline;
+  color: #3C3421;
+}
+
+/* ================= LANGUAGE SWITCH ================= */
+
+.langSwitch {
+  position: fixed;
+  top: 22px;
+  right: 26px;
+  z-index: 999;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(6px);
+  padding: 8px 14px;
+  border-radius: 999px;
+}
+
+.langSwitch button {
+  background: none;
+  border: none;
+  font-family: "Tenor Sans", sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+  color: #3C3421;
+  opacity: 0.6;
+}
+
+.langSwitch button.active {
+  opacity: 1;
+  font-weight: 600;
+}
+
+.langDivider {
+  opacity: 0.4;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .langSwitch {
+    top: 14px;
+    right: 14px;
+    padding: 6px 12px;
+  }
+}
+
+
+/* ================= SECTIONS ================= */
+
+
 .sectionTitle {
   font-family: "Noto Serif Display", serif;
   font-size: clamp(1.6rem, 3vw, 2.4rem);
   letter-spacing: 0.08em;
   color: #3C3421;
+  text-align: center;
 }
 
 .sectionSubtitle {
@@ -24,7 +141,6 @@
   padding: 3rem;
   border-radius: 36px;
   margin: 3rem auto;
-  text-align: center;
   max-width: 1240px;
   width: 80%;
 }

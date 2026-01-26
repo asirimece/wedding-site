@@ -1,22 +1,57 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import "./sections.css";
 import "./layouts.css";
+import "./animations.css";
 import { content } from "./content/content";
 import { SectionNav } from "./components/SectionNav";
 import { Section } from "./components/Section";
 import { SplitLayout } from "./components/layouts/SplitLayout";
 import { TextLayout } from "./components/layouts/TextLayout";
+import { LanguageSwitch } from "./components/LanguageSwitch";
 
 export default function App() {
 
-  const [lang, setLang] = useState("en");
+  const [lang, setLang] = useState(() => {
+  return localStorage.getItem("lang") || "de";
+  });
+
+  useEffect(() => {
+    localStorage.setItem("lang", lang);
+  }, [lang]);
+
+  useEffect(() => {
+    document.documentElement.lang = lang;
+  }, [lang]);
 
   const t = useMemo(() => {
-    return content[lang] ?? content.en;
+    return {
+      ...content.de,
+      ...(content[lang] || {})
+    };
   }, [lang]);
+
+
+  const [tentIndex, setTentIndex] = useState(0);
+  const tentImages = useMemo(() => {
+    const arr = t?.tent?.images;
+    if (Array.isArray(arr) && arr.length) return arr;
+
+    const single = t?.tent?.img;
+    if (typeof single === "string" && single.length) return [single];
+
+    return [];
+  }, [t]);
+
+  /* Reset slider when language changes */
+  useEffect(() => {
+    setTentIndex(0);
+  }, [lang]);
+
 
   return (
     <div className="page">
+
+      <LanguageSwitch lang={lang} onChange={setLang} />
 
       <main className="main">
 
@@ -35,14 +70,14 @@ export default function App() {
           <div className="heroWrapper">
 
           <div className="heroText">
-            <p className="heroSubtitle">{t.hero.subtitle}</p>
-            <h1 className="heroTitle nowrap-desktop">{t.hero.title}</h1>
+            <p className="heroSubtitle animate-slide-up delay-1">{t.hero.subtitle}</p>
+            <h1 className="heroTitle nowrap-desktop animate-slide-up delay-2">{t.hero.title}</h1>
           </div>
 
             <img
               src={t.hero.couple}
               alt="Couple"
-              className="heroCouple"
+              className="heroCouple animate-slide-up-centered delay-3"
             />
 
           </div>
@@ -198,57 +233,106 @@ export default function App() {
               </p>
             </div>
 
-            {/* SPLIT CONTENT */}
+            {/* SPLIT BODY */}
             <div className="tentBody">
 
+              {/* LEFT SIDE — IMAGE + BROCHURE */}
               <div className="splitLeft tentLeft">
-                <img src={t.tent.img} alt="" className="tentImg" />
-                  {t.tent.imageText && (
-                    <p className="tentImageText">
-                      {t.tent.imageText.split("{{BROCHURE}}").map((part, idx) => (
-                        <span key={idx}>
-                          {part}
-                          {idx === 0 && t.tent.brochureUrl && (
+
+                {/* SLIDER */}
+                {tentImages.length > 0 && (
+                  <div className="tentSlider">
+
+                    {tentImages.length > 1 && (
+                      <button
+                        type="button"
+                        className="tentArrow left"
+                        onClick={() =>
+                          setTentIndex((prev) =>
+                            prev === 0 ? tentImages.length - 1 : prev - 1
+                          )
+                        }
+                        aria-label="Previous image"
+                      >
+                        ‹
+                      </button>
+                    )}
+
+                    <img
+                      src={tentImages[tentIndex]}
+                      alt=""
+                      className="tentImg"
+                    />
+
+                    {tentImages.length > 1 && (
+                      <button
+                        type="button"
+                        className="tentArrow right"
+                        onClick={() =>
+                          setTentIndex((prev) =>
+                            prev === tentImages.length - 1 ? 0 : prev + 1
+                          )
+                        }
+                        aria-label="Next image"
+                      >
+                        ›
+                      </button>
+                    )}
+
+                  </div>
+                )}
+
+                {/* BROCHURE TEXT */}
+                {t.tent.imageText && (
+                  <p className="tentImageText">
+                    {t.tent.imageText.split("{{BROCHURE}}").map((part, idx) => (
+                      <span key={idx}>
+                        {part}
+                        {idx === 0 && t.tent.brochureUrl && (
+                          <>
                             <a
                               href={t.tent.brochureUrl}
                               target="_blank"
                               rel="noreferrer"
                               className="tentBrochureLink"
                             >
-                            Broschüre
+                              Broschüre
                             </a>
-                          )}
-                        </span>
-                      ))}
-                    </p>
-                  )}
+                          </>
+                        )}
+                      </span>
+                    ))}
+                  </p>
+                )}
+
               </div>
-              
+
+              {/* RIGHT SIDE — TEXT BLOCKS */}
               <div className="splitRight tentRight">
                 <div className="tentContent">
 
-                {t.tent.blocks.map((block, i) => (
-                  <div key={i} className="tentBlock">
+                  {t.tent.blocks.map((block, i) => (
+                    <div key={i} className="tentBlock">
 
-                    <h3 className="tentBlockTitle">
-                      {block.subtitle}
-                    </h3>
+                      <h3 className="tentBlockTitle">
+                        {block.subtitle}
+                      </h3>
 
-                    <p className="tentBlockText">
-                      {block.text}
-                    </p>
+                      <p className="tentBlockText">
+                        {block.text}
+                      </p>
 
-                  </div>
-                ))}
+                    </div>
+                  ))}
 
-              </div>
-
+                </div>
               </div>
 
             </div>
 
           </div>
         </Section>
+
 
 
         {/* ================= HOTEL ================= */}
