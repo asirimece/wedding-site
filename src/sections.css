@@ -52,8 +52,7 @@
 .heroTitle {
   font-family: "Noto Serif Display", serif;
   font-size: clamp(3rem, 8vw, 8rem);
-  font-weight: 2000;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.06em;
   color: #3C3421;
 }
 
@@ -61,7 +60,6 @@
   font-family: "Tenor Sans", sans-serif;
   letter-spacing: 0.18em;
   margin-top: 30px;
-
   font-size: 1.5rem;
   color: #3C3421;
 }
@@ -81,40 +79,46 @@
 
 
 /* ================= SEIT ================= */
-.seitBox {
-  display: flex;
-  grid-template-columns: 1.1fr 0.9fr;
-  max-width: 1100px;
+.seitHeader {
+  text-align: center;
+  margin-bottom: 2.5rem;
 }
 
-@media (max-width: 768px) {
-  .seitBox {
-    gap: 1.25rem;
-    grid-template-columns: 1fr;
-  }
+.seitBody {
+  display: flex;
+  white-space: pre-line;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .seitLeft {
+  justify-content: center;
   text-align: center;
-  flex-direction: column;
-}
-
-.seitRight img {
   width: 100%;
-  height: auto;
 }
 
-/* ================= TITLES ================= */
-.seitTitle,
-.scheduleTitle,
-.infoTitle,
-.qaTitle,
-.tentTitle {
-  font-family: "Noto Serif Display", serif;
-  font-size: clamp(2.8rem, 6vw, 5rem);
-  letter-spacing: 0.12em;
-  color: #3C3421;
+.seitRight {
+  display: flex;
+  justify-content: center;
 }
+
+.seitText {
+  font-family: "Tenor Sans", sans-serif;
+  color: #3C3421;
+  line-height: 1.25;
+  justify-content: center;
+  font-size: 1.25rem; 
+}
+
+.seitImg {
+  width: 100%;
+  max-width: 420px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 14px;
+}
+
 
 /* ================= BUTTON ================= */
 .primaryButton {
@@ -130,6 +134,7 @@
 /* ================= SCHEDULE ================= */
 .contentBox--schedule{
   display: flex;
+  align-items: center;
 }
 
 .scheduleLeft {
@@ -149,58 +154,74 @@
 .scheduleRight {
   display: flex;
   align-items: center;
+  margin-top: 3rem;
 }
 
 .scheduleLines {
   width: 100%;
-  max-width: 520px;
+  max-width: 700px; 
   margin-top: 1.25rem;
 }
 
 .scheduleRow2 {
   display: grid;
   grid-template-columns: 110px 1fr;
-  gap: 1.75rem;
-  padding: 1.25rem 0;
+  gap: 2rem;
+  padding: 1.4rem 0;
   border-bottom: 1px solid rgba(60, 52, 33, 0.20);
+  width: 155%
 }
 
 .scheduleTime2 {
   font-family: "Tenor Sans", sans-serif;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.06em;
   color: #3C3421;
-  font-size: 1.25rem; 
+  font-size: 1.5rem; 
 }
 
 .scheduleLabel2 {
   font-family: "Noto Serif Display", serif;
   color: #3C3421;
-  font-size: 1.25rem; 
+  font-size: 1.3rem; 
   line-height: 1.25;
   text-align: left;
+  font-size: 1.5rem; 
 }
+
+.scheduleSubtext {
+  font-size: 1rem;
+  line-height: 1.45;
+  color: #3C3421;
+  font-family: "Tenor Sans", sans-serif;
+  white-space: nowrap;  
+  margin-left: 8.7rem;
+}
+
 
 /* ================= INFO, Q&A ================= */
 .infoBox,
-.qaBox {
+.qaBox,
+.reiseBox {
   max-width: 1100px !important;
   margin-left: auto;
   margin-right: auto;
 }
 
 .infoGrid,
-.qaGrid {
+.qaGrid,
+.reiseGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2.5rem;
-
   max-width: 900px;
-  margin: 2.5rem auto 0 auto;
+  margin: auto;
 }
 
 /* Individual card */
 .infoCard,
-.qaCard {
+.qaCard,
+.reiseCard {
+  margin-top: 2rem;
   text-align: justify;
   display: flex;
   flex-direction: column;
@@ -209,7 +230,8 @@
 
 /* Icon styling */
 .infoIcon,
-.qaIcon {
+.qaIcon,
+.reiseIcon {
   height: 150px;
   margin-bottom: 1.2rem;
   opacity: 100;
@@ -217,17 +239,25 @@
 
 /* Card title */
 .infoCardTitle,
-.qaCardTitle {
+.qaCardTitle,
+.reiseCardTitle {
   font-family: "Noto Serif Display", serif;
-  font-size: 1.2rem;
+  font-weight: 400;
+  font-size: 1.5rem;
   letter-spacing: 0.06em;
   color: #3C3421;
   margin-bottom: 0.75rem;
+}
+
+.infoTitle,
+.qaTitle,
+.reiseTitle {
   text-align: center;
 }
 
 .infoCardText,
-.qaCardText {
+.qaCardText,
+.reiseCardText {
   font-family: "Tenor Sans", sans-serif;
   font-size: 0.95rem;
   line-height: 1.6;
@@ -235,6 +265,21 @@
   color: #3C3421;
   white-space: pre-line;
 }
+
+.reiseBullets {
+  list-style: disc;
+  padding-left: 1.2rem;
+  margin-top: 0.4rem;
+  color: #3C3421;
+}
+
+.reiseBullets li {
+  font-family: "Tenor Sans", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 0.2rem;
+}
+
 
 .infoLink,
 .qaLink {
@@ -246,6 +291,20 @@
 .contentBox--hotel {
   display: flex;
   flex-direction: column;
+}
+
+/* Tent title line layout */
+
+.tentEntryHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.tentLine {
+  flex: 1;
+  height: 1px;
+  background: rgba(60, 52, 33, 0.35);
 }
 
 .tentHeader,
@@ -293,6 +352,8 @@
   text-align: left;
 }
 
+
+
 .tentBlockText,
 .hotelBlockText {
   font-family: "Tenor Sans", sans-serif;
@@ -305,12 +366,191 @@
 }
 
 .tentImageText,
-.hotelImageText {
+.hotelUrl {
   font-style: italic;
   opacity: 0.75;
   margin-top: 0.75rem;
+  color: #3C3421;
+  text-decoration: none;
 }
 
+/* ================= HOTEL ================= */
+
+.hotelBox {
+  background: rgba(255,255,255,0.92);
+  border-radius: 28px;
+  padding: 3rem 3.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.hotelList {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.hotelEntry {
+  display: flex;
+  flex-direction: column;
+}
+
+.hotelEntryHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hotelName {
+  font-family: "Noto Serif Display", serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #3C3421;
+  white-space: nowrap;
+}
+
+.hotelLine,
+.tentLine {
+  flex: 1;
+  height: 1px;
+  background: rgba(60,52,33,0.35);
+}
+
+.hotelText,
+.mapText {
+  font-family: "Tenor Sans", sans-serif;
+  font-size: 1.25rem; 
+  line-height: 1.7;
+  color: #3C3421;
+  margin-top: 1rem;
+  white-space: pre-line;
+}
+
+.hotelBullets {
+  font-family: "Tenor Sans", sans-serif;
+  font-size: 1.25rem; 
+  margin-top: 0.75rem;
+  padding-left: 1.2rem;
+  line-height: 1.7;
+  color: #3C3421;
+}
+
+.hotelBullets li,
+.mapBullets li {
+  font-family: "Tenor Sans", sans-serif;
+  margin-bottom: 0.3rem;
+  font-size: 1.25rem; 
+  color: #3C3421;
+}
+
+/* ================= MAP ================= */
+.mapBullets {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 3rem;
+  row-gap: 0.6rem;
+
+  list-style: none;
+  padding-left: 0;
+}
+
+
+/* ================= RSVP ================= */
+/* Whole section should not be tall/empty */
+.rsvpSection {
+  padding: 0 !important;
+}
+
+.rsvpSplit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  min-height: 520px;
+}
+
+.rsvpLeft {
+  overflow: hidden;
+}
+
+.rsvpImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.rsvpRight {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: stretch;   
+}
+
+.rsvpInner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 5rem 4rem;
+  max-width: 520px;
+  margin-left: 6rem;
+}
+
+.rsvpTitle {
+  font-family: "Noto Serif Display", serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: 0.08em;
+  line-height: 1.05;
+  color: #3C3421;
+  margin: 0;
+  white-space: pre-line;
+  font-weight: 300;
+}
+
+.rsvpDate {
+  font-weight: 600;
+}
+
+.rsvpContactRow {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-top: 2.6rem;
+}
+
+.rsvpIcon {
+  font-size: 1.1rem;
+  opacity: 0.8;
+}
+
+.rsvpPhone {
+  font-family: "Tenor Sans", sans-serif;
+  font-size: 1.05rem;
+  letter-spacing: 0.12em;
+  color: #3C3421;
+}
+
+.rsvpButton {
+  margin-top: 1.5rem;
+  display: inline-block;
+
+  background: #3C3421;
+  color: #fff;
+  text-decoration: none;
+
+  padding: 14px 46px;
+  border-radius: 4px;
+  letter-spacing: 0.14em;
+  font-family: "Tenor Sans", sans-serif;
+}
+
+.section--rsvp .sectionInner {
+  align-items: stretch !important;
+  justify-content: flex-start !important;
+  padding: 0 !important; /* optional, but usually needed for full-bleed */
+}
 
 
 /* ================= MOBILE ================= */
@@ -409,6 +649,36 @@
     font-size: 1rem; 
   }
 
+  .seitBody {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .seitLeft {
+    justify-content: center;
+  }
+
+  .seitImg {
+  width: 110%;
+  }
+
+  .mapBullets {
+    grid-template-columns: 1fr;
+  }
+
+  .rsvpSplit {
+    grid-template-columns: 1fr;
+  }
+
+  .rsvpLeft {
+    height: 260px;
+  }
+
+  .rsvpInner {
+    margin-left: 0;
+    padding: 3rem 2rem;
+    max-width: 100%;
+  }
   
 }
 

@@ -19,8 +19,8 @@ export const content = {
       background: "/backgrounds/seit-bg.png",
       couple: "/photos/seit.png",
       title: "WIE ALLES BEGANN",
-      subtitle: "SEIT 2012",
-      text: "Wir haben uns im August 2012 auf einer Tanzfläche in Barcelona kennengelernt – ein zufälliger Moment, der alles verändert hat.\n Seitdem haben wir zusammen getanzt, gelacht und Wege gefunden, die uns immer näher zueinander gebracht haben.\n Jetzt freuen wir uns darauf, mit euch unseren nächsten Schritt zu feiern.",
+      subtitle: " ",
+      text: "Wir haben uns im August 2012 auf einer Tanzfläche in Barcelona kennengelernt – ein zufälliger Moment, der alles verändert hat.\n\n Seitdem ist viel passiert.\n Das Leben zeigte sich uns in vielen Farben – mal laut und leicht, mal ruhiger und ernster.\n Es wurde gelacht, geweint, innegehalten und getanzt.\n \n Egal welche Melodie spielen wird:\n Wir möchten unser Leben miteinander teilen und füreinander da sein. Deshalb möchten wir uns nun dieses Versprechen geben.\n \n Dass wir diesen Tag mit euch teilen dürfen, bedeutet uns sehr viel. Ihr habt uns begleitet, geprägt und getragen. Umso schöner ist es, diesen nächsten Schritt mit euch feiern zu dürfen.",
     },
 
     schedule: {
@@ -31,8 +31,8 @@ export const content = {
       items: [
         { time: "2:45 PM", label: "Ankunft & Welcome Drinks" },
         { time: "3:30 PM", label: "Zeremonie" },
-        { time: "4:30 PM", label: "Apéro & Fotos" },
-        { time: "7:00 PM", label: "Abendessen & Party" },
+        { time: "4:30 PM", label: "Apéro & Fotos", subtext: "Feine häppchen & Drinks, während wir schöne Momente festhalten"},
+        { time: "7:00 PM", label: "Abendessen & Party", subtext: "Ein gemütlicher Abend mit feinem Essen, liebevollen Toast & viel Tanz!"},
       ],
     },
 
@@ -43,7 +43,7 @@ export const content = {
         {
           icon: "/icons/location.gif",
           title: "Die Hochzeitslocation",
-          text: "Hier möchten wir mit euch anstoßen, lachen und unvergessliche Momente erleben. Damit ihr leicht dorthin findet, hier die Adresse:\n Domaine des Jardins de Campagne, 30100 Nîmes \n {{MAP}}auf dem Gelände der steht euch ein großer Parkplatz kostenlos zur Verfügung.",
+          text: "Hier möchten wir mit euch anstoßen, lachen und unvergessliche Momente erleben. Damit ihr leicht dorthin findet, hier die Adresse:\n Domaine des Jardins de Campagne, 30100 Nîmes {{MAP}} \n auf dem Gelände der steht euch ein großer Parkplatz kostenlos zur Verfügung.",
           mapUrl: "https://maps.google.com/?q=Domaine+des+Jardins+de+Campagne+30100+Nîmes"
         },
         {
@@ -84,6 +84,35 @@ export const content = {
       ],
     },
 
+    reise: {
+      background: "/backgrounds/reise-bg.png",
+      img: "/photos/reise-img.png",
+      title: "HÄUFIG GESTELLTEN FRAGEN",
+      subtitle: " ",
+      text: " ",
+      items: [
+        {
+          icon: "/icons/car.png",
+          title: "Auto",
+          text: "Für alle, die gerne unterwegs Stopps einlegen oder flexibel sein möchten.\nFalls ihr kein Auto zur Verfügung habt, meldet euch gerne bei uns–\nwir helfen euch, Mitfahrgelegenheiten unter unseren Gästen zu koordinieren."
+        },
+        {
+          icon: "/icons/fly.png",
+          title: "Flugzeug",
+          text: "Nahegelegene Flughäfen sind Montpellier oder Marseille. Von Basel gibt es bspw. günstige Verbindungen (ab ca. 79 CHF hin & zurück). Ab beiden Flughäfen erreicht ihr Nîmes gut mit Zug, Mietwagen, oder meldet euch bei uns wir klären ob ein Pick-up möglich ist."        
+        },
+        {
+          icon: "/icons/zug.gif",
+          title: "Zug",
+          text: "Nîmes ist gut mit dem Zug erreichbar, Beispielhafte Verbindungen:\n",
+          bullets: [
+          "Karlsruhe – Strasbourg – Nîmes",
+          "Genf – Lyon – Nîmes"
+        ]
+        },
+      ],
+    },
+
     tent: {
       background: "/backgrounds/tent-bg.png",
       images: [
@@ -115,37 +144,77 @@ export const content = {
 
     hotel: {
       background: "/backgrounds/hotel-bg.png",
-      img: "/photos/hotel-img.png",
-      title: "BEST WESTERN - MARQUIS DE LA BAUME",
+      title: "WEITERE ÜBERNACHTUNGSIDEEN",
       subtitle: "Für alle Gäste, die lieber im Hotel übernachten möchten",
-      imageText: "Mehr Infos unter: {{URL}}",
-      hotelUrl: "www.hotel-marquis-de-la-baume.com",
       blocks: [
-    {
-      subtitle: "Reservierung",
-      text: "Die Buchung erfolgt direkt über das Hotel. Für Verfügbarkeit und Preise wendet euch bitte direkt an das Hotel Marquis de la Baume.\n Mit dem Code „Romain&Nora 2026“ erhaltet ihr – je nach Zimmerkategorie und Datum – einen reduzierten Übernachtungspreis.\n Kontakt Hotel:  E‑Mail oder Telefon gemäss Website."
+        {
+          subtitle: "Hotel Best Western Marquis de la Baume****",
+          url: "https://www.hotel-marquis-de-la-baume.com",
+
+          textTop:
+            "Das Hotel befindet sich in Nîmes und ist ca. 20 Minuten mit dem Auto vom Hochzeitsfest entfernt.\n\n" +
+            "Spezialpreise mit der Referenz “Nora&Romain 2026”:\nNur gültig für einen Aufenthalt von vier Nächten.\n",
+          bullets: [
+            "Zimmer Standard Double Bed: EUR 98 / Zimmer / Nacht",
+            "Zimmer Classic Queen Size Bed: EUR 108 / Zimmer / Nacht"
+          ],
+          textBottom: "Reservierung per Tel (+33 4 66 76 28 42) oder per Mail (contact@hotelmarquisdelabaume.com)"
+        },
+        {
+          subtitle: "Domaine du Prieuré d’Estagel",
+          url: "https://www.domaineduprieure-estagel.com",
+
+          textTop:
+            "Die Unterkunft ist ca. 5 Minuten (mit dem Auto) von der Hochzeitslocation entfernt.\n"+
+            "Preise ab EUR 170 / Nacht.\n\n"+
+            "Für eine Reserierung siehe Webseite oder booking.com."
+        }
+      ]
     },
-    {
-      subtitle: "Hotel Info",
-      text: "Für alle Gäste, die eine komfortable Unterkunft bevorzugen, empfehlen wir das Best Western Marquis de la Baume in Nîmes.\n Das charmante 4‑Sterne-Hotel befindet sich in einem historischen Stadthaus aus dem 17. Jahrhundert im Herzen der Altstadt und bietet eine romantische Atmosphäre rund um einen Innenhof, moderne Zimmer und ein reichhaltiges Frühstück.\n Das Hotel liegt 15 km vom Veranstaltungsort entfernt und ist ein idealer Ausgangspunkt, um die Schönheit von Nîmes zu entdecken– von der Arena bis zur Maison Carrée, alles nur wenige Gehminuten entfernt.",
-    },
-  ]
+
+    map: {
+      background: "/backgrounds/map-bg.png",
+      title: "UNSERE REISE– MAP FÜR EUCH",
+      blocks: [
+        {
+          textTop:
+            "Für unsere Hochzeit in Nîmes haben wir eine kleine Inspiration-Map für euch zusammengestellt.\n"+
+            "Dies ist eine Einladung zum Entdecken – für alle, die den Weg zu unserer Hochzeit mit schönen Stopps verbinden oder ihren Aufenthalt im Süden verlängern möchten.\n\n"+
+            "Auf der Karte findet ihr:\n"+
+            "Stopps auf dem Weg nach und in Nîmes – Orte in der Provence – Spots an der Côte d’Azur\n\n",
+          bullets: [
+            "🍽️ Restaurants",
+            "📚 Museen",
+            "🍷 Weingüter & Bars",
+            "🌸 Gärten",
+            "🛏️ Aussergewöhnliche Hotels",
+            "🌄 Naturspots",
+            "🏛️ Sehenswürdigkeiten & besondere Orte",
+            "💍 Unsere Hochzeitslocation & Parkmöglichkeiten"
+          ],
+          textBottom: 
+            "Die Icons helfen euch bei der Orientierung – wählt einfach aus, was zu eurer Route, eurer Reisezeit und eurer Stimmung passt.\n"+
+            "Wir freuen uns, wenn diese Karte euch nicht nur zu unserer Hochzeit führt, sondern auch zu eigenen kleinen Erinnerungen unterwegs 🩵 \n\n"+
+            "Map: https://maps.app.goo.gl/gUftbYhKf3hoYiia7"
+        },
+      ]
     },
 
     rsvp: {
+      image: "/public/photos/rsvp-left.png",
       background: "/backgrounds/rsvp-bg.png",
-      title: "RSVP",
-      text: "BITTE BIS ZUM 28. FEBRUAR 2026 ZUSAGEN - DIREKT ÜBER DEN LINK",
-      formLink: "https://example.com/rsvp",
+      title:
+        "BITTE BIS ZUM\n" +
+        "{{DATE}}\n" +
+        "ZUSAGEN — DIREKT ÜBER DEN LINK",
+      date: "28. FEBRUAR 2026",
+      phone: "+41 76 477 22 76",
+      link: "https://example.com/rsvp"
     },
 
-    venue: {
-      background: "/backgrounds/venue-bg.png",
-      title: "Venue",
-      text: "Château de Villary, 30900 Nîmes, France",
-      mapLink: "https://www.google.com/maps?q=Château+de+Villary",
-    }, 
   },
+
+
 
   fr: {
 
@@ -288,8 +357,8 @@ export const content = {
   hotel: {
     background: "/backgrounds/hotel-bg.png",
     img: "/photos/hotel-img.png",
-    title: "BEST WESTERN — MARQUIS DE LA BAUME",
-    subtitle: "Pour les invités préférant séjourner à l’hôtel",
+    title: "WEITERE ÜBERNACHTUNGSIDEEN",
+    subtitle: "Für alle Gäste, die lieber im Hotel übernachten möchten",
     imageText: "Plus d’informations sur : {{URL}}",
     hotelUrl: "www.hotel-marquis-de-la-baume.com",
 
@@ -312,17 +381,11 @@ export const content = {
   },
 
   rsvp: {
+    image: "/public/photos/rsvp-left.png",
     background: "/backgrounds/rsvp-bg.png",
-    title: "RSVP",
-    text: "MERCI DE RÉPONDRE AVANT LE 28 FÉVRIER 2026 — VIA LE LIEN CI-DESSOUS",
-    formLink: "https://example.com/rsvp",
-  },
-
-  venue: {
-    background: "/backgrounds/venue-bg.png",
-    title: "Lieu",
-    text: "Château de Villary, 30900 Nîmes, France",
-    mapLink: "https://www.google.com/maps?q=Château+de+Villary",
+    title: "BITTE BIS ZUM 28.\nFEBRUAR 2026 ZUSAGEN\n— DIREKT ÜBER DEN LINK",
+    phone: "+41 76 477 22 76",
+    link: "https://example.com/rsvp"
   },
 
 }

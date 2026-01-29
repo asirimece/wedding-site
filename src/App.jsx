@@ -10,9 +10,8 @@ import { TextLayout } from "./components/layouts/TextLayout";
 import { LanguageSwitch } from "./components/LanguageSwitch";
 
 export default function App() {
-
   const [lang, setLang] = useState(() => {
-  return localStorage.getItem("lang") || "de";
+    return localStorage.getItem("lang") || "de";
   });
 
   useEffect(() => {
@@ -26,7 +25,7 @@ export default function App() {
   const t = useMemo(() => {
     return {
       ...content.de,
-      ...(content[lang] || {})
+      ...(content[lang] || {}),
     };
   }, [lang]);
 
@@ -49,10 +48,10 @@ export default function App() {
 
 
   return (
+    <>
+    <LanguageSwitch lang={lang} onChange={setLang} />
+
     <div className="page">
-
-      <LanguageSwitch lang={lang} onChange={setLang} />
-
       <main className="main">
 
         {/* ================= HERO ================= */}
@@ -89,13 +88,40 @@ export default function App() {
           id="seit"
           style={{ backgroundImage: `url(${t.seit.background})` }}
         >
-          <SplitLayout
-            title={t.seit.title}
-            subtitle={t.seit.subtitle}
-            text={t.seit.text}
-            image={t.seit.couple}
-          />
+          <div className="contentBox contentBox--seit">
+
+            {/* FULL WIDTH HEADER */}
+            <div className="seitHeader">
+              <h2 className="sectionTitle">{t.seit.title}</h2>
+              {t.seit.subtitle && (
+                <p className="sectionSubtitle seitSubtitle">
+                  {t.seit.subtitle}
+                </p>
+              )}
+            </div>
+
+            {/* SPLIT */}
+            <div className="seitBody">
+
+              {/* LEFT — TEXT COLUMN */}
+              <div className="splitLeft seitLeft">
+                <p className="seitText">{t.seit.text}</p>
+              </div>
+
+              {/* RIGHT — IMAGE */}
+              <div className="splitRight seitRight">
+                <img
+                  src={t.seit.couple}
+                  alt=""
+                  className="seitImg"
+                />
+              </div>
+
+            </div>
+
+          </div>
         </Section>
+
 
 
         {/* ================= SCHEDULE ================= */}
@@ -122,6 +148,9 @@ export default function App() {
                   <div key={i} className="scheduleRow2">
                     <div className="scheduleTime2">{item.time}</div>
                     <div className="scheduleLabel2">{item.label}</div>
+                    {item.subtext && (
+                      <div className="scheduleSubtext">{item.subtext}</div>
+                    )}
                   </div>
                 ))}
               </div>
@@ -140,7 +169,7 @@ export default function App() {
         >
           <div className="contentBox infoBox">
 
-            <h2 className="sectionTitle">{t.info.title}</h2>
+            <h2 className="sectionTitle infoTitle">{t.info.title}</h2>
 
             <div className="infoGrid">
 
@@ -194,7 +223,7 @@ export default function App() {
         >
           <div className="contentBox qaBox">
 
-            <h2 className="sectionTitle">{t.qa.title}</h2>
+            <h2 className="sectionTitle qaTitle">{t.qa.title}</h2>
 
             <div className="qaGrid">
 
@@ -209,6 +238,45 @@ export default function App() {
 
                   <h3 className="qaCardTitle">{item.title}</h3>
                   <p className="qaCardText">{item.text}</p>
+                </div>
+              ))}
+
+            </div>
+
+          </div>
+        </Section>
+
+        {/* ================= REISE ================= */}
+        <Section
+          id="reise"
+          style={{
+            backgroundImage: `url(${t.reise.background})`,
+          }}
+        >
+          <div className="contentBox reiseBox">
+
+            <h2 className="sectionTitle reiseTitle">{t.reise.title}</h2>
+
+            <div className="reiseGrid">
+
+              {t.reise.items.map((item, i) => (
+                <div key={i} className="reiseCard">
+
+                  <img
+                    src={item.icon}
+                    alt=""
+                    className="reiseIcon"
+                  />
+
+                  <h3 className="reiseCardTitle">{item.title}</h3>
+                  <p className="reiseCardText">{item.text}</p>
+                    {item.bullets && (
+                      <ul className="reiseBullets">
+                        {item.bullets.map((line, idx) => (
+                          <li key={idx}>{line}</li>
+                        ))}
+                      </ul>
+                    )}
                 </div>
               ))}
 
@@ -314,9 +382,10 @@ export default function App() {
                   {t.tent.blocks.map((block, i) => (
                     <div key={i} className="tentBlock">
 
-                      <h3 className="tentBlockTitle">
-                        {block.subtitle}
-                      </h3>
+                      <div className="tentEntryHeader">
+                        <h3 className="tentBlockTitle">{block.subtitle}</h3>
+                        <div className="tentLine" />
+                      </div>
 
                       <p className="tentBlockText">
                         {block.text}
@@ -340,62 +409,122 @@ export default function App() {
           id="hotel"
           style={{ backgroundImage: `url(${t.hotel.background})` }}
         >
-          <div className="contentBox contentBox--hotel">
+          <div className="contentBox hotelBox">
 
-            {/* FULL WIDTH HEADER */}
+            {/* HEADER */}
             <div className="hotelHeader">
               <h2 className="sectionTitle">{t.hotel.title}</h2>
-              <p className="sectionSubtitle hotelSubtitle">
-                {t.hotel.subtitle}
-              </p>
+              <p className="sectionSubtitle">{t.hotel.subtitle}</p>
             </div>
 
-            {/* SPLIT CONTENT */}
-            <div className="hotelBody">
+            {/* LIST */}
+            <div className="hotelList">
 
-              <div className="splitLeft hotelLeft">
-                <img src={t.hotel.img} alt="" className="hotelImg" />
-                  {t.hotel.imageText && (
-                    <p className="hotelImageText">
-                      {t.hotel.imageText.split("{{URL}}").map((part, idx) => (
-                        <span key={idx}>
-                          {part}
-                          {idx === 0 && t.hotel.hotelUrl && (
-                            <a
-                              href={t.hotel.hotelUrl}
-                              target="_blank"
-                              rel="noreferrer"
-                              className="hotelLink"
-                            >
-                            www.hotel-marquis-de-la-baume.com
-                            </a>
-                          )}
-                        </span>
+              {t.hotel.blocks.map((block, i) => (
+                <div key={i} className="hotelEntry">
+
+                  {/* Title row with line */}
+                  <div className="hotelEntryHeader">
+                    <h3 className="hotelName">{block.subtitle}</h3>
+                    <div className="hotelLine" />
+                  </div>
+
+                  {/* URL */}
+                  {block.url && (
+                    <a
+                      href={block.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="hotelUrl"
+                    >
+                      {block.url}
+                    </a>
+                  )}
+
+                  {/* Text */}
+                  <p className="hotelText">
+                    {block.textTop}
+                  </p>
+
+                  {/* Optional bullets */}
+                  {block.bullets && (
+                    <ul className="hotelBullets">
+                      {block.bullets.map((line, idx) => (
+                        <li key={idx}>{line}</li>
                       ))}
+                    </ul>
+                  )}
+                  {block.textBottom && (
+                    <p className="hotelText">
+                      {block.textBottom}
                     </p>
                   )}
-              </div>
-              
-              <div className="splitRight hotelRight">
-                <div className="hotelContent">
+                </div>
+              ))}
 
-                {t.hotel.blocks.map((block, i) => (
-                  <div key={i} className="hotelBlock">
+            </div>
 
-                    <h3 className="hotelBlockTitle">
-                      {block.subtitle}
-                    </h3>
+          </div>
+        </Section>
 
-                    <p className="hotelBlockText">
-                      {block.text}
-                    </p>
 
+        {/* ================= MAP ================= */}
+        <Section
+          id="map"
+          style={{ backgroundImage: `url(${t.map.background})` }}
+        >
+          <div className="contentBox mapBox">
+
+            {/* HEADER */}
+            <div className="mapHeader">
+              <h2 className="sectionTitle">{t.map.title}</h2>
+              <p className="sectionSubtitle">{t.map.subtitle}</p>
+            </div>
+
+            {/* LIST */}
+            <div className="mapList">
+
+              {t.map.blocks.map((block, i) => (
+                <div key={i} className="mapEntry">
+
+                  {/* Title row with line */}
+                  <div className="mapEntryHeader">
+                    <h3 className="mapName">{block.subtitle}</h3>
+                    <div className="mapLine" />
                   </div>
-                ))}
 
-              </div>
+                  {/* URL */}
+                  {block.url && (
+                    <a
+                      href={block.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mapUrl"
+                    >
+                      {block.url}
+                    </a>
+                  )}
 
-              </div>
+                  {/* Text */}
+                  <p className="mapText">
+                    {block.textTop}
+                  </p>
+
+                  {/* Optional bullets */}
+                  {block.bullets && (
+                    <ul className="mapBullets">
+                      {block.bullets.map((line, idx) => (
+                        <li key={idx}>{line}</li>
+                      ))}
+                    </ul>
+                  )}
+                  {block.textBottom && (
+                    <p className="mapText">
+                      {block.textBottom}
+                    </p>
+                  )}
+                </div>
+              ))}
 
             </div>
 
@@ -404,34 +533,56 @@ export default function App() {
 
 
         {/* ================= RSVP ================= */}
-  
-          <Section
-            id="rsvp"
-            style={{
-              backgroundImage: `url(${t.rsvp.background})`,
-            }}
-          >
-            <div className="contentBox">
-  
-              <h2>{t.rsvp.title}</h2>
-              <p>{t.rsvp.text}</p>
-  
-              <a
-                className="primaryButton"
-                href={t.rsvp.formLink}
-                target="_blank"
-                rel="noreferrer"
-              >
-                RSVP
-              </a>
-  
+        <Section id="rsvp" className="section--rsvp">
+          <div className="rsvpSplit">
+
+            <div className="rsvpLeft">
+              <img src={t.rsvp.image} alt="" className="rsvpImg" />
             </div>
-          </Section>
-      
+
+            <div
+              className="rsvpRight"
+              style={{ backgroundImage: `url(${t.rsvp.background})` }}
+            >
+              <div className="rsvpInner">
+
+                <h2 className="rsvpTitle">
+                  {t.rsvp.title.split("{{DATE}}").map((part, i) => (
+                    <span key={i}>
+                      {part}
+                      {i === 0 && (
+                        <span className="rsvpDate">
+                          {t.rsvp.date}
+                        </span>
+                      )}
+                    </span>
+                  ))}
+                </h2>
+
+                <div className="rsvpContactRow">
+                  <span className="rsvpIcon">📞</span>
+                  <span className="rsvpPhone">{t.rsvp.phone}</span>
+                </div>
+
+                <a
+                  className="rsvpButton"
+                  href={t.rsvp.link}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  RSVP
+                </a>
+
+              </div>
+            </div>
+
+          </div>
+        </Section>
 
 
 
       </main>
     </div>
+    </>
   );
 }

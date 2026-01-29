@@ -112,22 +112,21 @@
 
 
 /* ================= SECTIONS ================= */
-
-
 .sectionTitle {
   font-family: "Noto Serif Display", serif;
   font-size: clamp(1.6rem, 3vw, 2.4rem);
   letter-spacing: 0.08em;
+  font-weight: 300;
   color: #3C3421;
-  text-align: center;
+  font-size: 3rem;
 }
 
 .sectionSubtitle {
   margin-top: 0.75rem;
   font-family: "Tenor Sans", sans-serif;
-  letter-spacing: 0.18em;
-  font-size: 0.9rem;
+  letter-spacing: 0.06em;
   color: #3C3421;
+  font-size: 1.5rem; 
 }
 
 .sectionText {
