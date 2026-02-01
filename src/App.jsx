@@ -8,8 +8,14 @@ import { Section } from "./components/Section";
 import { SplitLayout } from "./components/layouts/SplitLayout";
 import { TextLayout } from "./components/layouts/TextLayout";
 import { LanguageSwitch } from "./components/LanguageSwitch";
+import { RSVP } from "./RSVP";
+import { useScrollReveal } from "./hooks/useScrollReveal";
+
 
 export default function App() {
+
+  useScrollReveal();
+
   const [lang, setLang] = useState(() => {
     return localStorage.getItem("lang") || "de";
   });
@@ -69,8 +75,8 @@ export default function App() {
           <div className="heroWrapper">
 
           <div className="heroText">
-            <p className="heroSubtitle animate-slide-up delay-1">{t.hero.subtitle}</p>
-            <h1 className="heroTitle nowrap-desktop animate-slide-up delay-2">{t.hero.title}</h1>
+            <p className="heroSubtitle reveal animate-slide-up delay-1">{t.hero.subtitle}</p>
+            <h1 className="heroTitle reveal nowrap-desktop animate-slide-up delay-2">{t.hero.title}</h1>
           </div>
 
             <img
@@ -88,10 +94,10 @@ export default function App() {
           id="seit"
           style={{ backgroundImage: `url(${t.seit.background})` }}
         >
-          <div className="contentBox contentBox--seit animate-slide-up delay-1">
+          <div className="contentBox contentBox--seit reveal animate-slide-up delay-1">
 
             {/* HEADER */}
-            <div className="seitHeader animate-slide-down delay-2">
+            <div className="seitHeader reveal animate-slide-down delay-2">
               <h2 className="sectionTitle">{t.seit.title}</h2>
             </div>
 
@@ -99,12 +105,12 @@ export default function App() {
             <div className="seitSplit">
 
               {/* LEFT — TEXT */}
-              <div className="seitLeft animate-slide-down delay-4">
+              <div className="seitLeft reveal animate-slide-down delay-4">
                 <p className="seitText">{t.seit.text}</p>
               </div>
 
               {/* RIGHT — IMAGE */}
-              <div className="seitRight animate-slide-up delay-3">
+              <div className="seitRight reveal animate-slide-up delay-3">
                 <img
                   src={t.seit.couple}
                   alt=""
@@ -123,11 +129,11 @@ export default function App() {
           id="schedule"
           style={{ backgroundImage: `url(${t.schedule.background})` }}
         >
-          <div className="contentBox contentBox--schedule animate-slide-up delay-1">
+          <div className="contentBox contentBox--schedule reveal animate-slide-up delay-1">
 
             {/* FULL WIDTH HEADER */}
-            <div className="scheduleHeader animate-slide-down delay-2">
-              <h2 className="sectionTitle nowrap-desktop">{t.schedule.title}</h2>
+            <div className="scheduleHeader reveal animate-slide-down delay-2">
+              <h2 className="sectionTitle reveal nowrap-desktop">{t.schedule.title}</h2>
               {t.schedule.subtitle && (
                 <p className="sectionSubtitle">{t.schedule.subtitle}</p>
               )}
@@ -137,12 +143,12 @@ export default function App() {
             <div className="scheduleBody">
 
               {/* IMAGE COLUMN */}
-              <div className="scheduleImageWrap animate-slide-up delay-3">
+              <div className="scheduleImageWrap reveal animate-slide-up delay-3">
                 <img src={t.schedule.img} alt="" className="scheduleImg" />
               </div>
 
               {/* TABLE COLUMN */}
-              <div className="scheduleTableWrap animate-slide-down delay-4">
+              <div className="scheduleTableWrap reveal animate-slide-down delay-4">
                 <div className="scheduleLines">
                   {t.schedule.items.map((item, i) => (
                     <div key={i} className="scheduleRow2">
@@ -172,14 +178,14 @@ export default function App() {
             backgroundImage: `url(${t.info.background})`, /* BG NOT WORKING?? */
           }}
         >
-          <div className="contentBox infoBox animate-slide-up delay-1">
+          <div className="contentBox infoBox reveal animate-slide-up delay-1">
 
-            <h2 className="sectionTitle infoTitle animate-slide-down delay-2">{t.info.title}</h2>
+            <h2 className="sectionTitle infoTitle reveal animate-slide-down delay-3">{t.info.title}</h2>
 
             <div className="infoGrid">
 
               {t.info.items.map((item, i) => (
-                <div key={i} className="infoCard">
+                <div key={i} className="infoCard reveal animate-slide-up delay-4">
 
                   <img
                     src={item.icon}
@@ -188,7 +194,7 @@ export default function App() {
                   />
 
                   <h3 className="infoCardTitle">{item.title}</h3>
-                  <p className="infoCardText animate-slide-down delay-4">
+                  <p className="infoCardText">
                     {item.text.split("{{MAP}}").map((part, idx) => (
                       <span key={idx}>
                         {part}
@@ -226,14 +232,14 @@ export default function App() {
             backgroundImage: `url(${t.qa.background})`,
           }}
         >
-          <div className="contentBox qaBox animate-slide-up delay-1">
+          <div className="contentBox qaBox reveal animate-slide-up delay-1">
 
-            <h2 className="sectionTitle qaTitle animate-slide-down delay-2">{t.qa.title}</h2>
+            <h2 className="sectionTitle qaTitle reveal animate-slide-down delay-2">{t.qa.title}</h2>
 
-            <div className="qaGrid animate-slide-down delay-4">
+            <div className="qaGrid reveal animate-slide-down delay-4">
 
               {t.qa.items.map((item, i) => (
-                <div key={i} className="qaCard">
+                <div key={i} className="qaCard reveal animate-slide-up delay-3">
 
                   <img
                     src={item.icon}
@@ -258,11 +264,11 @@ export default function App() {
             backgroundImage: `url(${t.reise.background})`,
           }}
         >
-          <div className="contentBox reiseBox animate-slide-up delay-1">
+          <div className="contentBox reiseBox reveal animate-slide-up delay-1">
 
-            <h2 className="sectionTitle reiseTitle animate-slide-down delay-2">{t.reise.title}</h2>
+            <h2 className="sectionTitle reiseTitle reveal animate-slide-down delay-2">{t.reise.title}</h2>
 
-            <div className="reiseGrid animate-slide-down delay-4">
+            <div className="reiseGrid reveal animate-slide-down delay-4">
 
               {t.reise.items.map((item, i) => (
                 <div key={i} className="reiseCard">
@@ -296,10 +302,10 @@ export default function App() {
           id="tent"
           style={{ backgroundImage: `url(${t.tent.background})` }}
         >
-          <div className="contentBox contentBox--tent animate-slide-up delay-1">
+          <div className="contentBox contentBox--tent reveal animate-slide-up delay-1">
 
             {/* FULL WIDTH HEADER */}
-            <div className="tentHeader animate-slide-down delay-2">
+            <div className="tentHeader reveal animate-slide-down delay-2">
               <h2 className="sectionTitle">{t.tent.title}</h2>
               <p className="sectionSubtitle tentSubtitle">
                 {t.tent.subtitle}
@@ -414,10 +420,10 @@ export default function App() {
           id="hotel"
           style={{ backgroundImage: `url(${t.hotel.background})` }}
         >
-          <div className="contentBox hotelBox animate-slide-up delay-1">
+          <div className="contentBox hotelBox reveal animate-slide-up delay-1">
 
             {/* HEADER */}
-            <div className="hotelHeader animate-slide-down delay-2">
+            <div className="hotelHeader reveal animate-slide-down delay-2">
               <h2 className="sectionTitle">{t.hotel.title}</h2>
               <p className="sectionSubtitle">{t.hotel.subtitle}</p>
             </div>
@@ -478,10 +484,10 @@ export default function App() {
           id="map"
           style={{ backgroundImage: `url(${t.map.background})` }}
         >
-          <div className="contentBox mapBox animate-slide-up delay-1">
+          <div className="contentBox mapBox reveal animate-slide-up delay-1">
 
             {/* HEADER */}
-            <div className="mapHeader animate-slide-down delay-2">
+            <div className="mapHeader reveal animate-slide-down delay-2">
               <h2 className="sectionTitle">{t.map.title}</h2>
               <p className="sectionSubtitle">{t.map.subtitle}</p>
             </div>
@@ -579,6 +585,9 @@ export default function App() {
                     RSVP
                   </a>
                 </div>
+                  
+                <RSVP />
+
 
               </div>
             </div>

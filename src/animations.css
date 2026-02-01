@@ -1,5 +1,4 @@
 /* ================= SLIDE UP (NORMAL ELEMENTS) ================= */
-
 @keyframes slideUp {
   from {
     opacity: 0;
@@ -11,15 +10,21 @@
   }
 }
 
+/* Base hidden state */
 .animate-slide-up {
   opacity: 0;
-  animation: slideUp 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  transform: translateY(80px);
   will-change: transform, opacity;
 }
 
+/* Triggered on scroll */
+.reveal.active.animate-slide-up {
+  animation: slideUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+
 
 /* ================= SLIDE UP CENTERED (FOR HERO IMAGE) ================= */
-
 @keyframes slideUpCentered {
   from {
     opacity: 0;
@@ -38,8 +43,8 @@
 }
 
 
-/* ================= SLIDE DOWN ================= */
 
+/* ================= SLIDE DOWN ================= */
 @keyframes slideDown {
   from {
     opacity: 0;
@@ -53,35 +58,28 @@
 
 .animate-slide-down {
   opacity: 0;
-  animation: slideDown 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  transform: translateY(-80px);
   will-change: transform, opacity;
+}
+
+.reveal.active.animate-slide-down {
+  animation: slideDown 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 
 /* ================= DELAYS ================= */
-
 .delay-1 { animation-delay: 0.15s; }
 .delay-2 { animation-delay: 0.35s; }
 .delay-3 { animation-delay: 0.6s; }
 .delay-4 { animation-delay: 0.7s; }
 
-.scroll-animate .animate-slide-up,
-.scroll-animate .animate-slide-up-centered,
-.scroll-animate .animate-slide-down {
-  animation-play-state: paused;
-}
-
-.in-view .animate-slide-up,
-.in-view .animate-slide-up-centered,
-.in-view .animate-slide-down {
-  animation-play-state: running;
-}
 
 @media (prefers-reduced-motion: reduce) {
   .animate-slide-up,
+  .animate-slide-down,
   .animate-slide-up-centered {
-    animation: none;
-    opacity: 1;
-    transform: none;
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
   }
 }
