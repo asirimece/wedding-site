@@ -65,7 +65,17 @@
 .delay-3 { animation-delay: 0.6s; }
 .delay-4 { animation-delay: 0.7s; }
 
-/* Accessibility */
+.scroll-animate .animate-slide-up,
+.scroll-animate .animate-slide-up-centered,
+.scroll-animate .animate-slide-down {
+  animation-play-state: paused;
+}
+
+.in-view .animate-slide-up,
+.in-view .animate-slide-up-centered,
+.in-view .animate-slide-down {
+  animation-play-state: running;
+}
 
 @media (prefers-reduced-motion: reduce) {
   .animate-slide-up,

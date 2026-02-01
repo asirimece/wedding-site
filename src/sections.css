@@ -264,7 +264,7 @@
 .qaCardText,
 .reiseCardText {
   font-family: "Tenor Sans", sans-serif;
-  font-size: 0.95rem;
+  font-size: 1.25rem;
   line-height: 1.6;
   margin-top: 0.75rem;
   color: #3C3421;
@@ -288,6 +288,10 @@
   font-size: 0.95rem;
   line-height: 1.5;
   margin-bottom: 0.2rem;
+
+  hyphens: auto;
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
 
@@ -327,6 +331,8 @@
 .hotelBody {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .tentLeft,
@@ -341,7 +347,6 @@
   width: 100%;
   max-width: 320px;
   height: auto;
-  margin-top: 1.5rem;
 }
 
 .tentRight,
@@ -353,29 +358,42 @@
 }
 
 .tentBlockTitle,
-.hotelBlockTitle {
+.hotelName {
   font-family: "Noto Serif Display", serif;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   letter-spacing: 0.06em;
   color: #3C3421;
   margin-bottom: 0.75rem;
   text-align: left;
 }
 
-
-
 .tentBlockText,
-.hotelBlockText {
+.hotelText,
+.mapText {
   font-family: "Tenor Sans", sans-serif;
-  font-size: 0.95rem;
+  font-size: 1.25rem;
   line-height: 1.6;
   margin-top: 0.75rem;
   color: #3C3421;
   white-space: pre-line;
   margin-bottom: 0.75rem;
+  white-space: pre-line;
+  text-align: justify;
+
+  hyphens: auto;
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
-.tentImageText,
+.tentImageText {
+  font-style: italic;
+  opacity: 0.75;
+  margin-top: 0.75rem;
+  color: #3C3421;
+  text-decoration: none;
+  margin-left: 42px;
+}
+
 .hotelUrl {
   font-style: italic;
   opacity: 0.75;
@@ -411,29 +429,11 @@
   gap: 1rem;
 }
 
-.hotelName {
-  font-family: "Noto Serif Display", serif;
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: #3C3421;
-  white-space: nowrap;
-}
-
 .hotelLine,
 .tentLine {
   flex: 1;
   height: 1px;
   background: rgba(60,52,33,0.35);
-}
-
-.hotelText,
-.mapText {
-  font-family: "Tenor Sans", sans-serif;
-  font-size: 1.25rem; 
-  line-height: 1.7;
-  color: #3C3421;
-  margin-top: 1rem;
-  white-space: pre-line;
 }
 
 .hotelBullets {
@@ -573,6 +573,74 @@
   }
 }
 
+@media (max-width: 1025px) {
+  .infoGrid,
+  .qaGrid,
+  .reiseGrid {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    gap: 1.75rem;
+    justify-content: center;
+  }
+
+  .infoBox,
+  .qaBox,
+  .reiseBox {
+    padding: 2rem 1.5rem;
+  }
+
+  .contentBox--tent {
+    flex-direction: column;
+  }
+
+  .tentLeft {
+    flex: 1 1 auto;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+    margin-bottom: 1rem;
+  }
+
+  .tentRight {
+    flex: 1 1 auto;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+  }
+
+  .tentImg {
+    margin-top: 0;
+  }
+
+  .tentImageText {
+    text-align: left;
+    margin-bottom: 1.5rem;
+    margin-left: 42px;
+  }
+
+  .tentHeader {
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+
+  .tentBody {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tentBlock {
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 0.75rem;
+    text-align: justify;
+    justify-content: center;
+  }
+}
+
 @media (max-width: 900px) {
   .heroTitle {
     font-size: 3.8rem;
@@ -645,55 +713,23 @@
 }
 
 @media (max-width: 768px) {
-  .infoGrid,
-  .qaGrid,
-  .reiseGrid {
-    grid-template-columns: 1fr;
-    max-width: 100%;
-    gap: 1.75rem;
-    justify-content: center;
+
+  .hotelEntryHeader .hotelLine {
+    display: none;
   }
 
-  .infoBox,
-  .qaBox {
-    padding: 2rem 1.5rem;
-  }
-
-  .contentBox--tent {
-    flex-direction: column;
-  }
-
-  .tentLeft,
-  .tentRight {
-    flex: 1 1 auto;
-    width: 100%;
-    text-align: center;
-  }
-
-  .tentImg {
-    margin-top: 0;
-  }
-
-  .tentImageText {
-    text-align: left;
-    margin-bottom: 1.5rem;
-  }
-
-  .tentHeader {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-
-  .tentBody {
-    flex-direction: column;
-  }
-
-  .tentBlock {
-    display:flex;
-    flex-direction: column;
+  .hotelUrl {
+    display: block;
     margin-bottom: 0.75rem;
-    text-align: justify;
-    justify-content: center;
+  }
+
+  .hotelUrl::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    background: rgba(60,52,33,0.35);
+    margin-top: 0.75rem;
   }
 
   .mapBullets {
