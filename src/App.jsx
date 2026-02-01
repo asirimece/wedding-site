@@ -84,32 +84,28 @@ export default function App() {
 
 
         {/* ================= SEIT ================= */}
+                {/* ================= SEIT ================= */}
         <Section
           id="seit"
           style={{ backgroundImage: `url(${t.seit.background})` }}
         >
           <div className="contentBox contentBox--seit">
 
-            {/* FULL WIDTH HEADER */}
+            {/* HEADER */}
             <div className="seitHeader">
               <h2 className="sectionTitle">{t.seit.title}</h2>
-              {t.seit.subtitle && (
-                <p className="sectionSubtitle seitSubtitle">
-                  {t.seit.subtitle}
-                </p>
-              )}
             </div>
 
             {/* SPLIT */}
-            <div className="seitBody">
+            <div className="seitSplit">
 
-              {/* LEFT — TEXT COLUMN */}
-              <div className="splitLeft seitLeft">
+              {/* LEFT — TEXT */}
+              <div className="seitLeft">
                 <p className="seitText">{t.seit.text}</p>
               </div>
 
               {/* RIGHT — IMAGE */}
-              <div className="splitRight seitRight">
+              <div className="seitRight">
                 <img
                   src={t.seit.couple}
                   alt=""
@@ -121,7 +117,6 @@ export default function App() {
 
           </div>
         </Section>
-
 
 
         {/* ================= SCHEDULE ================= */}

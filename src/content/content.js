@@ -21,7 +21,8 @@ export const content = {
       title: "WIE ALLES BEGANN",
       subtitle: " ",
       text: "Wir haben uns im August 2012 auf einer Tanzfläche in Barcelona kennengelernt – ein zufälliger Moment, der alles verändert hat.\n\n" +
-            "Seitdem ist viel passiert. Das Leben zeigte sich uns in vielen Farben – mal laut und leicht, mal ruhiger und ernster. Es wurde gelacht, geweint, innegehalten und getanzt.\n\n" + 
+            "Seitdem ist viel passiert.\n"+
+            "Das Leben zeigte sich uns in vielen Farben – mal laut und leicht, mal ruhiger und ernster. Es wurde gelacht, geweint, innegehalten und getanzt.\n\n" + 
             "Egal welche Melodie spielen wird:\n"+
             "Wir möchten unser Leben miteinander teilen und füreinander da sein. Deshalb möchten wir uns nun dieses Versprechen geben.\n\n"+
             "Dass wir diesen Tag mit euch teilen dürfen, bedeutet uns sehr viel. Ihr habt uns begleitet, geprägt und getragen. Umso schöner ist es, diesen nächsten Schritt mit euch feiern zu dürfen.",
