@@ -8,10 +8,23 @@
   padding: 0;
 }
 
-html, body, #root {
+html, body {
   width: 100%;
   height: 100%;
+  background: #f8f6f2;
+  overscroll-behavior-y: none;
 }
+
+#root {
+  min-height: 100vh;
+  background: #f8f6f2;
+}
+
+body {
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
 
 /* ================= SECTION SYSTEM ================= */
 

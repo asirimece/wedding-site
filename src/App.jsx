@@ -559,19 +559,21 @@ export default function App() {
                   ))}
                 </h2>
 
-                <div className="rsvpContactRow">
-                  <span className="rsvpIcon">📞</span>
-                  <span className="rsvpPhone">{t.rsvp.phone}</span>
-                </div>
+                <div className="rsvpContactBlock">
+                  <div className="rsvpContactRow">
+                    <span className="rsvpIcon">📞</span>
+                    <span className="rsvpPhone">{t.rsvp.phone}</span>
+                  </div>
 
-                <a
-                  className="rsvpButton"
-                  href={t.rsvp.link}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  RSVP
-                </a>
+                  <a
+                    className="rsvpButton"
+                    href={t.rsvp.link}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    RSVP
+                  </a>
+                </div>
 
               </div>
             </div>

@@ -1,4 +1,8 @@
+import "./PasswordGate.css";
 import { useState, useEffect } from "react";
+import { LanguageSwitch } from "./components/LanguageSwitch.jsx";
+
+
 
 const PASSWORD = "N&R26";
 
@@ -27,7 +31,7 @@ export default function PasswordGate({ children }) {
 
   useEffect(() => {
     const ok = sessionStorage.getItem("wedding_access");
-    const savedLang = localStorage.getItem("wedding_lang");
+    const savedLang = localStorage.getItem("lang");
 
     if (ok === "true") setUnlocked(true);
     if (savedLang) setLang(savedLang);
@@ -44,7 +48,7 @@ export default function PasswordGate({ children }) {
 
   const switchLang = (l) => {
     setLang(l);
-    localStorage.setItem("wedding_lang", l);
+    localStorage.setItem("lang", l);
   };
 
   if (unlocked) return children;
@@ -52,104 +56,34 @@ export default function PasswordGate({ children }) {
   const t = TEXT[lang];
 
   return (
-    <div style={styles.wrapper}>
-      <div style={styles.overlay} />
+  <div className="gateWrapper">
+    <div className="gateOverlay" />
 
-      <div style={styles.langSwitch}>
-        <button onClick={() => switchLang("de")}>DE</button>
-        <span> | </span>
-        <button onClick={() => switchLang("fr")}>FR</button>
-      </div>
+    <LanguageSwitch
+      lang={lang}
+      onChange={switchLang}
+    />
 
-      <div style={styles.card}>
-        <h1 style={styles.title}>{t.title}</h1>
-        <p style={styles.subtitle}>{t.subtitle}</p>
+    <div className="gateCard">
+      <h1 className="gateTitle">{t.title}</h1>
+      <p className="gateSubtitle">{t.subtitle}</p>
 
-        <input
-          type="password"
-          placeholder={t.placeholder}
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          onKeyDown={(e) => {
-            if (e.key === "Enter") {
-              handleSubmit();
-            }
-          }}
-          style={styles.input}
-        />
+      <input
+        type="password"
+        placeholder={t.placeholder}
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+        onKeyDown={(e) => e.key === "Enter" && handleSubmit()}
+        className="gateInput"
+      />
 
-        <button onClick={handleSubmit} style={styles.button}>
-          {t.button}
-        </button>
+      <button onClick={handleSubmit} className="gateButton">
+        {t.button}
+      </button>
 
-        {error && <p style={styles.error}>{t.error}</p>}
-      </div>
+      {error && <p className="gateError">{t.error}</p>}
     </div>
-  );
+  </div>
+);
+
 }
-
-const styles = {
-  wrapper: {
-    height: "100vh",
-    width: "100vw",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundImage: "url('/backgrounds/bg.png')", 
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    position: "relative",
-    fontFamily: "'Noto Serif Display', serif"
-  },
-
-  overlay: {
-    position: "absolute",
-    inset: 0,
-    background: "rgba(0,0,0,0.35)"
-  },
-
-  langSwitch: {
-    position: "absolute",
-    top: 20,
-    right: 20,
-    zIndex: 3,
-    color: "white"
-  },
-
-  card: {
-    position: "relative",
-    zIndex: 2,
-    background: "rgba(255,255,255,0.92)",
-    padding: "36px",
-    borderRadius: "14px",
-    textAlign: "center",
-    minWidth: "260px"
-  },
-
-  title: {
-    marginBottom: "6px",
-    fontWeight: 600
-  },
-
-  subtitle: {
-    marginBottom: "20px"
-  },
-
-  input: {
-    padding: "10px",
-    width: "100%",
-    fontSize: "16px",
-    marginBottom: "12px"
-  },
-
-  button: {
-    padding: "10px",
-    width: "100%",
-    cursor: "pointer"
-  },
-
-  error: {
-    marginTop: "10px",
-    color: "crimson"
-  }
-};
