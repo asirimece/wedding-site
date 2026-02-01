@@ -142,35 +142,44 @@
 }
 
 /* ================= SCHEDULE ================= */
-.contentBox--schedule{
+.contentBox--schedule {
   display: flex;
-  align-items: center;
-}
-
-.scheduleLeft {
-  display: flex;
-  text-align: left;
   flex-direction: column;
 }
 
-.scheduleImg,
-.tentImg {
-  width: 100%;
-  max-width: 340px;
-  height: auto;
-  margin-top: 3rem;
+.scheduleHeader {
+  text-align: left;
+  margin-bottom: 2.5rem;
+
 }
 
-.scheduleRight {
+.scheduleBody {
   display: flex;
   align-items: center;
-  margin-top: 3rem;
+  gap: 3rem;
+}
+
+.scheduleImageWrap {
+  flex: 0 1 340px; 
+  min-width: 136px;
+  display: flex;
+  justify-content: center;
+}
+
+.scheduleImg {
+  width: 120%;
+  max-width: 340px;
+  min-width: 136px;
+  height: auto;
+  border-radius: 14px;
+}
+
+.scheduleTableWrap {
+  flex: 1 0 520px; 
 }
 
 .scheduleLines {
   width: 100%;
-  max-width: 700px; 
-  margin-top: 1.25rem;
 }
 
 .scheduleRow2 {
@@ -179,23 +188,20 @@
   gap: 2rem;
   padding: 1.4rem 0;
   border-bottom: 1px solid rgba(60, 52, 33, 0.20);
-  width: 100%;
 }
 
 .scheduleTime2 {
   font-family: "Tenor Sans", sans-serif;
   letter-spacing: 0.06em;
   color: #3C3421;
-  font-size: 1.5rem; 
+  font-size: 1.4rem;
 }
 
 .scheduleLabel2 {
   font-family: "Noto Serif Display", serif;
   color: #3C3421;
-  font-size: 1.3rem; 
+  font-size: 1.45rem;
   line-height: 1.25;
-  text-align: left;
-  font-size: 1.5rem; 
 }
 
 .scheduleSubtext {
@@ -203,28 +209,18 @@
   line-height: 1.45;
   color: #3C3421;
   font-family: "Tenor Sans", sans-serif;
-  white-space: nowrap;
-  margin-left: 8.7rem;
+  margin-top: 0.3rem;
 }
 
 
 /* ================= INFO, Q&A ================= */
-.infoBox,
-.qaBox,
-.reiseBox {
-  max-width: 1100px !important;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .infoGrid,
 .qaGrid,
 .reiseGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem;
-  max-width: 900px;
-  margin: auto;
+  gap: 3.5rem;
+  padding: 2.5rem;
 }
 
 /* Individual card */
@@ -232,7 +228,6 @@
 .qaCard,
 .reiseCard {
   margin-top: 2rem;
-  text-align: justify;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -274,6 +269,11 @@
   margin-top: 0.75rem;
   color: #3C3421;
   white-space: pre-line;
+  text-align: justify;
+
+  hyphens: auto;
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
 .reiseBullets {
@@ -597,50 +597,42 @@
     margin-top: 3rem;
   }
 
-  .contentBox--schedule {
+  .scheduleBody {
+    gap: 0;
     flex-direction: column;
     align-items: center;
   }
 
-  .scheduleLeft,
-  .scheduleRight {
+  .scheduleImageWrap {
+    order: -1;
     width: 100%;
   }
 
-  /* Center image */
-
-  .scheduleLeft {
-    align-items: center;
-    text-align: center;
-  }
-
   .scheduleImg {
-    max-width: 75%;
-    margin-top: 1.5rem;
+    margin-bottom: 2rem;
   }
 
-  /* Reduce typography */
+  .scheduleTableWrap {
+    width: 100%;
+    flex: none;
+  }
+
+  .scheduleRow2 {
+    grid-template-columns: 80px 1fr;
+    gap: 1rem;
+  }
 
   .scheduleTime2 {
     font-size: 1.1rem;
   }
 
   .scheduleLabel2 {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
   }
 
   .scheduleSubtext {
-    font-size: 0.95rem;
-    margin-left: 0;
-    margin-top: 0.3rem;
-  }
-
-  /* Adjust grid spacing */
-
-  .scheduleRow2 {
-    grid-template-columns: 80px 1fr;
-    gap: 1rem;
-    padding: 1rem 0;
+  font-size: 0.75rem;
+  margin-top: 0.3rem;
   }
 
 }
@@ -654,10 +646,12 @@
 
 @media (max-width: 768px) {
   .infoGrid,
-  .qaGrid {
+  .qaGrid,
+  .reiseGrid {
     grid-template-columns: 1fr;
     max-width: 100%;
     gap: 1.75rem;
+    justify-content: center;
   }
 
   .infoBox,
@@ -692,20 +686,14 @@
 
   .tentBody {
     flex-direction: column;
-
   }
 
   .tentBlock {
+    display:flex;
+    flex-direction: column;
     margin-bottom: 0.75rem;
     text-align: justify;
-  }
-
-  .scheduleTime2 {
-    font-size: 1rem; 
-  }
-
-  .scheduleLabel2 {
-    font-size: 1rem; 
+    justify-content: center;
   }
 
   .mapBullets {

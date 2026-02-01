@@ -107,7 +107,7 @@ export const content = {
           text: "Nahegelegene Flughäfen sind Montpellier oder Marseille. Von Basel gibt es bspw. günstige Verbindungen (ab ca. 79 CHF hin & zurück). Ab beiden Flughäfen erreicht ihr Nîmes gut mit Zug, Mietwagen, oder meldet euch bei uns wir klären ob ein Pick-up möglich ist."        
         },
         {
-          icon: "/icons/zug.gif",
+          icon: "/icons/zug.png",
           title: "Zug",
           text: "Nîmes ist gut mit dem Zug erreichbar, Beispielhafte Verbindungen:\n",
           bullets: [

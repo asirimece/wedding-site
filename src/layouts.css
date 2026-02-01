@@ -119,6 +119,10 @@
   font-weight: 300;
   color: #3C3421;
   font-size: 3rem;
+
+  hyphens: auto;
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
 .sectionSubtitle {

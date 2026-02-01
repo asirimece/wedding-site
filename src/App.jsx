@@ -84,15 +84,14 @@ export default function App() {
 
 
         {/* ================= SEIT ================= */}
-                {/* ================= SEIT ================= */}
         <Section
           id="seit"
           style={{ backgroundImage: `url(${t.seit.background})` }}
         >
-          <div className="contentBox contentBox--seit">
+          <div className="contentBox contentBox--seit animate-slide-up delay-1">
 
             {/* HEADER */}
-            <div className="seitHeader">
+            <div className="seitHeader animate-slide-down delay-2">
               <h2 className="sectionTitle">{t.seit.title}</h2>
             </div>
 
@@ -100,12 +99,12 @@ export default function App() {
             <div className="seitSplit">
 
               {/* LEFT — TEXT */}
-              <div className="seitLeft">
+              <div className="seitLeft animate-slide-down delay-4">
                 <p className="seitText">{t.seit.text}</p>
               </div>
 
               {/* RIGHT — IMAGE */}
-              <div className="seitRight">
+              <div className="seitRight animate-slide-up delay-3">
                 <img
                   src={t.seit.couple}
                   alt=""
@@ -124,33 +123,44 @@ export default function App() {
           id="schedule"
           style={{ backgroundImage: `url(${t.schedule.background})` }}
         >
-          <div className="contentBox contentBox--split contentBox--schedule">
+          <div className="contentBox contentBox--schedule animate-slide-up delay-1">
 
-            {/* LEFT column: title + subtitle + image */}
-            <div className="splitLeft scheduleLeft">
-              <h2 className="sectionTitle scheduleTitle nowrap-desktop">{t.schedule.title}</h2>
+            {/* FULL WIDTH HEADER */}
+            <div className="scheduleHeader animate-slide-down delay-2">
+              <h2 className="sectionTitle nowrap-desktop">{t.schedule.title}</h2>
               {t.schedule.subtitle && (
-                <p className="sectionSubtitle scheduleSubtitle">{t.schedule.subtitle}</p>
+                <p className="sectionSubtitle">{t.schedule.subtitle}</p>
               )}
-
-              <img src={t.schedule.img} alt="" className="scheduleImg" />
             </div>
 
-            {/* RIGHT column: schedule list */}
-            <div className="splitRight scheduleRight">
-              <div className="scheduleLines">
-                {t.schedule.items.map((item, i) => (
-                  <div key={i} className="scheduleRow2">
-                    <div className="scheduleTime2">{item.time}</div>
-                    <div className="scheduleLabel2">{item.label}</div>
-                    {item.subtext && (
-                      <div className="scheduleSubtext">{item.subtext}</div>
-                    )}
-                  </div>
-                ))}
+            {/* BODY */}
+            <div className="scheduleBody">
+
+              {/* IMAGE COLUMN */}
+              <div className="scheduleImageWrap animate-slide-up delay-3">
+                <img src={t.schedule.img} alt="" className="scheduleImg" />
               </div>
-            </div>
 
+              {/* TABLE COLUMN */}
+              <div className="scheduleTableWrap animate-slide-down delay-4">
+                <div className="scheduleLines">
+                  {t.schedule.items.map((item, i) => (
+                    <div key={i} className="scheduleRow2">
+                      <div className="scheduleTime2">{item.time}</div>
+
+                      <div>
+                        <div className="scheduleLabel2">{item.label}</div>
+                        {item.subtext && (
+                          <div className="scheduleSubtext">{item.subtext}</div>
+                        )}
+                      </div>
+
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+            </div>
           </div>
         </Section>
 
@@ -162,9 +172,9 @@ export default function App() {
             backgroundImage: `url(${t.info.background})`, /* BG NOT WORKING?? */
           }}
         >
-          <div className="contentBox infoBox">
+          <div className="contentBox infoBox animate-slide-up delay-1">
 
-            <h2 className="sectionTitle infoTitle">{t.info.title}</h2>
+            <h2 className="sectionTitle infoTitle animate-slide-down delay-2">{t.info.title}</h2>
 
             <div className="infoGrid">
 
@@ -178,7 +188,7 @@ export default function App() {
                   />
 
                   <h3 className="infoCardTitle">{item.title}</h3>
-                  <p className="infoCardText">
+                  <p className="infoCardText animate-slide-down delay-4">
                     {item.text.split("{{MAP}}").map((part, idx) => (
                       <span key={idx}>
                         {part}
@@ -216,11 +226,11 @@ export default function App() {
             backgroundImage: `url(${t.qa.background})`,
           }}
         >
-          <div className="contentBox qaBox">
+          <div className="contentBox qaBox animate-slide-up delay-1">
 
-            <h2 className="sectionTitle qaTitle">{t.qa.title}</h2>
+            <h2 className="sectionTitle qaTitle animate-slide-down delay-2">{t.qa.title}</h2>
 
-            <div className="qaGrid">
+            <div className="qaGrid animate-slide-down delay-4">
 
               {t.qa.items.map((item, i) => (
                 <div key={i} className="qaCard">
@@ -248,11 +258,11 @@ export default function App() {
             backgroundImage: `url(${t.reise.background})`,
           }}
         >
-          <div className="contentBox reiseBox">
+          <div className="contentBox reiseBox animate-slide-up delay-1">
 
-            <h2 className="sectionTitle reiseTitle">{t.reise.title}</h2>
+            <h2 className="sectionTitle reiseTitle animate-slide-down delay-2">{t.reise.title}</h2>
 
-            <div className="reiseGrid">
+            <div className="reiseGrid animate-slide-down delay-4">
 
               {t.reise.items.map((item, i) => (
                 <div key={i} className="reiseCard">
@@ -286,10 +296,10 @@ export default function App() {
           id="tent"
           style={{ backgroundImage: `url(${t.tent.background})` }}
         >
-          <div className="contentBox contentBox--tent">
+          <div className="contentBox contentBox--tent animate-slide-up delay-1">
 
             {/* FULL WIDTH HEADER */}
-            <div className="tentHeader">
+            <div className="tentHeader animate-slide-down delay-2">
               <h2 className="sectionTitle">{t.tent.title}</h2>
               <p className="sectionSubtitle tentSubtitle">
                 {t.tent.subtitle}
@@ -404,10 +414,10 @@ export default function App() {
           id="hotel"
           style={{ backgroundImage: `url(${t.hotel.background})` }}
         >
-          <div className="contentBox hotelBox">
+          <div className="contentBox hotelBox animate-slide-up delay-1">
 
             {/* HEADER */}
-            <div className="hotelHeader">
+            <div className="hotelHeader animate-slide-down delay-2">
               <h2 className="sectionTitle">{t.hotel.title}</h2>
               <p className="sectionSubtitle">{t.hotel.subtitle}</p>
             </div>
@@ -468,10 +478,10 @@ export default function App() {
           id="map"
           style={{ backgroundImage: `url(${t.map.background})` }}
         >
-          <div className="contentBox mapBox">
+          <div className="contentBox mapBox animate-slide-up delay-1">
 
             {/* HEADER */}
-            <div className="mapHeader">
+            <div className="mapHeader animate-slide-down delay-2">
               <h2 className="sectionTitle">{t.map.title}</h2>
               <p className="sectionSubtitle">{t.map.subtitle}</p>
             </div>

@@ -38,12 +38,32 @@
 }
 
 
+/* ================= SLIDE DOWN ================= */
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-down {
+  opacity: 0;
+  animation: slideDown 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  will-change: transform, opacity;
+}
+
+
 /* ================= DELAYS ================= */
 
 .delay-1 { animation-delay: 0.15s; }
 .delay-2 { animation-delay: 0.35s; }
 .delay-3 { animation-delay: 0.6s; }
-
+.delay-4 { animation-delay: 0.7s; }
 
 /* Accessibility */
 
