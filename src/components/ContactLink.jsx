@@ -1,82 +1,83 @@
 import { useState } from "react";
 
 export function ContactLink({ name, phone, lang }) {
-
   const [showNumber, setShowNumber] = useState(false);
 
-  // Use viewport instead of userAgent
-  const isMobile = window.matchMedia("(max-width: 768px)").matches;
-
   const label =
-    lang === "de"
-      ? `📞 Kontakt ${name}`
-      : `📞 Contacter ${name}`;
+    lang === "de" ? `📞 Kontakt ${name}` : `📞 Contacter ${name}`;
 
-  // ===== CLEAN NUMBER FOR WHATSAPP =====
-  const cleanPhone = phone.replace(/\D/g, "");
+  // ✅ WhatsApp needs digits only: 41764772276
+  const digits = String(phone).replace(/\D/g, "");
+  const waLink = `https://wa.me/${digits}`;
 
-  // ===== FORMAT FOR DISPLAY =====
+  // ✅ Desktop reveal format (nice display)
   function formatPhone(num) {
-
-    // Germany (+49)
-    if (num.startsWith("49")) {
-      return `+49 ${num.slice(2,5)} ${num.slice(5,8)} ${num.slice(8,10)} ${num.slice(10)}`;
+    // Switzerland: 41 76 477 22 76
+    if (num.startsWith("41") && num.length >= 11) {
+      return `+41 ${num.slice(2, 4)} ${num.slice(4, 7)} ${num.slice(7, 9)} ${num.slice(9, 11)}`;
     }
 
-    // France (+33)
-    if (num.startsWith("33")) {
-      return `+33 ${num.slice(2,3)} ${num.slice(3,5)} ${num.slice(5,7)} ${num.slice(7,9)} ${num.slice(9)}`;
+    // Germany: 49 176 123 45 67 (basic)
+    if (num.startsWith("49") && num.length >= 12) {
+      return `+49 ${num.slice(2, 5)} ${num.slice(5, 8)} ${num.slice(8, 10)} ${num.slice(10, 12)}`;
     }
 
-    // Switzerland (+41)
-    if (num.startsWith("41")) {
-      return `+41 ${num.slice(2,4)} ${num.slice(4,7)} ${num.slice(7,9)} ${num.slice(9)}`;
+    // France: 33 6 12 34 56 78
+    if (num.startsWith("33") && num.length >= 11) {
+      return `+33 ${num.slice(2, 3)} ${num.slice(3, 5)} ${num.slice(5, 7)} ${num.slice(7, 9)} ${num.slice(9, 11)}`;
     }
 
-    // fallback
     return `+${num}`;
   }
 
-  function handleClick() {
+  function handleClick(e) {
+    // Use breakpoint logic (same as your site)
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
     if (isMobile) {
-      window.open(`https://wa.me/${cleanPhone}`, "_blank");
-    } else {
-      setShowNumber((prev) => !prev);
+      // ✅ Most reliable on mobile (Safari/Chrome): navigate directly
+      window.location.href = waLink;
+      return;
     }
 
+    // Desktop: reveal/hide number
+    setShowNumber((prev) => !prev);
   }
 
   return (
     <div style={{ marginTop: "0.6rem" }}>
-
-      <span
+      <button
+        type="button"
         onClick={handleClick}
         style={{
+          background: "none",
+          border: "none",
+          padding: 0,
           cursor: "pointer",
           textDecoration: "underline",
           fontFamily: "Tenor Sans",
-          letterSpacing: "0.08em"
+          letterSpacing: "0.08em",
+          color: "#3C3421",
         }}
       >
         {label}
-      </span>
+      </button>
 
       {/* Desktop reveal */}
-      {!isMobile && showNumber && (
+      {showNumber && (
         <div
           style={{
             marginTop: "0.4rem",
             opacity: 0.85,
             fontFamily: "Tenor Sans",
             letterSpacing: "0.08em",
-            fontSize: "0.95rem"
+            fontSize: "0.95rem",
+            color: "#3C3421",
           }}
         >
-          {formatPhone(cleanPhone)}
+          {formatPhone(digits)}
         </div>
       )}
-
     </div>
   );
 }

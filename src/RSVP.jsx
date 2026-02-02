@@ -23,6 +23,10 @@ export function RSVP() {
         })
       });
 
+      if (!response.ok) {
+        throw new Error("Server error");
+      }
+
       const result = await response.json();
 
       if (result.success) {

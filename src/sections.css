@@ -573,9 +573,22 @@
   color: #3C3421;
 }
 
+.rsvpButtons {
+  display: flex;
+  flex-direction: column;   /* STACK VERTICALLY */
+  align-items: flex-start;  /* LEFT ALIGN */
+  margin-top: 10px;
+}
+
 .rsvpButton {
-  margin-top: 1.5rem;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 14px;
+  appearance: none;
+  border: none;
+  outline: none;
 
   background: #3C3421;
   color: #fff;
@@ -583,8 +596,13 @@
 
   padding: 14px 46px;
   border-radius: 4px;
-  letter-spacing: 0.14em;
+
   font-family: "Tenor Sans", sans-serif;
+  letter-spacing: 0.14em;
+  font-size: 0.9rem;
+
+  cursor: pointer;
+  user-select: none;
 }
 
 .section--rsvp .sectionInner {
@@ -593,23 +611,16 @@
   padding: 0 !important; /* optional, but usually needed for full-bleed */
 }
 
-.contactButton {
-  background: transparent;
-  color: #3C3421;
-  border: 1px solid #3C3421;
-
-  padding: 14px 46px;
-  border-radius: 4px;
-
-  letter-spacing: 0.14em;
-  font-family: "Tenor Sans", sans-serif;
-
-  cursor: pointer;
-  transition: all 0.2s ease;
+.rsvpButton:hover {
+  background: #2f2819;
 }
 
-.contactButton:hover {
-  background: rgba(60,52,33,0.08);
+.rsvpButton:active {
+  transform: translateY(1px);
+}
+
+.rsvpFormWrapper {
+  margin-top: 2.5rem;
 }
 
 /* Phone reveal on desktop */
@@ -799,6 +810,10 @@
     margin-left: 0;
     padding: 3rem 2rem;
     max-width: 100%;
+  }
+
+  .hotelHeader {
+    font-size: 2.5rem;
   }
 
 }

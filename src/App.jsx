@@ -611,7 +611,7 @@ export default function App() {
                 {/* BUTTON STACK */}
                 <div className="rsvpButtons">
 
-                  {/* ORIGINAL RSVP BUTTON (UNCHANGED) */}
+                  {/* RSVP LINK BUTTON */}
                   <a
                     className="rsvpButton"
                     href={t.rsvp.link}
@@ -620,14 +620,15 @@ export default function App() {
                   >
                     RSVP
                   </a>
-                  <RSVP/>
-                  {/* CONTACT BUTTON (SAME STYLE) */}
-                  <button
+
+                  {/* CONTACT BUTTON */}
+                  <a
                     className="rsvpButton"
                     onClick={handleContactClick}
+                    role="button"
                   >
                     KONTAKTIERE UNS
-                  </button>
+                  </a>
 
                   {/* Desktop phone reveal */}
                   {showPhone && (
@@ -637,6 +638,12 @@ export default function App() {
                   )}
 
                 </div>
+
+                {/* MOVE RSVP COMPONENT BELOW BUTTON STACK */}
+                <div className="rsvpFormWrapper">
+                  <RSVP />
+                </div>
+
 
               </div>
             </div>
