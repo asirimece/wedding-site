@@ -24,7 +24,7 @@ ${message}
 `;
 
     await resend.emails.send({
-      from: "onboarding@resend.dev",
+      from: "rsvp@noraromain-wedding.ch",
       to: ["asirimece@gmail.com"],
       subject: "RSVP Test Submission",
       text: emailText
