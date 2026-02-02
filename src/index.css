@@ -16,7 +16,8 @@ html, body {
 }
 
 #root {
-  min-height: 100vh;
+  min-height: 100dvh;
+  min-height: 100svh;
   background: #f8f6f2;
 }
 
@@ -29,7 +30,8 @@ body {
 /* ================= SECTION SYSTEM ================= */
 
 .section {
-  min-height: 100vh;
+  min-height: 100dvh;
+  min-height: 100svh;
   width: 100%;
   background-size: cover;
   background-position: center;
