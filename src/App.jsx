@@ -224,7 +224,7 @@ export default function App() {
                     rel="noreferrer"
                     className="infoLink"
                   >
-                    siehe Google Maps
+                    Google Maps
                   </a>
                   ){" "}
                 </>
@@ -233,7 +233,6 @@ export default function App() {
           ))}
         </p>
 
-            {/* COLOR SCHEME IMAGE — ONLY IF PRESENT */}
             {item.colorImage && (
               <div className="dressCodeImageWrap">
                 <img

@@ -247,9 +247,9 @@ export const content = {
     couple: "/photos/seit.png",
     title: "NOTRE HISTOIRE",
     text:
-      "Nous nous sommes rencontrés en août 2012, sur une piste de danse à Barcelone - un moment totalement imprévu, qui a pourtant tout changé.\n\n" +
+      "Nous nous sommes rencontrés en août 2012, sur une piste de danse à Barcelone – un moment totalement imprévu, qui a pourtant tout changé.\n\n" +
       "Depuis, beaucoup de choses se sont passées. La vie nous est apparue dans toutes ses couleurs – parfois légère et éclatante, parfois plus sérieuse ou plus douce. Il y a eu des rires, des larmes, des moments qui nous ont fait grandir, et beaucoup de danse.\n\n" +
-      "Qulle que soit la mélodie jouée: nous voulons partager notre vie et être là l’un pour l’autre. C’est pourquoi nous souhaitons aujourd’hui nous faire cette promesse.\n\n" +
+      "Quelle que soit la mélodie jouée: nous voulons partager notre vie et être là l’un pour l’autre. C’est pourquoi nous souhaitons aujourd’hui nous faire cette promesse.\n\n" +
       "Pouvoir partager ce jour avec vous compte énormément pour nous. Vous nous avez accompagnés, inspirés et soutenus. Et c’est une joie d’autant plus grande de pouvoir célébrer cette nouvelle étape à vos côtés."
   },
 
