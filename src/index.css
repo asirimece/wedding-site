@@ -2,40 +2,56 @@
   color-scheme: light;
 }
 
+/* RESET */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-html, body {
+/* LOCK VIEWPORT */
+html {
   width: 100%;
   height: 100%;
+  overflow: hidden;          /* IMPORTANT */
   background: #f8f6f2;
-  overscroll-behavior-y: none;
 }
 
+/* SCROLL ONLY BODY */
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
+
+  background: #f8f6f2;
+
+  /* iPhone safe area */
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* APP ROOT */
 #root {
   min-height: 100dvh;
-  min-height: 100svh;
+  width: 100%;
   background: #f8f6f2;
 }
-
-body {
-  overflow-x: hidden;
-  -webkit-overflow-scrolling: touch;
-}
-
 
 /* ================= SECTION SYSTEM ================= */
 
 .section {
   min-height: 100dvh;
-  min-height: 100svh;
   width: 100%;
+  display: flex;
+
   background-size: cover;
   background-position: center;
-  display: flex;
 }
 
 .sectionInner {
