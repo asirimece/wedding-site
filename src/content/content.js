@@ -48,7 +48,7 @@ export const content = {
         {
           icon: "/icons/location.gif",
           title: "Die Hochzeitslocation",
-          text: "Hier möchten wir mit euch anstoßen, lachen und unvergessliche Momente erleben. Damit ihr leicht dorthin findet, hier die Adresse:\n Domaine des Jardins de Campagne, 30100 Nîmes {{MAP}} \n auf dem Gelände der steht euch ein großer Parkplatz kostenlos zur Verfügung.",
+          text: "Hier möchten wir mit euch anstoßen, lachen und unvergessliche Momente erleben. Damit ihr leicht dorthin findet, hier die Adresse:\n Domaine des Jardins de Campagne, 30100 Nîmes {{MAP}} \n auf dem Gelände steht euch ein großer Parkplatz kostenlos zur Verfügung.",
           mapUrl: "https://maps.google.com/?q=Domaine+des+Jardins+de+Campagne+30100+Nîmes"
         },
         {
@@ -104,7 +104,7 @@ export const content = {
         {
           icon: "/icons/car.png",
           title: "Auto",
-          text: "Für alle, die gerne unterwegs Stopps einlegen oder flexibel sein möchten.\nFalls ihr kein Auto zur Verfügung habt, meldet euch gerne bei uns–\nwir helfen euch, Mitfahrgelegenheiten unter unseren Gästen zu koordinieren."
+          text: "Für alle, die gerne unterwegs Stopps einlegen oder flexibel sein möchten.\nFalls ihr kein Auto zur Verfügung habt, meldet euch gerne bei uns – wir helfen euch, Mitfahrgelegenheiten unter unseren Gästen zu koordinieren."
         },
         {
           icon: "/icons/fly.png",
@@ -176,14 +176,14 @@ export const content = {
           textTop:
             "Die Unterkunft ist ca. 5 Minuten (mit dem Auto) von der Hochzeitslocation entfernt.\n"+
             "Preise ab EUR 170 / Nacht.\n\n"+
-            "Für eine Reserierung siehe Webseite oder Booking.com."
+            "Für eine Reservierung siehe Webseite oder Booking.com."
         }
       ]
     },
 
     map: {
       background: "/backgrounds/map-bg.png",
-      title: "UNSERE REISE– MAP FÜR EUCH",
+      title: "UNSERE REISE-MAP FÜR EUCH",
       blocks: [
         {
           textTop:
@@ -203,7 +203,7 @@ export const content = {
           ],
           textBottom: 
             "Die Icons helfen euch bei der Orientierung – wählt einfach aus, was zu eurer Route, eurer Reisezeit und eurer Stimmung passt.\n"+
-            "Wir freuen uns, wenn diese Karte euch nicht nur zu unserer Hochzeit führt, sondern auch zu eigenen kleinen Erinnerungen unterwegs 🩵 \n\n",
+            "Wir freuen uns, wenn diese Karte euch nicht nur zu unserer Hochzeit führt, sondern auch zu eigenen kleinen Erinnerungen unterwegs ❤️ \n\n",
           mapUrl: "https://maps.app.goo.gl/gUftbYhKf3hoYiia7",
           mapLabel: "🗺️ Unsere Map ansehen →"
         },
@@ -447,7 +447,7 @@ export const content = {
       ],
           textBottom: 
             "Les icônes vous aideront à vous orienter – il vous suffit de choisir ce qui correspond à votre itinéraire, à votre période de voyage et à vos envies du moment.\n"+
-            "Nous espérons que cette carte ne vous mènera pas seulement à notre mariage, mais aussi vers vos propres petits souvenirs en chemin 🩵 \n\n",
+            "Nous espérons que cette carte ne vous mènera pas seulement à notre mariage, mais aussi vers vos propres petits souvenirs en chemin ❤️ \n\n",
           mapUrl: "https://maps.app.goo.gl/gUftbYhKf3hoYiia7",
           mapLabel: "🗺️ Découvrir notre carte →"
         },
