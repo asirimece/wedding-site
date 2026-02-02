@@ -10,16 +10,18 @@
 
 html, body {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
+  height: auto;
   background: #f8f6f2;
   overscroll-behavior-y: none;
 }
 
+
 #root {
-  min-height: 100dvh;
-  min-height: 100svh;
+  min-height: 100vh;
   background: #f8f6f2;
 }
+
 
 body {
   overflow-x: hidden;
@@ -30,8 +32,7 @@ body {
 /* ================= SECTION SYSTEM ================= */
 
 .section {
-  min-height: 100dvh;
-  min-height: 100svh;
+  min-height: 100vh;
   width: 100%;
   background-size: cover;
   background-position: center;
