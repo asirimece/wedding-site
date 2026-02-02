@@ -150,7 +150,7 @@ export const content = {
 
     hotel: {
       background: "/backgrounds/hotel-bg.png",
-      title: "WEITERE ÜBERNACHTUNGSIDEEN",
+      title: "WEITERE IDEEN FÜR ÜBERNACHTUNGEN",
       subtitle: "Für alle Gäste, die lieber im Hotel übernachten möchten",
       blocks: [
         {
@@ -363,7 +363,7 @@ export const content = {
   hotel: {
     background: "/backgrounds/hotel-bg.webp",
     img: "/photos/hotel-img.png",
-    title: "WEITERE ÜBERNACHTUNGSIDEEN",
+    title: "WEITERE IDEEN FÜR ÜBERNACHTUNGEN",
     subtitle: "Für alle Gäste, die lieber im Hotel übernachten möchten",
     imageText: "Plus d’informations sur : {{URL}}",
     hotelUrl: "www.hotel-marquis-de-la-baume.com",
