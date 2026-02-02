@@ -42,7 +42,7 @@ export const content = {
     },
 
     info: {
-      title: "EIN PAAR INFOS...",
+      title: "EIN PAAR INFOS",
       background: "/backgrounds/info-bg.png",
       items: [
         {
@@ -54,7 +54,7 @@ export const content = {
         {
           icon: "/icons/drink.gif",
           title: "Dress Code",
-          text: "Das Wichtigste: Ihr fühlt euch wohl und genießt den Tag mit uns.\n Helle Farben und leichte Stoffe passen perfekt zur Location. Für den Abend kann eine leichte Weste angenehm sein. Unser Farb‑Schema (ihr müsst euch nicht daran halten):",
+          text: "Das Wichtigste: Ihr fühlt euch wohl und genießt den Tag mit uns.\n Helle Farben und leichte Stoffe passen perfekt zur Location. Für den Abend kann eine leichte Weste angenehm sein. Unser Farb-Schema (ihr müsst euch nicht daran halten):",
           colorImage: "/photos/farbe.png"
         },
         {
@@ -145,7 +145,7 @@ export const content = {
     },
     {
       subtitle: "Reservierung",
-      text: "Die Buchung erfolgt direkt über den Dienstleister. Bitte melde dich per Email bei tentesdubonheur@gmail.com\n"+
+      text: "Die Buchung erfolgt direkt über den Dienstleister. Bitte melde dich per E-Mail bei <a href=\"mailto:tentesdubonheur@gmail.com\">tentesdubonheur@gmail.com</a>\n"+
             "Wichtig: Gib die Referenz “Nora&Romain 2026” ein."
     }
   ]
@@ -153,7 +153,7 @@ export const content = {
 
     hotel: {
       background: "/backgrounds/hotel-bg.png",
-      title: "WEITERE IDEEN FÜR ÜBERNACHTUNGEN",
+      title: "WEITERE IDEEN FÜR ÜBERNACHT&shy;UNGEN",
       subtitle: "Für alle Gäste, die lieber im Hotel übernachten möchten",
       blocks: [
         {
@@ -167,7 +167,7 @@ export const content = {
             "Zimmer Standard Double Bed: EUR 98/Zimmer/Nacht",
             "Zimmer Classic Queen Size Bed: EUR 108/Zimmer/Nacht"
           ],
-          textBottom: "Reservierung per Tel (+33 4 66 76 28 42) oder per Mail (contact@hotelmarquisdelabaume.com)"
+          textBottom: "Reservierung per Tel (+33 4 66 76 28 42) oder per E-Mail (<a href=\"mailto:contact@hotelmarquisdelabaume.com\">contact@hotelmarquisdelabaume.com</a>)"
         },
         {
           subtitle: "Domaine du Prieuré d’Estagel",
@@ -267,7 +267,7 @@ export const content = {
   },
 
   info: {
-    title: "QUELQUES INFORMATIONS...",
+    title: "QUELQUES INFORMATIONS",
     background: "/backgrounds/info-bg.webp",
     items: [
       {
@@ -388,7 +388,7 @@ export const content = {
         subtitle: "Réservation",
         text:
           "La réservation se fait directement auprès du prestataire.\n" +
-          "Merci d’envoyer un email à: tentesdubonheur@gmail.com\n"+
+          "Merci d’envoyer un e-mail à: <a href=\"mailto:tentesdubonheur@gmail.com\">tentesdubonheur@gmail.com</a>\n"+
           "Important: veuillez indiquer la référence « Nora&Romain 2026 » dans votre demande."
       }
     ]
@@ -396,7 +396,7 @@ export const content = {
 
   hotel: {
       background: "/backgrounds/hotel-bg.png",
-      title: "AUTRES IDÉES D'HÉBERGEMENT",
+      title: "AUTRES IDÉES D'HÉBER&shy;GEMENT",
       subtitle: "Pour les invités qui préfèrent dormir à l’hôtel",
       blocks: [
         {
@@ -410,7 +410,7 @@ export const content = {
             "Chambre Standard (lit double): EUR 98/chambre/nuit",
             "Chambre Classic (lit Queen Size): EUR 108/chambre/nuit"
           ],
-          textBottom: "Réservation par Tél. (+33 4 66 76 28 42) our par e-mail (contact@hotelmarquisdelabaume.com)"
+          textBottom: "Réservation par Tél. (+33 4 66 76 28 42) our par e-mail (<a href=\"mailto:contact@hotelmarquisdelabaume.com\">contact@hotelmarquisdelabaume.com</a>)"
         },
         {
           subtitle: "Domaine du Prieuré d’Estagel",

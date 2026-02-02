@@ -45,3 +45,9 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+.long-word {
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: manual;
+}

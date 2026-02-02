@@ -297,6 +297,7 @@
 .infoLink,
 .qaLink {
   text-decoration: underline;
+  color: #3C3421;
 }
 
 .dressCodeImageWrap {
@@ -424,6 +425,11 @@
   hyphens: auto;
   overflow-wrap: break-word;
   word-break: normal;
+}
+
+.tentBlockText a,
+.hotelText a {
+  color: #3C3421;
 }
 
 .tentImageText {

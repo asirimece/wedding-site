@@ -443,9 +443,7 @@ export default function App() {
                         <div className="tentLine" />
                       </div>
 
-                      <p className="tentBlockText">
-                        {block.text}
-                      </p>
+                      <p className="tentBlockText" dangerouslySetInnerHTML={{ __html: block.text }}/>
 
                     </div>
                   ))}
@@ -469,7 +467,7 @@ export default function App() {
 
             {/* HEADER */}
             <div className="hotelHeader reveal animate-slide-down delay-2">
-              <h2 className="sectionTitle">{t.hotel.title}</h2>
+              <h2 className="sectionTitle"><span className="long-word" dangerouslySetInnerHTML={{ __html: t.hotel.title}}/></h2>
               <p className="sectionSubtitle">{t.hotel.subtitle}</p>
             </div>
 
@@ -511,9 +509,7 @@ export default function App() {
                     </ul>
                   )}
                   {block.textBottom && (
-                    <p className="hotelText">
-                      {block.textBottom}
-                    </p>
+                    <p className="hotelText" dangerouslySetInnerHTML={{ __html: block.textBottom }} />
                   )}
                 </div>
               ))}
