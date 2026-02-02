@@ -299,6 +299,48 @@
   text-decoration: underline;
 }
 
+.dressCodeImageWrap {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.dressCodeImage {
+  max-width: 150px;
+  border-radius: 10px;
+}
+
+.qaContacts {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-family: "Tenor Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.qaContactLink {
+  background: rgba(255,255,255,0.9);
+
+  all: unset;
+  cursor: pointer;
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.15);
+  transition: 0.2s ease;
+}
+
+.qaContactLink:hover {
+  transform: translateY(-1px);
+}
+
+.qaPhoneReveal {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  margin-left: 10px;
+}
+
 /* ================= TENT ================= */
 .contentBox--tent,
 .contentBox--hotel {
@@ -414,7 +456,7 @@
 .hotelList {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .hotelEntry {

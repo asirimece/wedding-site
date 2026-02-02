@@ -200,39 +200,52 @@ export default function App() {
             <div className="infoGrid">
 
               {t.info.items.map((item, i) => (
-                <div key={i} className="infoCard reveal animate-slide-up delay-4">
+  <div key={i} className="infoCard reveal animate-slide-up delay-4">
 
-                  <img
-                    src={item.icon}
-                    alt=""
-                    className="infoIcon"
-                  />
+    <img
+      src={item.icon}
+      alt=""
+      className="infoIcon"
+    />
 
-                  <h3 className="infoCardTitle">{item.title}</h3>
-                  <p className="infoCardText">
-                    {item.text.split("{{MAP}}").map((part, idx) => (
-                      <span key={idx}>
-                        {part}
-                        {idx === 0 && item.mapUrl && (
-                          <>
-                            {" "}
-                            (
-                            <a
-                              href={item.mapUrl}
-                              target="_blank"
-                              rel="noreferrer"
-                              className="infoLink"
-                            >
-                              siehe Google Maps
-                            </a>
-                            ){" "}
-                          </>
-                        )}
-                      </span>
-                    ))}
-                  </p>
-                </div>
-              ))}
+    <h3 className="infoCardTitle">{item.title}</h3>
+
+    <p className="infoCardText">
+          {item.text.split("{{MAP}}").map((part, idx) => (
+            <span key={idx}>
+              {part}
+              {idx === 0 && item.mapUrl && (
+                <>
+                  {" "}
+                  (
+                  <a
+                    href={item.mapUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="infoLink"
+                  >
+                    siehe Google Maps
+                  </a>
+                  ){" "}
+                </>
+              )}
+            </span>
+          ))}
+        </p>
+
+            {/* COLOR SCHEME IMAGE — ONLY IF PRESENT */}
+            {item.colorImage && (
+              <div className="dressCodeImageWrap">
+                <img
+                  src={item.colorImage}
+                  alt="Dress Code Farbpalette"
+                  className="dressCodeImage"
+                />
+              </div>
+            )}
+
+          </div>
+        ))}
 
             </div>
 
@@ -263,23 +276,23 @@ export default function App() {
                   />
 
                   <h3 className="qaCardTitle">{item.title}</h3>
-                  <p className="qaCardText">{item.text}
+                  <p className="qaCardText">{item.text}</p>
+
                     {item.type === "contact" && (
-                      <>
+                      <div className="qaContacts">
+
                         <ContactLink
-                          name="Johanna (DE)"
-                          phone="491761234567"
-                          lang={lang}
+                          label="📞 Johanna (DE)"
+                          phone="+49 1522 9245971"
                         />
 
                         <ContactLink
-                          name="Aurélien (FR)"
-                          phone="33612345678"
-                          lang={lang}
+                          label="📞 Aurélien (FR)"
+                          phone="+41 76 445 32 86"
                         />
-                      </>
+
+                      </div>
                     )}
-                  </p>
 
                 </div>
               ))}
@@ -559,14 +572,14 @@ export default function App() {
 
                   {/* MAP LINK — MUST BE LAST */}
                   {block.mapUrl && (
-                    <a
-                      href={block.mapUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="mapInlineLink"
-                    >
-                      🗺️ Unsere Map ansehen →
-                    </a>
+                  <a
+                    href={block.mapUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mapInlineLink"
+                  >
+                    {block.mapLabel || "🗺️ Unsere Map ansehen →"}
+                  </a>
                   )}
 
                 </div>
@@ -638,19 +651,11 @@ export default function App() {
                   )}
 
                 </div>
-
-                {/* MOVE RSVP COMPONENT BELOW BUTTON STACK */}
-                <div className="rsvpFormWrapper">
-                  <RSVP />
-                </div>
-
-
               </div>
             </div>
 
           </div>
         </Section>
-
 
       </main>
     </div>

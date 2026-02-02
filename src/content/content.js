@@ -54,7 +54,8 @@ export const content = {
         {
           icon: "/icons/drink.gif",
           title: "Dress Code",
-          text: "Das Wichtigste: Ihr fühlt euch wohl und genießt den Tag mit uns.\n Helle Farben und leichte Stoffe passen perfekt zur Location. Für den Abend kann eine leichte Weste angenehm sein. Unser Farb‑Schema (ihr müsst euch nicht daran halten):"
+          text: "Das Wichtigste: Ihr fühlt euch wohl und genießt den Tag mit uns.\n Helle Farben und leichte Stoffe passen perfekt zur Location. Für den Abend kann eine leichte Weste angenehm sein. Unser Farb‑Schema (ihr müsst euch nicht daran halten):",
+          colorImage: "/photos/farbe.png"
         },
         {
           icon: "/icons/gift.gif",
@@ -74,18 +75,21 @@ export const content = {
         {
           icon: "/icons/kid.gif",
           title: "Können wir Kinder mitnehmen?",
-          text: "Wir möchten die gemeinsame Zeit mit unseren Freunden und unserer Familie in einer entspannten Atmosphäre voll auskosten. Unsere Feier ist daher ohne Kinder geplant. Solltet ihr eine besondere Situation haben, meldet euch gern direkt bei uns – wir finden gemeinsam eine Lösung."
+          text: "Wir möchten diesen besonderen Tag gemeinsam entspannt mit euch feiern. Unsere Idee ist deshalb eine Feier unter Erwachsenen.\n"+
+                "Wenn ihr eure Kinder mitbringen möchtet oder es für euch sonst schwierig ist, ist das natürlich kein Problem. Bitte gebt uns einfach im RSVP an."
         },
         {
           icon: "/icons/surprise.gif",
           title: "Überraschung geplant?",
-          text: "Wie schön! Damit alles gut in den Ablauf passt, meldet euch bitte kurz bei unserer Ansprechperson – so bleibt die Überraschung (z.B. Rede, Spiel, etc.) für uns erhalten und lässt sich ideal einplanen.\n",
+          text: "Wie schön! Damit alles gut in den Ablauf passt, meldet euch bitte kurz bei unserer Ansprechperson – so bleibt die Überraschung (z.B. Rede, Spiel, etc.) für uns erhalten und lässt sich ideal einplanen.",
           type: "contact"
         },
         {
           icon: "/icons/hotel.gif",
           title: "Unterkunft",
-          text: "Ihr könnt selbstverständlich die Unterkunft wählen, die am besten zu euch passt.\n Damit ihr euch leichter orientieren könnt, haben wir zwei Empfehlungen vorbereitet – ein Hotel und eine Übernachtungsmöglichkeit direkt vor Ort.\n Für alle, die die Region weiter erkunden möchten, gibt es außerdem einen kleinen Guide mit zusätzlichen Tipps."
+          text: "Ihr könnt selbstverständlich die Unterkunft wählen, die am besten zu euch passt.\n"+
+                "Damit ihr euch leichter orientieren könnt, haben wir drei Empfehlungen vorbereitet – zwei Hotels und eine Übernachtungsmöglichkeit direkt vor Ort.\n"+
+                "Für alle, die die Region weiter erkunden möchten, gibt es außerdem einen kleinen Guide mit zusätzlichen Tipps."
         },
       ],
     },
@@ -128,22 +132,21 @@ export const content = {
         "/photos/tent-img-4.png",
         "/photos/tent-img-5.png",
       ],
-      title: "LES TENTES DU BONHEUR",
+      title: "ÜBERNACHTEN – GLAMPING",
       subtitle: "Unser Vorschlag für alle Gäste, die “sous les étoiles” übernachten möchten",
       imageText: "Mehr Infos & Fotos findet ihr in dieser {{BROCHURE}}.",
       brochureUrl: "public/pdfs/tent-brochure.pdf",
       blocks: [
     {
       subtitle: "Worum geht es?",
-      text: "Für alle Gäste, die von Freitag, 05. Juni bis Sonntag, 07 Juni auf dem Gelände übernachten möchten, bieten wir liebevoll eingerichtete Tipis im Garten an. \n Die “Premium Zelte” befinden sich direkt auf dem Grundstück und verfügen über Zugang zu geteilten Duschen und Toiletten. Der Pool und der Garten können während des Aufenthalts frei genutzt werden."
-    },
-    {
-      subtitle: "Preis:",
-      text: "Der Preis beträgt EUR 350 für 2 Nächte für 2 Personen (inkl. Frühstück)."
+      text: "Für alle Gäste, die von Freitag, 05. Juni bis Sonntag, 07 Juni auf dem Gelände übernachten möchten. Die “Premium Zelte” befinden sich im Park des Geländes und verfügen über Zugang zu Duschen und Toiletten.\n"+
+            "Der Pool und der Garten können während des Aufenthalts frei genutzt werden.\n"+
+            "Der Preis beträgt EUR 300 für 2 Nächte für 2 Personen (inkl. Frühstück)."
     },
     {
       subtitle: "Reservierung",
-      text: "Die Buchung erfolgt direkt über den Dienstleister. Bitte melde dich per Email bei lestentesdubonheuratxxxxx.com. \n Wichtig: vergesse nicht die Referenz “Nora&Romain 2026” einzugeben."
+      text: "Die Buchung erfolgt direkt über den Dienstleister. Bitte melde dich per Email bei tentesdubonheur@gmail.com\n"+
+            "Wichtig: Gib die Referenz “Nora&Romain 2026” ein."
     }
   ]
     },
@@ -158,11 +161,11 @@ export const content = {
           url: "https://www.hotel-marquis-de-la-baume.com",
 
           textTop:
-            "Das Hotel befindet sich in Nîmes und ist ca. 20 Minuten mit dem Auto vom Hochzeitsfest entfernt.\n\n" +
+            "Das Hotel ist in Nîmes und ca. 20 Minuten mit dem Auto vom Hochzeitsfest entfernt.\n\n" +
             "Spezialpreise mit der Referenz “Nora&Romain 2026”:\nNur gültig für einen Aufenthalt von vier Nächten.\n",
           bullets: [
-            "Zimmer Standard Double Bed: EUR 98 / Zimmer / Nacht",
-            "Zimmer Classic Queen Size Bed: EUR 108 / Zimmer / Nacht"
+            "Zimmer Standard Double Bed: EUR 98/Zimmer/Nacht",
+            "Zimmer Classic Queen Size Bed: EUR 108/Zimmer/Nacht"
           ],
           textBottom: "Reservierung per Tel (+33 4 66 76 28 42) oder per Mail (contact@hotelmarquisdelabaume.com)"
         },
@@ -173,7 +176,7 @@ export const content = {
           textTop:
             "Die Unterkunft ist ca. 5 Minuten (mit dem Auto) von der Hochzeitslocation entfernt.\n"+
             "Preise ab EUR 170 / Nacht.\n\n"+
-            "Für eine Reserierung siehe Webseite oder booking.com."
+            "Für eine Reserierung siehe Webseite oder Booking.com."
         }
       ]
     },
@@ -202,7 +205,7 @@ export const content = {
             "Die Icons helfen euch bei der Orientierung – wählt einfach aus, was zu eurer Route, eurer Reisezeit und eurer Stimmung passt.\n"+
             "Wir freuen uns, wenn diese Karte euch nicht nur zu unserer Hochzeit führt, sondern auch zu eigenen kleinen Erinnerungen unterwegs 🩵 \n\n",
           mapUrl: "https://maps.app.goo.gl/gUftbYhKf3hoYiia7",
-          mapLabel: "🗺️ Karte öffnen"
+          mapLabel: "🗺️ Unsere Map ansehen →"
         },
       ]
     },
@@ -216,7 +219,7 @@ export const content = {
         "ZUSAGEN — DIREKT ÜBER DEN LINK",
       date: "28. FEBRUAR 2026",
       phone: "+41 76 477 22 76",
-      link: "https://example.com/rsvp"
+      link: "https://forms.gle/FSarnovDvNYGPsi77"
     },
 
   },
@@ -236,40 +239,40 @@ export const content = {
     background: "/backgrounds/hero-bg.webp",
     couple: "/photos/hero.png",
     title: "NORA & ROMAIN",
-    subtitle: "6 JUIN 2026, Nîmes, France",
+    subtitle: "6 JUIN 2026 À NÎMES, FRANCE",
   },
 
   seit: {
     background: "/backgrounds/seit-bg.webp",
     couple: "/photos/seit.png",
-    title: "COMMENT TOUT A COMMENCÉ",
-    subtitle: "DEPUIS 2012",
+    title: "NOTRE HISTOIRE",
     text:
-      "Nous nous sommes rencontrés en août 2012 sur une piste de danse à Barcelone – un moment inattendu qui a tout changé.\n" +
-      "Depuis, nous avons dansé, ri et trouvé ensemble notre chemin, toujours un peu plus proches.\n" +
-      "Aujourd’hui, nous sommes impatients de célébrer avec vous cette nouvelle étape de notre vie.",
+      "Nous nous sommes rencontrés en août 2012, sur une piste de danse à Barcelone - un moment totalement imprévu, qui a pourtant tout changé.\n\n" +
+      "Depuis, beaucoup de choses se sont passées. La vie nous est apparue dans toutes ses couleurs – parfois légère et éclatante, parfois plus sérieuse ou plus douce. Il y a eu des rires, des larmes, des moments qui nous ont fait grandir, et beaucoup de danse.\n\n" +
+      "Qulle que soit la mélodie jouée: nous voulons partager notre vie et être là l’un pour l’autre. C’est pourquoi nous souhaitons aujourd’hui nous faire cette promesse.\n\n" +
+      "Pouvoir partager ce jour avec vous compte énormément pour nous. Vous nous avez accompagnés, inspirés et soutenus. Et c’est une joie d’autant plus grande de pouvoir célébrer cette nouvelle étape à vos côtés."
   },
 
   schedule: {
     background: "/backgrounds/schedule-bg.webp",
     img: "/photos/schedule-img.webp",
-    title: "NOTRE JOUR DE MARIAGE",
+    title: "NOTRE JOURNÉE DE MARIAGE",
     subtitle: "06 Juin 2026",
     items: [
-      { time: "2:45 PM", label: "Arrivée & cocktail d’accueil" },
+      { time: "2:45 PM", label: "Arrivée & Welcome Drinks" },
       { time: "3:30 PM", label: "Cérémonie" },
-      { time: "4:30 PM", label: "Apéritif & photos" },
-      { time: "7:00 PM", label: "Dîner & soirée" },
+      { time: "4:30 PM", label: "Apéritif & Photos", subtext: "De délicieux amusebouche et quelques verres, pendant que nous immortalisons de beaux moments."},
+      { time: "7:00 PM", label: "Repas & Fête", subtext: "Une soirée conviviale, avec un bon repas, des discours remplis d’amour... et beaucoup de danse!"},
     ],
   },
 
   info: {
-    title: "QUELQUES INFOS...",
+    title: "QUELQUES INFORMATIONS...",
     background: "/backgrounds/info-bg.webp",
     items: [
       {
         icon: "/icons/location.gif",
-        title: "Le lieu du mariage",
+        title: "Lieu du mariage",
         text:
           "C’est ici que nous trinquerons, rirons et partagerons ensemble des moments inoubliables.\n" +
           "Pour vous y rendre facilement, voici l’adresse :\n" +
@@ -279,18 +282,18 @@ export const content = {
       },
       {
         icon: "/icons/drink.gif",
-        title: "Dress code",
+        title: "Dress Code",
         text:
-          "L’essentiel : que vous vous sentiez à l’aise et profitiez pleinement de la journée avec nous.\n" +
-          "Les couleurs claires et les tissus légers s’accordent parfaitement avec le lieu.\n" +
-          "Pour la soirée, une petite veste peut être utile. Notre palette de couleurs (sans obligation) :"
+          "L’essentiel: que vous vous sentiez bien et que vous profitiez pleinement de cette journée avec nous.\n" +
+          "Des couleurs claires et des tissus légers se marient parfaitement avec la beauté du lieu. Pour la soirée, une petite veste peut être agréable. Notre palette de couleurs (vous n’êtes pas obligés de vous y tenir):",
+        colorImage: "/photos/farbe.png"
       },
       {
         icon: "/icons/gift.gif",
         title: "Cadeaux",
         text:
-          "Votre présence est le plus beau des cadeaux.\n" +
-          "Si vous souhaitez tout de même nous offrir quelque chose, une contribution à notre voyage de noces nous ferait très plaisir."
+          "Votre présence est le plus beau cadeau que vous puissiez nous faire.\n" +
+          "Si vous souhaitez malgré tout nous offrir quelque chose, une participation à notre voyage de noces nous ferait très plaisir."
       },
     ],
   },
@@ -298,42 +301,78 @@ export const content = {
   qa: {
     background: "/backgrounds/qa-bg.webp",
     img: "/photos/qa-img.png",
-    title: "QUESTIONS FRÉQUENTES",
+    title: "QUESTIONS FRÉQUEMMENT POSÉES",
     subtitle: " ",
     text: " ",
     items: [
       {
         icon: "/icons/kid.gif",
-        title: "Les enfants sont-ils invités ?",
+        title: "Puis-je venir avec mes enfants?",
         text:
-          "Nous souhaitons profiter pleinement de ce moment avec nos amis et notre famille dans une atmosphère détendue.\n" +
-          "La célébration se fera donc sans enfants.\n" +
-          "Si vous avez une situation particulière, n’hésitez pas à nous contacter — nous trouverons ensemble une solution."
+          "Nous aimerions célébrer cette journée spéciale dans une atmosphère détendue. C’est pourquoi nous avons imaginé une fête principalement entre adultes.\n" +
+          "Cependant, si vous souhaitez venir avec vos enfants ou si c’est plus simple pour vous, aucun souci. Merci de simplement l’indiquer dans votre RSVP."
       },
       {
         icon: "/icons/surprise.gif",
-        title: "Vous préparez une surprise ?",
+        title: "Une surprise de prévue?",
         text:
           "Quelle belle attention !\n" +
-          "Afin que tout s’intègre parfaitement au déroulement de la journée, merci de contacter notre personne de référence.",
+          "Pour que tout s’intègre harmonieusement dans le déroulement de la journée, merci de contacter l’une de nos personnes de référence.\n"+
+          "Cela permettra de garder la surprise intacte (discours, animation, petit jeu, etc.) tout en veillant à ce que le moment choisi s’accorde bien avec le programme.",
         type: "contact"
       },
       {
         icon: "/icons/hotel.gif",
-        title: "Hébergement",
+        title: "Où puis-je loger?",
         text:
-          "Vous êtes libres de choisir l’hébergement qui vous convient le mieux.\n" +
-          "Pour vous faciliter la tâche, nous avons préparé deux recommandations : un hôtel et une possibilité de logement directement sur place.\n" +
-          "Pour celles et ceux qui souhaitent explorer davantage la région, un petit guide avec des conseils supplémentaires sera également disponible."
+          "Vous êtes bien sûr libres de choisir l’hébergement qui vous convient le mieux.\n" +
+          "Pour faciliter votre recherche, nous avons sélectionné trois options: Deux hôtels et une possibilité de logement directement sur place.\n" +
+          "Et pour celles et ceux qui souhaitent profiter un peu plus de la région, nous avons également préparé un petit guide avec des recommandations supplémentaires."
+      },
+    ],
+  },
+
+  reise: {
+    background: "/backgrounds/reise-bg.png",
+    img: "/photos/reise-img.png",
+    title: "ACCÉS ET HÉBERGEMENT",
+    subtitle: " ",
+    text: " ",
+    items: [
+      {
+        icon: "/icons/car.png",
+        title: "En voiture",
+        text: "Idéal pour tous ceux qui souhaitent faire quelques arrêts en route ou rester pleinement flexibles.\nSi vous n’avez pas de voiture, n’hésitez pas à nous contacter: nous vous aiderons volontiers à organiser des co‑voiturages entre nos invités."
+      },
+      {
+        icon: "/icons/fly.png",
+        title: "En avion",
+        text: "Les aéroports les plus proches sont Montpellier et Marseille. Depuis Bâle, il existe par exemple des vols à prix avantageux (dès env. 79 CHF aller-retour).\n"+
+              "Depuis les deux aéroports, vous pouvez rejoindre Nîmes facilement en train, en voiture de location ou, si besoin, en nous contactant: nous verrons s’il est possible d’organiser un transfert."        
+      },
+      {
+        icon: "/icons/zug.png",
+        title: "En train",
+        text: "Nîmes est bien desservie par le rail.Voici quelques exemples de trajets:",
+        bullets: [
+        "Karlsruhe – Strasbourg – Nîmes",
+        "Genf – Lyon – Nîmes"
+      ]
       },
     ],
   },
 
   tent: {
-    background: "/backgrounds/tent-bg.webp",
-    img: "/photos/tent-img.png",
-    title: "LES TENTES DU BONHEUR",
-    subtitle: "Notre suggestion pour les invités souhaitant dormir « sous les étoiles »",
+      background: "/backgrounds/tent-bg.png",
+      images: [
+        "/photos/tent-img-1.png",
+        "/photos/tent-img-2.png",
+        "/photos/tent-img-3.png",
+        "/photos/tent-img-4.png",
+        "/photos/tent-img-5.png",
+      ],
+    title: "DORMIR SUR PLACE – GLAMPING",
+    subtitle: "Pour tous les invités souhaitant passer la nuit sous les étoiles",
     imageText: "Plus d’informations et de photos dans cette {{BROCHURE}}.",
     brochureUrl: "/pdfs/tent-brochure.pdf",
 
@@ -341,58 +380,91 @@ export const content = {
       {
         subtitle: "De quoi s’agit-il ?",
         text:
-          "Pour les invités souhaitant séjourner sur place du vendredi 5 juin au dimanche 7 juin, nous proposons de magnifiques tipis installés dans le jardin.\n" +
-          "Les « tentes premium » se trouvent directement sur le domaine et donnent accès à des douches et toilettes partagées.\n" +
-          "La piscine et le jardin peuvent être utilisés librement pendant le séjour."
-      },
-      {
-        subtitle: "Prix",
-        text:
-          "Le prix est de 350 € pour 2 nuits pour 2 personnes (petit-déjeuner inclus)."
+          "Notre suggestion pour tous les invités qui souhaitent passer la nuit sous les étoiles et profiter pleinement du domaine du vendredi 5 Juin au dimanche 7 Juin.\n"+
+          "Les tentes « Premium » sont installées dans le parc du domaine et disposent d’un accès aux douches et aux toilettes. Le jardin et la piscine peuvent être utilisés librement pendant tout votre séjour.\n"+
+          "Tarif: 300 € pour 2 nuits / 2 personnes (petit-déjeuner inclus)."
       },
       {
         subtitle: "Réservation",
         text:
           "La réservation se fait directement auprès du prestataire.\n" +
-          "Merci de contacter : lestentesdubonheuratxxxxx.com\n" +
-          "Important : n’oubliez pas d’indiquer la référence « Nora&Romain 2026 »."
+          "Merci d’envoyer un email à: tentesdubonheur@gmail.com\n"+
+          "Important: veuillez indiquer la référence « Nora&Romain 2026 » dans votre demande."
       }
     ]
   },
 
   hotel: {
-    background: "/backgrounds/hotel-bg.webp",
-    img: "/photos/hotel-img.png",
-    title: "WEITERE IDEEN FÜR ÜBERNACHTUNGEN",
-    subtitle: "Für alle Gäste, die lieber im Hotel übernachten möchten",
-    imageText: "Plus d’informations sur : {{URL}}",
-    hotelUrl: "www.hotel-marquis-de-la-baume.com",
+      background: "/backgrounds/hotel-bg.png",
+      title: "AUTRES IDÉES D'HÉBERGEMENT",
+      subtitle: "Pour les invités qui préfèrent dormir à l’hôtel",
+      blocks: [
+        {
+          subtitle: "Hotel Best Western Marquis de la Baume****",
+          url: "https://www.hotel-marquis-de-la-baume.com",
 
-    blocks: [
-      {
-        subtitle: "Réservation",
-        text:
-          "La réservation se fait directement auprès de l’hôtel.\n" +
-          "Pour les disponibilités et tarifs, merci de contacter le Marquis de la Baume.\n" +
-          "Avec le code « Romain&Nora 2026 », vous bénéficiez d’un tarif préférentiel selon les dates et catégories de chambre."
-      },
-      {
-        subtitle: "Informations sur l’hôtel",
-        text:
-          "Nous recommandons le Best Western Marquis de la Baume pour les invités souhaitant un hébergement confortable.\n" +
-          "Cet hôtel 4 étoiles plein de charme est situé dans un bâtiment historique du XVIIe siècle au cœur du centre-ville de Nîmes.\n" +
-          "Il se trouve à environ 15 km du lieu de réception et constitue un excellent point de départ pour découvrir la ville."
-      }
-    ]
-  },
+          textTop:
+            "L’hôtel se situe à Nîmes, à environ 20 minutes en voiture du lieu du mariage.\n\n" +
+            "Tarifs spéciaux avec la référence « Nora&Romain 2026 »:\nOffre valable uniquement pour un séjour de quatre nuits :\n",
+          bullets: [
+            "Chambre Standard (lit double): EUR 98/chambre/nuit",
+            "Chambre Classic (lit Queen Size): EUR 108/chambre/nuit"
+          ],
+          textBottom: "Réservation par Tél. (+33 4 66 76 28 42) our par e-mail (contact@hotelmarquisdelabaume.com)"
+        },
+        {
+          subtitle: "Domaine du Prieuré d’Estagel",
+          url: "https://www.domaineduprieure-estagel.com",
 
-  rsvp: {
-    image: "/photos/rsvp-left.webp",
-    background: "/backgrounds/rsvp-bg.webp",
-    title: "BITTE BIS ZUM 28.FEBRUAR 2026 ZUSAGEN—\nDIREKT ÜBER DEN LINK",
-    phone: "xxxx",
-    link: "https://example.com/rsvp"
-  },
+          textTop:
+            "Cette option se trouve à environ 5 minutes en voiture du lieu du mariage.\n"+
+            "Prix à partir de EUR 170 / nuit.\n\n"+
+            "Pour réserver, veuillez consulter directement le site web de l’établissement ou Booking.com."
+        }
+      ]
+    },
+
+    map: {
+      background: "/backgrounds/map-bg.png",
+      title: "NOTRE CARTE DE VOYAGE POUR VOUS",
+      blocks: [
+        {
+          textTop:
+
+            "Nous avons préparé pour vous une petite carte d’inspiration.\n"+
+            "Une invitation à la découverte - pour celles et ceux qui souhaitent ponctuer leur trajet de jolis arrêts ou prolonger leur séjour dans le Sud.\n"+
+            "Sur cette carte, vous trouverez:\n"+
+            "Etapes sur le chemin vers ou dans Nîmes – Lieux à découvrir en Provence – Spots en Côte d’Azur\n\n",
+      bullets: [
+        "🍽️ Restaurants",
+        "📚 Musées",
+        "🍷 Domaines viticoles & Bars",
+        "🌸 Jardins",
+        "🛏️ Hôtels insolites",
+        "🌄 Spots nature",
+        "🏛️ Sites touristiques & lieux exceptionnels",
+        "💍 Notre lieu de mariage & parkings"
+      ],
+          textBottom: 
+            "Les icônes vous aideront à vous orienter – il vous suffit de choisir ce qui correspond à votre itinéraire, à votre période de voyage et à vos envies du moment.\n"+
+            "Nous espérons que cette carte ne vous mènera pas seulement à notre mariage, mais aussi vers vos propres petits souvenirs en chemin 🩵 \n\n",
+          mapUrl: "https://maps.app.goo.gl/gUftbYhKf3hoYiia7",
+          mapLabel: "🗺️ Découvrir notre carte →"
+        },
+      ]
+    },
+
+    rsvp: {
+      image: "/photos/rsvp-left.webp",
+      background: "/backgrounds/rsvp-bg.png",
+      title:
+        "MERCI DE CONFIRMER VOTRE PRÉSENCE D'ICI AU\n" +
+        "{{DATE}}\n" +
+        "DIRECTEMENT VIA LE LIEN",
+      date: "28. FÉVRIER 2026",
+      phone: "+41 76 477 22 76",
+      link: "https://forms.gle/FSarnovDvNYGPsi77"
+    },
 
 }
 
