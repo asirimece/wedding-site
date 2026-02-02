@@ -10,6 +10,7 @@ import { TextLayout } from "./components/layouts/TextLayout";
 import { LanguageSwitch } from "./components/LanguageSwitch";
 import { RSVP } from "./RSVP";
 import { useScrollReveal } from "./hooks/useScrollReveal";
+import { ContactLink } from "./components/ContactLink";
 
 
 export default function App() {
@@ -37,6 +38,20 @@ export default function App() {
 
 
   const [tentIndex, setTentIndex] = useState(0);
+
+  /* RSVP contact state */
+  const [showPhone, setShowPhone] = useState(false);
+
+  const handleContactClick = () => {
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
+    if (isMobile) {
+      window.open("https://wa.me/41764772276", "_blank");
+    } else {
+      setShowPhone((prev) => !prev);
+    }
+  };
+
   const tentImages = useMemo(() => {
     const arr = t?.tent?.images;
     if (Array.isArray(arr) && arr.length) return arr;
@@ -248,7 +263,24 @@ export default function App() {
                   />
 
                   <h3 className="qaCardTitle">{item.title}</h3>
-                  <p className="qaCardText">{item.text}</p>
+                  <p className="qaCardText">{item.text}
+                    {item.type === "contact" && (
+                      <>
+                        <ContactLink
+                          name="Johanna (DE)"
+                          phone="491761234567"
+                          lang={lang}
+                        />
+
+                        <ContactLink
+                          name="Aurélien (FR)"
+                          phone="33612345678"
+                          lang={lang}
+                        />
+                      </>
+                    )}
+                  </p>
+
                 </div>
               ))}
 
@@ -504,19 +536,7 @@ export default function App() {
                     <div className="mapLine" />
                   </div>
 
-                  {/* URL */}
-                  {block.url && (
-                    <a
-                      href={block.url}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="mapUrl"
-                    >
-                      {block.url}
-                    </a>
-                  )}
-
-                  {/* Text */}
+                  {/* Main text */}
                   <p className="mapText">
                     {block.textTop}
                   </p>
@@ -529,11 +549,26 @@ export default function App() {
                       ))}
                     </ul>
                   )}
+
+                  {/* Bottom text */}
                   {block.textBottom && (
                     <p className="mapText">
                       {block.textBottom}
                     </p>
                   )}
+
+                  {/* MAP LINK — MUST BE LAST */}
+                  {block.mapUrl && (
+                    <a
+                      href={block.mapUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mapInlineLink"
+                    >
+                      🗺️ Unsere Map ansehen →
+                    </a>
+                  )}
+
                 </div>
               ))}
 
@@ -547,16 +582,19 @@ export default function App() {
         <Section id="rsvp" className="section--rsvp">
           <div className="rsvpSplit">
 
+            {/* LEFT IMAGE */}
             <div className="rsvpLeft">
               <img src={t.rsvp.image} alt="" className="rsvpImg" />
             </div>
 
+            {/* RIGHT CONTENT */}
             <div
               className="rsvpRight"
               style={{ backgroundImage: `url(${t.rsvp.background})` }}
             >
               <div className="rsvpInner">
 
+                {/* TITLE */}
                 <h2 className="rsvpTitle">
                   {t.rsvp.title.split("{{DATE}}").map((part, i) => (
                     <span key={i}>
@@ -570,12 +608,10 @@ export default function App() {
                   ))}
                 </h2>
 
-                <div className="rsvpContactBlock">
-                  <div className="rsvpContactRow">
-                    <span className="rsvpIcon">📞</span>
-                    <span className="rsvpPhone">{t.rsvp.phone}</span>
-                  </div>
+                {/* BUTTON STACK */}
+                <div className="rsvpButtons">
 
+                  {/* ORIGINAL RSVP BUTTON (UNCHANGED) */}
                   <a
                     className="rsvpButton"
                     href={t.rsvp.link}
@@ -584,17 +620,29 @@ export default function App() {
                   >
                     RSVP
                   </a>
-                </div>
-                  
-                <RSVP />
+                  <RSVP/>
+                  {/* CONTACT BUTTON (SAME STYLE) */}
+                  <button
+                    className="rsvpButton"
+                    onClick={handleContactClick}
+                  >
+                    KONTAKTIERE UNS
+                  </button>
 
+                  {/* Desktop phone reveal */}
+                  {showPhone && (
+                    <div className="rsvpPhoneReveal">
+                      {t.rsvp.phone}
+                    </div>
+                  )}
+
+                </div>
 
               </div>
             </div>
 
           </div>
         </Section>
-
 
 
       </main>

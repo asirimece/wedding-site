@@ -21,7 +21,7 @@ ${message}
 `;
 
     await resend.emails.send({
-  from: "RSVP <onboarding@resend.dev>",   // TEST sender
+  from: "<onboarding@resend.dev>",   // TEST sender
   to: ["asirimece@gmail.com"],           // YOUR inbox
   subject: "RSVP Test Submission",
   text: emailText

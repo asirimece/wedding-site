@@ -83,3 +83,19 @@
     transform: none !important;
   }
 }
+
+/* ================= RSVP ================= */
+.rsvpPhoneReveal {
+  animation: fadeInPhone 0.25s ease forwards;
+}
+
+@keyframes fadeInPhone {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 0.85;
+    transform: translateY(0);
+  }
+}

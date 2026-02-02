@@ -9,7 +9,7 @@ export const content = {
     ],
 
     hero: {
-      background: "/backgrounds/hero-bg.png",
+      background: "/backgrounds/hero-bg.webp",
       couple: "/photos/hero.png",
       title: "NORA & ROMAIN",
       subtitle: "6 JUNI 2026 IN NÎMES, FRANKREICH",
@@ -30,7 +30,7 @@ export const content = {
 
     schedule: {
       background: "/backgrounds/schedule-bg.png",
-      img: "/photos/schedule-img.png",
+      img: "/photos/schedule-img.webp",
       title: "UNSER HOCHZEITSTAG",
       subtitle: "06. Juni 2026",
       items: [
@@ -67,7 +67,7 @@ export const content = {
     qa: {
       background: "/backgrounds/qa-bg.png",
       img: "/photos/qa-img.png",
-      title: "HÄUFIG GESTELLTEN FRAGEN",
+      title: "HÄUFIG GESTELLTE FRAGEN",
       subtitle: " ",
       text: " ",
       items: [
@@ -79,7 +79,8 @@ export const content = {
         {
           icon: "/icons/surprise.gif",
           title: "Überraschung geplant?",
-          text: "Wie schön! Damit alles gut in den Ablauf passt, meldet euch bitte kurz bei unserer Ansprechperson – so bleibt die Überraschung (z.B. Rede, Spiel, etc.) für uns erhalten und lässt sich ideal einplanen.\n Johanna (DE): +49 xxx x xx x \n Aurélien (FR): +41 76 445 32 86"
+          text: "Wie schön! Damit alles gut in den Ablauf passt, meldet euch bitte kurz bei unserer Ansprechperson – so bleibt die Überraschung (z.B. Rede, Spiel, etc.) für uns erhalten und lässt sich ideal einplanen.\n",
+          type: "contact"
         },
         {
           icon: "/icons/hotel.gif",
@@ -92,7 +93,7 @@ export const content = {
     reise: {
       background: "/backgrounds/reise-bg.png",
       img: "/photos/reise-img.png",
-      title: "HÄUFIG GESTELLTEN FRAGEN",
+      title: "ANREISE UND AUFENTHALT",
       subtitle: " ",
       text: " ",
       items: [
@@ -199,14 +200,15 @@ export const content = {
           ],
           textBottom: 
             "Die Icons helfen euch bei der Orientierung – wählt einfach aus, was zu eurer Route, eurer Reisezeit und eurer Stimmung passt.\n"+
-            "Wir freuen uns, wenn diese Karte euch nicht nur zu unserer Hochzeit führt, sondern auch zu eigenen kleinen Erinnerungen unterwegs 🩵 \n\n"+
-            "Map: https://maps.app.goo.gl/gUftbYhKf3hoYiia7"
+            "Wir freuen uns, wenn diese Karte euch nicht nur zu unserer Hochzeit führt, sondern auch zu eigenen kleinen Erinnerungen unterwegs 🩵 \n\n",
+          mapUrl: "https://maps.app.goo.gl/gUftbYhKf3hoYiia7",
+          mapLabel: "🗺️ Karte öffnen"
         },
       ]
     },
 
     rsvp: {
-      image: "/photos/rsvp-left.png",
+      image: "/photos/rsvp-left.webp",
       background: "/backgrounds/rsvp-bg.png",
       title:
         "BITTE BIS ZUM\n" +
@@ -231,14 +233,14 @@ export const content = {
   ],
 
   hero: {
-    background: "/backgrounds/hero-bg.png",
+    background: "/backgrounds/hero-bg.webp",
     couple: "/photos/hero.png",
     title: "NORA & ROMAIN",
     subtitle: "6 JUIN 2026, Nîmes, France",
   },
 
   seit: {
-    background: "/backgrounds/seit-bg.png",
+    background: "/backgrounds/seit-bg.webp",
     couple: "/photos/seit.png",
     title: "COMMENT TOUT A COMMENCÉ",
     subtitle: "DEPUIS 2012",
@@ -249,8 +251,8 @@ export const content = {
   },
 
   schedule: {
-    background: "/backgrounds/schedule-bg.png",
-    img: "/photos/schedule-img.png",
+    background: "/backgrounds/schedule-bg.webp",
+    img: "/photos/schedule-img.webp",
     title: "NOTRE JOUR DE MARIAGE",
     subtitle: "06 Juin 2026",
     items: [
@@ -263,7 +265,7 @@ export const content = {
 
   info: {
     title: "QUELQUES INFOS...",
-    background: "/backgrounds/info-bg.png",
+    background: "/backgrounds/info-bg.webp",
     items: [
       {
         icon: "/icons/location.gif",
@@ -294,7 +296,7 @@ export const content = {
   },
 
   qa: {
-    background: "/backgrounds/qa-bg.png",
+    background: "/backgrounds/qa-bg.webp",
     img: "/photos/qa-img.png",
     title: "QUESTIONS FRÉQUENTES",
     subtitle: " ",
@@ -313,9 +315,8 @@ export const content = {
         title: "Vous préparez une surprise ?",
         text:
           "Quelle belle attention !\n" +
-          "Afin que tout s’intègre parfaitement au déroulement de la journée, merci de contacter notre personne de référence.\n" +
-          "Johanna (DE) : +49 xxx x xx x\n" +
-          "Aurélien (FR) : +41 76 445 32 86"
+          "Afin que tout s’intègre parfaitement au déroulement de la journée, merci de contacter notre personne de référence.",
+        type: "contact"
       },
       {
         icon: "/icons/hotel.gif",
@@ -329,7 +330,7 @@ export const content = {
   },
 
   tent: {
-    background: "/backgrounds/tent-bg.png",
+    background: "/backgrounds/tent-bg.webp",
     img: "/photos/tent-img.png",
     title: "LES TENTES DU BONHEUR",
     subtitle: "Notre suggestion pour les invités souhaitant dormir « sous les étoiles »",
@@ -360,7 +361,7 @@ export const content = {
   },
 
   hotel: {
-    background: "/backgrounds/hotel-bg.png",
+    background: "/backgrounds/hotel-bg.webp",
     img: "/photos/hotel-img.png",
     title: "WEITERE ÜBERNACHTUNGSIDEEN",
     subtitle: "Für alle Gäste, die lieber im Hotel übernachten möchten",
@@ -386,10 +387,10 @@ export const content = {
   },
 
   rsvp: {
-    image: "/photos/rsvp-left.png",
-    background: "/backgrounds/rsvp-bg.png",
+    image: "/photos/rsvp-left.webp",
+    background: "/backgrounds/rsvp-bg.webp",
     title: "BITTE BIS ZUM 28.FEBRUAR 2026 ZUSAGEN—\nDIREKT ÜBER DEN LINK",
-    phone: "+41 76 477 22 76",
+    phone: "xxxx",
     link: "https://example.com/rsvp"
   },
 
