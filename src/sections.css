@@ -112,7 +112,7 @@
 .seitText {
   font-family: "Tenor Sans", sans-serif;
   color: #3C3421;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   line-height: 1.45;
   text-align: center;
   white-space: pre-line;
@@ -247,7 +247,7 @@
 .reiseCardTitle {
   font-family: "Noto Serif Display", serif;
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   letter-spacing: 0.06em;
   color: #3C3421;
   margin-bottom: 0.75rem;
@@ -264,7 +264,7 @@
 .qaCardText,
 .reiseCardText {
   font-family: "Tenor Sans", sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   line-height: 1.6;
   margin-top: 0.75rem;
   color: #3C3421;
@@ -402,7 +402,7 @@
 .tentBlockTitle,
 .hotelName {
   font-family: "Noto Serif Display", serif;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   letter-spacing: 0.06em;
   color: #3C3421;
   margin-bottom: 0.75rem;
@@ -413,7 +413,7 @@
 .hotelText,
 .mapText {
   font-family: "Tenor Sans", sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   line-height: 1.6;
   margin-top: 0.75rem;
   color: #3C3421;
@@ -496,7 +496,7 @@
 .mapBullets li {
   font-family: "Tenor Sans", sans-serif;
   margin-bottom: 0.3rem;
-  font-size: 1.25rem; 
+  font-size: 1.1rem;
   color: #3C3421;
 }
 

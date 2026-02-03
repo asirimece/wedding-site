@@ -461,7 +461,7 @@ export const content = {
         "MERCI DE CONFIRMER VOTRE PRÉSENCE D'ICI AU\n" +
         "{{DATE}}\n" +
         "DIRECTEMENT VIA LE LIEN",
-      date: "28. FÉVRIER 2026",
+      date: "28 FÉVRIER 2026",
       phone: "+41 76 477 22 76",
       link: "https://forms.gle/FSarnovDvNYGPsi77"
     },
