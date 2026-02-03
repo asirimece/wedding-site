@@ -217,7 +217,7 @@ export const content = {
         "BITTE BIS ZUM\n" +
         "{{DATE}}\n" +
         "ZUSAGEN — DIREKT ÜBER DEN LINK",
-      date: "28. FEBRUAR 2026",
+      date: "28 FEBRUAR 2026",
       phone: "+41 76 477 22 76",
       link: "https://forms.gle/FSarnovDvNYGPsi77"
     },
