@@ -14,6 +14,7 @@ html, body {
   height: auto;
   background: #f8f6f2;
   overscroll-behavior-y: none;
+  -webkit-overflow-scrolling: touch;
 }
 
 
@@ -32,7 +33,8 @@ body {
 /* ================= SECTION SYSTEM ================= */
 
 .section {
-  min-height: 100vh;
+  min-height: 100dvh; /* real visible height on iOS */
+  min-height: 100vh;  /* fallback */
   width: 100%;
   background-size: cover;
   background-position: center;
