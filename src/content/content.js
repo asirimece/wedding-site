@@ -135,7 +135,7 @@ export const content = {
       title: "ÜBERNACHTEN – GLAMPING",
       subtitle: "Unser Vorschlag für alle Gäste, die “sous les étoiles” übernachten möchten",
       imageText: "Mehr Infos & Fotos findet ihr in dieser {{BROCHURE}}.",
-      brochureUrl: "public/pdfs/tent-brochure.pdf",
+      brochureUrl: "/pdfs/tent-brochure.pdf",
       blocks: [
     {
       subtitle: "Worum geht es?",
@@ -219,7 +219,8 @@ export const content = {
         "ZUSAGEN — DIREKT ÜBER DEN LINK",
       date: "28. FEBRUAR 2026",
       phone: "+41 76 477 22 76",
-      link: "https://forms.gle/FSarnovDvNYGPsi77"
+      link: "https://forms.gle/FSarnovDvNYGPsi77",
+      contactLabel: "KONTAKTIERE UNS"
     },
 
   },
@@ -463,7 +464,8 @@ export const content = {
         "DIRECTEMENT VIA LE LIEN",
       date: "28 FÉVRIER 2026",
       phone: "+41 76 477 22 76",
-      link: "https://forms.gle/FSarnovDvNYGPsi77"
+      link: "https://forms.gle/FSarnovDvNYGPsi77",
+      contactLabel: "CONTACTEZ-NOUS"
     },
 
 }

@@ -630,14 +630,13 @@ export default function App() {
                   </a>
 
                   {/* CONTACT BUTTON */}
-                  <a
-                    className="rsvpButton"
-                    onClick={handleContactClick}
-                    role="button"
-                  >
-                    KONTAKTIERE UNS
-                  </a>
-
+                 <a
+                  className="rsvpButton"
+                  onClick={handleContactClick}
+                  role="button"
+                >
+                  {t.rsvp.contactLabel}
+                </a>
                   {/* Desktop phone reveal */}
                   {showPhone && (
                     <div className="rsvpPhoneReveal">
