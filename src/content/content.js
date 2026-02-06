@@ -34,10 +34,10 @@ export const content = {
       title: "UNSER HOCHZEITSTAG",
       subtitle: "06. Juni 2026",
       items: [
-        { time: "2:45 PM", label: "Ankunft & Welcome Drinks" },
-        { time: "3:30 PM", label: "Zeremonie" },
-        { time: "4:30 PM", label: "Apéro & Fotos", subtext: "Feine häppchen & Drinks, während wir schöne Momente festhalten"},
-        { time: "7:00 PM", label: "Abendessen & Party", subtext: "Ein gemütlicher Abend mit feinem Essen, liebevollen Toast & viel Tanz!"},
+        { time: "3:15 PM", label: "Ankunft & Welcome Drinks" },
+        { time: "4:00 PM", label: "Zeremonie" },
+        { time: "5:00 PM", label: "Apéro & Fotos", subtext: "Feine häppchen & Drinks, während wir schöne Momente festhalten"},
+        { time: "7:30 PM", label: "Abendessen & Party", subtext: "Ein gemütlicher Abend mit feinem Essen, liebevollen Toast & viel Tanz!"},
       ],
     },
 
@@ -260,10 +260,10 @@ export const content = {
     title: "NOTRE JOURNÉE DE MARIAGE",
     subtitle: "06 Juin 2026",
     items: [
-      { time: "2:45 PM", label: "Arrivée & Welcome Drinks" },
-      { time: "3:30 PM", label: "Cérémonie" },
-      { time: "4:30 PM", label: "Apéritif & Photos", subtext: "De délicieux amusebouche et quelques verres, pendant que nous immortalisons de beaux moments."},
-      { time: "7:00 PM", label: "Repas & Fête", subtext: "Une soirée conviviale, avec un bon repas, des discours remplis d’amour... et beaucoup de danse!"},
+      { time: "3:15 PM", label: "Arrivée & Welcome Drinks" },
+      { time: "4:00 PM", label: "Cérémonie" },
+      { time: "5:00 PM", label: "Apéritif & Photos", subtext: "De délicieux amusebouche et quelques verres, pendant que nous immortalisons de beaux moments."},
+      { time: "7:30 PM", label: "Repas & Fête", subtext: "Une soirée conviviale, avec un bon repas, des discours remplis d’amour... et beaucoup de danse!"},
     ],
   },
 
