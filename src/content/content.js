@@ -34,10 +34,10 @@ export const content = {
       title: "UNSER HOCHZEITSTAG",
       subtitle: "06. Juni 2026",
       items: [
-        { time: "3:15 PM", label: "Ankunft & Welcome Drinks" },
-        { time: "4:00 PM", label: "Zeremonie" },
-        { time: "5:00 PM", label: "Apéro & Fotos", subtext: "Feine häppchen & Drinks, während wir schöne Momente festhalten"},
-        { time: "7:30 PM", label: "Abendessen & Party", subtext: "Ein gemütlicher Abend mit feinem Essen, liebevollen Toast & viel Tanz!"},
+        { time: "3:30 PM", label: "Ankunft & Welcome Drinks" },
+        { time: "4:15 PM", label: "Zeremonie" },
+        { time: "5:15 PM", label: "Apéro & Fotos", subtext: "Feine häppchen & Drinks, während wir schöne Momente festhalten"},
+        { time: "8:00 PM", label: "Abendessen & Party", subtext: "Ein gemütlicher Abend mit feinem Essen, liebevollen Toast & viel Tanz!"},
       ],
     },
 
@@ -60,7 +60,14 @@ export const content = {
         {
           icon: "/icons/gift.gif",
           title: "Geschenke",
-          text: "Eure Anwesenheit ist unser größtes Geschenk. Falls ihr uns dennoch etwas schenken möchtet, freuen wir uns über einen Beitrag zu unseren Flitterwochen."
+          text: "Eure Anwesenheit ist für uns das schönste Geschenk. Falls ihr uns darüber hinaus eine Freude machen möchtet, freuen wir uns über einen Beitrag zu unseren Flitterwochen.",
+          bankLabel: "Kontodaten anzeigen",
+          bankHideLabel: "Kontodaten ausblenden",
+          copyLabel: "IBAN kopieren",
+          copiedLabel: "IBAN kopiert",
+          address: "Friedheimstrasse 21, 8057 Zürich",
+          accountName: "Descloux R. o. Roeckel N.",
+          iban: "CH75 0070 0114 9043 6979 8",
         },
       ],
     },
@@ -260,10 +267,10 @@ export const content = {
     title: "NOTRE JOURNÉE DE MARIAGE",
     subtitle: "06 Juin 2026",
     items: [
-      { time: "3:15 PM", label: "Arrivée & Welcome Drinks" },
-      { time: "4:00 PM", label: "Cérémonie" },
-      { time: "5:00 PM", label: "Apéritif & Photos", subtext: "De délicieux amusebouche et quelques verres, pendant que nous immortalisons de beaux moments."},
-      { time: "7:30 PM", label: "Repas & Fête", subtext: "Une soirée conviviale, avec un bon repas, des discours remplis d’amour... et beaucoup de danse!"},
+      { time: "3:30 PM", label: "Arrivée & Welcome Drinks" },
+      { time: "4:15 PM", label: "Cérémonie" },
+      { time: "5:15 PM", label: "Apéritif & Photos", subtext: "De délicieux amusebouche et quelques verres, pendant que nous immortalisons de beaux moments."},
+      { time: "8:00 PM", label: "Repas & Fête", subtext: "Une soirée conviviale, avec un bon repas, des discours remplis d’amour... et beaucoup de danse!"},
     ],
   },
 
@@ -292,9 +299,16 @@ export const content = {
       {
         icon: "/icons/gift.gif",
         title: "Cadeaux",
-        text:
-          "Votre présence est le plus beau cadeau que vous puissiez nous faire.\n" +
-          "Si vous souhaitez malgré tout nous offrir quelque chose, une participation à notre voyage de noces nous ferait très plaisir."
+          text:
+            "Votre présence est pour nous le plus beau des cadeaux.\n" +
+            "Si vous souhaitez malgré tout nous faire plaisir, une participation à notre voyage de noces nous ferait très plaisir.",
+          bankLabel: "Voir les détails du compte",
+          bankHideLabel: "Masquer les détails du compte",
+          copyLabel: "Copier l'IBAN",
+          copiedLabel: "IBAN copié",  
+          address: "Friedheimstrasse 21, 8057 Zürich",
+          accountName: "Descloux R. o. Roeckel N.",
+          iban: "CH75 0070 0114 9043 6979 8",
       },
     ],
   },

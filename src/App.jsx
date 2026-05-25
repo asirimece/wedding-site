@@ -11,6 +11,7 @@ import { LanguageSwitch } from "./components/LanguageSwitch";
 import { RSVP } from "./RSVP";
 import { useScrollReveal } from "./hooks/useScrollReveal";
 import { ContactLink } from "./components/ContactLink";
+import { BankLink } from "./components/BankLink";
 
 
 export default function App() {
@@ -241,6 +242,18 @@ export default function App() {
                   className="dressCodeImage"
                 />
               </div>
+            )}
+
+            {item.iban && (
+              <BankLink
+                label={item.bankLabel}
+                hideLabel={item.bankHideLabel}
+                copyLabel={item.copyLabel}
+                copiedLabel={item.copiedLabel}
+                accountName={item.accountName}
+                address={item.address}
+                iban={item.iban}
+              />
             )}
 
           </div>
